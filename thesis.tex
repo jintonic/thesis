@@ -1,0 +1,42 @@
+\documentclass[11pt,a4]{book}
+
+\input{style}
+
+\begin{document}
+
+\input{title}
+
+\input{abstract} 
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Introduction}
+\label{cha:intro}
+\input{introduction}
+
+\chapter{GERDA experiment}
+\label{cha:gerda}
+\input{gerda}
+
+\chapter{Munich test stands}
+\label{cha:teststand}
+\input{teststand}
+
+\chapter{Conclusions and outlook}
+\label{cha:con}
+\input{conclusion}
+
+\chapter*{Acknowledgement}
+\label{cha:ack}
+\input{acknowledgement} 
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{99}
+  \input{bibliography}
+\end{thebibliography}
+
+\end{document}
