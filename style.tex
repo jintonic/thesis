@@ -1,0 +1,22 @@
+\usepackage{graphicx}
+
+\usepackage{ifpdf}
+\ifpdf
+\usepackage{epstopdf}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[pdftex,bookmarks=true,hypertexnames=false]{hyperref}
+\hypersetup{
+  pdfauthor = {Jing Liu},
+  pdftitle = {},
+  pdfsubject = {PhD Thesis},
+  pdfkeywords = {neutrino, double beta decay, germanium detector},
+}
+\pdfadjustspacing=1
+\else
+\usepackage[usenames,dvips]{color}
+\fi
+
+
+%%% Local Variables:
+%%% TeX-master: "thesis"
+%%% End:
