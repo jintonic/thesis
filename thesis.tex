@@ -1,42 +1,54 @@
-\documentclass[11pt,a4]{book}
+\documentclass[11pt,a4paper]{book}
 
 \input{style}
 
 \begin{document}
 
+\pagestyle{empty}
+
 \input{title}
 
-\input{abstract} 
+\cleardoublepage
 
-\pagenumbering{roman}
+\input{abstract}
+
+\cleardoublepage \setcounter{page}{1} \pagenumbering{Roman}
+
 \tableofcontents
-\clearpage
-\pagenumbering{arabic}
-\setcounter{page}{1}
+
+\cleardoublepage \setcounter{page}{1} \pagenumbering{arabic}
+
+\pagestyle{fancy}
 
 \chapter{Introduction}
 \label{cha:intro}
 \input{introduction}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \chapter{Neutrinoless double beta decay}
 \label{cha:theory}
 \input{theory}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{GERDA experiment}
+\chapter{The GERDA experiment}
 \label{cha:gerda}
 \input{gerda}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \chapter{Germanium detectors}
 \label{cha:detector}
 \input{detector}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \chapter{Munich test stands}
 \label{cha:teststand}
 \input{teststand}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Gerdalinch II}
+\chapter{Gerdalinchen II}
 \label{cha:gerdalinchenII}
 \input{gerdalinchenII}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \chapter{Neutron induced background}
 \label{cha:neutron}
@@ -45,22 +57,23 @@
 \chapter{Pulse shape simulation}
 \label{cha:pss}
 \input{pss}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Pulse shape analysis}
+\chapter{Pulse shape analysis and Event Classification}
 \label{cha:psa}
 \input{psa}
 
 \chapter{Conclusions and outlook}
 \label{cha:con}
 \input{conclusion}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \chapter*{Acknowledgement}
 \label{cha:ack}
 \input{acknowledgement} 
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \addcontentsline{toc}{chapter}{Bibliography}
-\begin{thebibliography}{99}
-  \input{bibliography}
-\end{thebibliography}
+\input{bibliography}
 
 \end{document}
