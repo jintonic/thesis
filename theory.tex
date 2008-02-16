@@ -59,25 +59,66 @@ The theory of \emph{neutrino oscillations} can be briefly summarized as follows:
   \label{eq:osci}
   |\nu_{\alpha}\rangle=\sum_{i}U^{*}_{\alpha i}|\nu_{i}\rangle,
 \end{equation}
-where $\alpha=e,\mu,\tau$, and $i=1,2,3$. In case of two generations, which has been proved to be a good approximation, eq.~\ref{eq:osci} can be expressed as
+where $\alpha=e,\mu,\tau$, $i=1,2,3$, and $U$ is a unitary matrix referred to as the Pontecorvo-Maki-Nakagawa-Sakata(PMNS) matrix. A common parameterization of PMNS matrix is
+\begin{eqnarray*}
+  \label{eq:pmns}
+  U = \left(\begin{array}{ccc}
+      1 & 0 & 0 \\ 0 & C_{23} & S_{23} \\ 0 & -S_{23} & C_{23}
+    \end{array}\right) &\times&
+  \left(\begin{array}{ccc}
+      C_{13} & 0 & S_{13}e^{-i\delta} \\ 
+      0 & 1 & 0 \\ -S_{13}e^{-i\delta} & 0 & C_{13}
+    \end{array}\right) \\\times
+  \left(\begin{array}{ccc}
+       C_{12} & S_{12} & 0 \\ -S_{12} & C_{12} & 0 \\ 0 & 0 & 1
+    \end{array}\right) &\times&
+  \left(\begin{array}{ccc}
+      e^{i\alpha_1/2} & 0 & 0 \\ 0 & e^{i\alpha_2/2} & 0 \\ 0 & 0 & 1
+    \end{array}\right),
+\end{eqnarray*}
+where $S_{ij} = \sin\theta_{ij}$, $C_{ij} = \cos\theta_{ij}$ represent the sines and coines of the three mixing angles, $\delta, \alpha_1$ and $\alpha_2$ are CP-violating phasees. Taking two generations as an example, eq.~\ref{eq:osci} can be expressed as
 \begin{equation}
   \label{eq:osci2}
   \left(\begin{array}{c}\nu_{\alpha}\\\nu_{\beta}\end{array}\right)=
   \left(\begin{array}{cc} \cos\theta & \sin\theta\\
       -\sin\theta & \cos\theta \end{array}\right)
-  \left(\begin{array}{c}\nu_{1}\\\nu_{2}\end{array}\right),
+  \left(\begin{array}{c}\nu_{1}\\\nu_{2}\end{array}\right).
 \end{equation}
-where $\theta$ is called the mixing angle. The probability for the neutrino to change flavor, $p(\nu_\alpha \rightarrow \nu_\beta)$, is
+The probability for the neutrino to change flavor after traveling a distance $L$, $p(\nu_\alpha \rightarrow \nu_\beta)$, is
 \begin{equation}
   \label{eq:pa2b}
   p(\nu_\alpha \rightarrow \nu_\beta)=
   \sin^{2}2\theta\sin^{2}\left(\Delta m^{2}_{12}\frac{L}{4E}\right),
 \end{equation}
-where $\Delta m^{2}_{12} =  m^{2}_{1} - m^{2}_{2}$, L is the.
+where $\Delta m^{2}_{12}$ is the squared mass difference between the two mass eigenstates $|m^{2}_{1} - m^{2}_{2}|$, while $E$ is the average energy of the mass eigenstates.
+
+There would be not oscillation ($p(\nu_\alpha \rightarrow \nu_\beta) = 0$), if neutrinos are all massless ($\Delta m^{2} = 0$) or not mixing ($\theta = 0$), \textit{i.e.} if there are neutrino oscillations at least one of the neutrinos has mass and there is mixing between them.
 
 \subsection{Atmosphere neutrinos}
 \label{sec:atmo}
-The hypothesis was at first used to explain the problem of the solar neutrino flux~\cite{Dav64,Dav68}, which was smaller than that was predicted by the standard solar model. This explanation was not widely accepted because it required very large neutrino mixing and a fine-tuned mass difference squared to fit the distance between the San and the Earth. The uncertainties of the standard solar model could be used to solve this problem as well.
+The hypothesis of neutrino oscillations was at first used to explain the problem of the solar neutrino flux~\cite{Dav64,Dav68}, which was smaller than that was predicted by the standard solar model~\cite{Bah98}. This explanation was not widely accepted because it required very large neutrino mixing and a fine-tuned mass difference squared to fit the distance between the Sun and the Earth. The uncertainties of the standard solar model could be used to solve this problem as well.
+
+The studies of the atmosphere neutrinos, however, presented the first evidence of neutrino oscillations. In the early 1980s, several massive detectors were built to search for proton decays. Neutrinos created by the cosmic rays in the atmosphere were studied in detail as background events. A deficit in the muon neutrino flux relative to the electron neutrino flux compared with the calculation was found in two experiments, IMB~\cite{Hai86} (1986) and Kamiokande~\cite{Hir88} (1988). The IMB group, however, took the conservative attitude that this deficit is probably ascribable to some unknown systematics. On the other hand, the Kamiokande, relying on its capability for clear $e, \mu$ event separation, ventured to interpret it as a result of neutrino oscillation.
+
+Kamiokande further investigated this problem and found that higher energy muon neutrino flux showed a nontrivial zenith-angle dependence that could be explained by $\nu_\mu$ oscillating to $\nu_\tau$ in 1994.~\cite{Fuk94} This still did not convinced everybody because the oscillation interpretation required very large mixing between two neutrinos, which did not look reasonable. Finally, Super-Kamiokande, the enlarged facility of Kamiokande, showed that every aspects of atmosphere neutrino data were consistent with neutrino oscillation between $\nu_\mu$ and $\nu_\tau$, and the mixing was nearly maximal (1998).~\cite{Fuk98}
+
+\subsection{Solar neutrinos}
+\label{sec:solar}
+The hypothesis of neutrino oscillations was not taken seriously as a solution of the solar neutrino puzzle until Mikheyev and Smirnov brought up an idea in 1986 that $\nu_e$s could be efficiently converted into $\nu_mu$s when passing through the matters on the surface of the Sun.~\cite{Mik86} This mechanism did not require the intrinsic mixing angle to be very large and the fine-tuned mass difference squared to fit the distance between the Sun and the Earth. This is the so-called MSW effect~\cite{Mik86,Wol78}.
+
+The experimental evidences of solar neutrino deficit coming after~\cite{Hir89,Aba91,Ans92} were all explained as the result of neutrino oscillations and the ranges of allowed neutrino mixing parameters were narrowed down step by step. The neutrino oscillations was finally confirmed by the combined results from the Sudbury Neutrino Observatory (SNO) and Super-Kamiokande (2001)~\cite{Ahm01,Fuk01}. SNO measured the $^8$B solar neutrinos through the reactions
+\begin{eqnarray*}
+  \nu_e + d \rightarrow p + p + e^- &\mbox{\ \ \ \ \ \ (CC)}&,\\
+  \nu_\alpha + d \rightarrow p + n + \nu_\alpha &\mbox{\ \ \ \ \ \     (NC)}&,\\
+  \nu_\alpha + e^- \rightarrow \nu_\alpha + e^- &\mbox{\ \ \ \ \ \     (ES)}&.
+\end{eqnarray*}
+The charged current (CC) reaction is sensitive exclusively to $\nu_e$, while the neutral current (NC) and the elastic scattering (ES) are sensitive to all active neutrino flavors ($\alpha = e, \mu, \tau$). If $\nu_e$s from the Sun change into other flavors, the neutrino flux measured from CC interaction, $\phi^{CC}(\nu_e)$, should be smaller than that from ES interaction, $\phi^{ES}(\nu_\alpha)$. It turned out that $\phi^{CC}(\nu_e)$ measured by SNO was smaller than $\phi^{ES}(\nu_\alpha)$ precisely measured by Super-Kamiokande with a $3.3\sigma$ difference. This is a very convincing evidence of neutrino oscillations because it does not rely on solar model flux calculations.
+
+\subsection{Summary of experimental results}
+\label{sec:allo}
+Neutrino oscillations have been observed not only in solar and atmosphere neutrino experiments but also in reactor~\cite{Ara05} and accelerator~\cite{Dod06,Agu07} neutrino experiments.
+
+To sum up, the observation of neutrino oscillations confirms that neutrinos do have mass.
 
 \section{Majorana neutrinos}
 \label{sec:major}
