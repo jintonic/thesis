@@ -116,15 +116,53 @@ The charged current (CC) reaction is sensitive exclusively to $\nu_e$, while the
 
 \subsection{Summary of experimental results}
 \label{sec:allo}
-Neutrino oscillations have been observed not only in solar and atmosphere neutrino experiments but also in reactor~\cite{Ara05} and accelerator~\cite{Dod06,Agu07} neutrino experiments.
+Neutrino oscillations have been observed not only in solar and atmosphere neutrino experiments but also in reactor~\cite{Ara05} and accelerator~\cite{Dod06,Agu07} neutrino experiments. It is confirmed that neutrinos do have masses. A global fit of the mass difference squared and the mixing parameters taking into account the latest results from all kinds of neutrino oscillations experiment can be found in Ref.~\cite{}, which is updated regularly. Table~\ref{tab:par} is taken from Ref.~\cite{}. The mass difference squared, $m^{2}_{12}$, is mainly from the data of solor neutrino oscillations, $m^{2}_$; while the mass difference squared, $m^{2}_{23}$, is mainly from the data of atmosphere neutrino oscillations, $m^{2}_$. Since the solor and atmosphere neutrino oscillations experiments can only measure the mass difference of the neutrino mass eigenstates and cannot determine the signs of $m^{2}_{12}$ and $m^{2}_{23}$, there are two interesting questions left as shown in Fig~\ref{fig:hie}
+\begin{itemize}
+\item what are the absolute values of neutrino masses?
+\item what is the real mass hierarchy? Is it the same as their lepton partners, namely, the normal hierarchy, or the inversed heirarchy, as shown in Fig~\ref{fig:hie}
+\end{itemize}
 
-To sum up, the observation of neutrino oscillations confirms that neutrinos do have mass.
+\section{Dirac neutrinos}
+\label{sec:dirac}
+The observation of neutrino oscillations makes the introduction of neutrino mass terms into the \emph{Standard Model} necessary. In case of free fields of fermions, the Dirac equation can be deduced from the Lagrangian density
+\begin{equation}
+  \label{eq:deq}
+  \mathB{L}=\bar{\phi}(i\gamma^{\mu}\frac{}{x^\mu}-m)\phi,
+\end{equation}
+where $\phi$ is the free Dirac field. The first term corresponds to the kinetic energy and the second is the Dirac mass term,
+\begin{equation}
+  \label{eq:dm}
+  \mathB{L_D}=m_{D}\bar{\phi}\phi.
+\end{equation}
+Since
+\begin{equation}
+  \label{eq:deq}
+  \bar{\phi}\phi=\bar{\phi}\left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right)
+	\left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right)\phi=
+		\bar{\phi}_{L}\phi_{R}+\bar{\phi}_{R}\phi_{L},
+\end{equation}
+a right-handed partner of the left-handed neutrino must be introduced in order to prevent the above term vanishing. This particle does not participate the weak interaction hence is called as the sterile neutrino.
+
+To motivate the above mass term, the most straightforward approach is to follow the same procedure as for the electron, \textit{i.e.} the lepton obtains mass by coupling to the Higgs field. The mass term of the electron can be expressed as
+\begin{equation}
+  \label{eq:dm}
+  m_{e}\bar{\phi_e}\phi_{e} = g_{e}\langle h^{0}\rangle\bar{\phi_e}\phi_{e},
+\end{equation}
+where $g_e$ is the coupling strength of electron field with Higgs field, $\langle h^{0}\rangle$ is the vacuum expectation value for the Higgs field. Similarly,
+\begin{equation}
+  \label{eq:dm}
+  m_{\nu}\bar{\phi_\nu}\phi_{\nu} = g_{\nu}\langle h^{0}\rangle\bar{\phi_\nu}\phi_{\nu},
+\end{equation}
+where $g_\nu$ is the coupling strength of neutrino field with Higgs field. Since neutrinos are much lighter than their leptonic partners, the coupling strength of neutrino field with Higgs field should be much smaller than that of electron:
+\begin{equation}
+  \label{eq:dm}
+  g_{\nu}<<g_{e}.
+\end{equation}
+By only introduce the Dirac mass term one has to answer the question why neutrinos couple to the Higgs field so weakly compared with their leptonic partners.
 
 \section{Majorana neutrinos}
 \label{sec:major}
-
-\section{Neutrino mass terms}
-\label{sec:mass}
+Theoretically speaking, $\bar{\phi}^{c}\phi^{c}, \bar{\phi}\phi^{c}$ and $\bar{\phi}^{c}\phi$ are also possible mass terms, where $\phi^{c}$ are the charge conjugate of $\phi$. $\bar{\phi}^{c}\phi^{c}$ is equivalent to $\bar{\phi}\phi$. $\bar{\phi}\phi^{c}$ and $\bar{\phi}^{c}\phi$ cannot be the mass terms for electrons or quarks because it destroys or creates two particles of the same charge. But nothing forbids to use them as mass terms for neutrinos because neutrinos have no charge. These mass terms destroy or creates two particles of the same lepton number hence violate lepton number conservation, which is not necessarily to be true as being discussed in section~\ref{sec:sm}.
 
 \section{Neutrinoless double beta decay}
 \label{sec:0n2b}
