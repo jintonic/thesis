@@ -93,9 +93,9 @@ where $\alpha=e,\mu,\tau, ...$, $i=1,2,3, ...$, and $U$ is a unitary matrix refe
 where $S_{ij} = \sin\theta_{ij}$, $C_{ij} = \cos\theta_{ij}$ represent the sines and cosines of the three mixing angles $\theta_{ij}$, $\delta$ is the CP violation phase, $\alpha_1$ and $\alpha_2$ are Majorana phases. The probability that a neutrino originally of flavor $\alpha$ will be observed as having flavor $\beta$ after traveling a distance $L$ is
 \begin{equation}
   \label{eq:pa2b}
-  \begin{matrix}
-    P_{\alpha \rightarrow \beta} &=& \left| \left\langle         \nu_{\beta}|\nu_{\alpha}(t) \right\rangle \right|^{2} = \left|       \sum_{i}U_{\alpha i}^{*}U_{\beta i}e^{-i m_{i}^2 L/2E} \right|^{2}\\ &=& \delta_{\alpha\beta} - 4{\displaystyle \sum_{i>j}Re(U_{\alpha         i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*}})\sin^{2}(\Delta     m_{ij}^{2} \frac{L}{4E})\\ &+& {\displaystyle 2\sum_{i>j}Im(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*})\sin(}\Delta m_{ij}^{2}\frac{L}{2E}),
-  \end{matrix}
+  \begin{array}{ccccl}
+    P_{\alpha \rightarrow \beta} &=& \left| \left\langle                 \nu_{\beta}|\nu_{\alpha}(t) \right\rangle \right|^{2} &=&     {\displaystyle \left|       \sum_{i}U_{\alpha i}^{*}U_{\beta i}e^{-i           m_{i}^2 L/2E} \right|^{2}}\\ &=& \delta_{\alpha\beta} &-&     4{\displaystyle \sum_{i>j}Re(U_{\alpha         i}^{*}U_{\beta         i}U_{\alpha j}U_{\beta j}^{*})\sin^{2}(\Delta     m_{ij}^{2}       \frac{L}{4E})}\\ & & &+& {\displaystyle 2\sum_{i>j}Im(U_{\alpha         i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*})\sin(\Delta       m_{ij}^{2}\frac{L}{2E})},
+  \end{array}
 \end{equation}
 where $\Delta m^{2}_{ij}$ is the squared mass difference between the
 two mass eigenstates $|m^{2}_{i} - m^{2}_{j}|$, while $E$ is the
@@ -103,51 +103,11 @@ average energy of the mass eigenstates.
 
 There would be not oscillation ($P_{\alpha \rightarrow \beta} = 0$) if neutrinos are all massless or all masses are the same ($\Delta m^{2} = 0$) or not mixing ($\theta = 0$); \textit{i.e.} if there are neutrino oscillations at least one neutrino must have mass and they must be mixed.
 
-\subsection{Atmosphere neutrinos}
-\label{sec:atmo}
-The hypothesis of neutrino oscillations was at first used to explain
-the problem of the solar neutrino flux~\cite{Dav64,Dav68}, which was
-smaller than that was predicted by the standard solar
-model~\cite{Bah98}. This explanation was not widely accepted because
-it required very large neutrino mixing and a fine-tuned mass
-difference squared to fit the distance between the Sun and the Earth.
-The uncertainties of the standard solar model could be used to solve
-this problem as well.
-
-The studies of the atmosphere neutrinos, however, presented the first
-evidence of neutrino oscillations. In the early 1980s, several massive
-detectors were built to search for proton decays. Neutrinos created by
-the cosmic rays in the atmosphere were studied in detail as background
-events. A deficit in the muon neutrino flux relative to the electron
-neutrino flux compared with the calculation was found in two
-experiments, IMB~\cite{Hai86} (1986) and Kamiokande~\cite{Hir88}
-(1988). The IMB group, however, took the conservative attitude that
-this deficit is probably ascribable to some unknown systematics. On
-the other hand, the Kamiokande, relying on its capability for clear
-$e, \mu$ event separation, ventured to interpret it as a result of
-neutrino oscillation.
-
-Kamiokande further investigated this problem and found that higher
-energy muon neutrino flux showed a nontrivial zenith-angle dependence
-that could be explained by $\nu_\mu$ oscillating to $\nu_\tau$ in
-1994.~\cite{Fuk94} This still did not convinced everybody because the
-oscillation interpretation required very large mixing between two
-neutrinos, which did not look reasonable. Finally, Super-Kamiokande,
-the enlarged facility of Kamiokande, showed that every aspects of
-atmosphere neutrino data were consistent with neutrino oscillation
-between $\nu_\mu$ and $\nu_\tau$, and the mixing was nearly maximal
-(1998).~\cite{Fuk98}
-
 \subsection{Solar neutrinos}
 \label{sec:solar}
-The hypothesis of neutrino oscillations was not taken seriously as a
-solution of the solar neutrino puzzle until Mikheyev and Smirnov
-brought up an idea in 1986 that $\nu_e$s could be efficiently
-converted into $\nu_mu$s when passing through the matters on the
-surface of the Sun.~\cite{Mik86} This mechanism did not require the
-intrinsic mixing angle to be very large and the fine-tuned mass
-difference squared to fit the distance between the Sun and the Earth.
-This is the so-called MSW effect~\cite{Mik86,Wol78}.
+The hypothesis of neutrino oscillations was at first used to explain the problem of the solar neutrino flux~\cite{Dav64,Dav68}, which was smaller than that was predicted by the standard solar model~\cite{Bah98}. This explanation was not widely accepted because it required very large neutrino mixing and a fine-tuned squared mass difference to fit the distance between the Sun and the Earth. The uncertainties of the standard solar model were used to resolve the problem instead, \textit{i.e.} to deny its existence.
+
+It was at first realized by L. Wolfenstein in 1978 that neutrinos propagating in matter have different effective masses than those in vacuum due to charged current coherent forward scattering of electron neutrinos with electrons in matter~\cite{Wol78}. Since neutrino oscillations depend upon the squared mass difference of the neutrinos, they may be different in matter than in vacuum. S. P. Mikheyev and A. Yu. Smirnov in 1986 noticed that even if the intrinsic oscillations were small the matter effect could still cause maximal mixing between electron neutrinos and the other flavors~\cite{Mik86}. Their observation is called MSW effect. Since this mechanism did not require the intrinsic mixing angle to be very large and the squared mass difference fine-tuned to fit the distance between the Sun and the Earth, people started to believe that neutrino oscillations might be the answer of the solar neutrino flux problem.
 
 The experimental evidences of solar neutrino deficit coming
 after~\cite{Hir89,Aba91,Ans92} were all explained as the result of
@@ -175,6 +135,21 @@ $\phi^{ES}(\nu_\alpha)$ precisely measured by Super-Kamiokande with a
 $3.3\sigma$ difference. This is a very convincing evidence of neutrino
 oscillations because it does not rely on solar model flux
 calculations.
+
+\subsection{Atmosphere neutrinos}
+\label{sec:atmo}
+The studies of atmosphere neutrinos yielded the first confirmation of neutrino oscillations. In the early 1980s several massive detectors were built to search for proton decays. Neutrinos created by the cosmic rays in the atmosphere were studied in detail as background events. A deficit in the muon neutrino flux relative to the electron neutrino flux compared with the calculation was found in two experiments, IMB~\cite{Hai86} (1986) and Kamiokande~\cite{Hir88} (1988). The IMB group, however, took the conservative attitude and ascribed the deficit to some unknown systematics. On the other hand, the Kamiokande group, relying on its capability for clear $e, \mu$ event separation, ventured to interpret it as evidence for neutrino oscillation.
+
+Kamiokande further investigated this phenomenon and found that the flux of high energy muon neutrinos showed a nontrivial zenith-angle dependence that could best be explained by $\nu_\mu$ oscillating to $\nu_\tau$ in 1994~\cite{Fuk94}. This still did not convince everybody because the oscillation interpretation required very large mixing between two neutrinos which was not considered reasonable. Finally, Super-Kamiokande, the enlarged facility of Kamiokande, showed that every aspects of atmosphere neutrino data were consistent with neutrino oscillation between $\nu_\mu$ and $\nu_\tau$, and the mixing was nearly maximal (1998)~\cite{Fuk98}.
+
+\subsection{Reactor neutrinos}
+\label{sec:reactor}
+Chooz, double Chooz, Daya bay, KamLAND
+
+\subsection{Accelerator  neutrinos}
+\label{sec:acce}
+K2K, T2K, LSND, MiniBOONE, MINOS, Opera
+
 
 \subsection{Summary of experimental results}
 \label{sec:allo}
@@ -210,10 +185,8 @@ lie, nor the real mass hierarchy.}
 
 \begin{table}[tbhp]
   \centering
-  \caption{Summary of the neutrino squared-mass differences and the            
-mixing parameters based on the 3-neutrino mixing scheme. The suffixes        
-$_\odot$ and $_{\mbox{atm}}$ stand for the results from solar and        
-atmosphere experiments, respectively.}
+  \caption{Summary of the neutrino squared-mass differences and the         
+    mixing parameters based on the 3-neutrino mixing scheme. The         suffixes $_\odot$ and $_{\mbox{atm}}$ stand for the results from         solar and atmosphere experiments, respectively.}
   \label{tab:par}
   \begin{tabular}{lr}\hline\hline
     Parameter & Value \\\hline
