@@ -74,23 +74,25 @@ The theory of \emph{neutrino oscillations} can be briefly summarized as follows:
   |\nu_{\alpha}\rangle=\sum_{i}U^{*}_{\alpha i}|\nu_{i}\rangle,
 \end{equation}
 where $\alpha=e,\mu,\tau, ...$, $i=1,2,3, ...$, and $U$ is a unitary matrix referred to as the Pontecorvo-Maki-Nakagawa-Sakata(PMNS) matrix. A common parameterization of the PMNS matrix is
-\begin{eqnarray*}
+\begin{equation}
   \label{eq:pmns}
-  U = \left(\begin{array}{ccc}
-      1 & 0 & 0 \\ 0 & C_{23} & S_{23} \\ 0 & -S_{23} & C_{23}
-    \end{array}\right) &\times&
-  \left(\begin{array}{ccc}
-      C_{13} & 0 & S_{13}e^{-i\delta} \\ 
-      0 & 1 & 0 \\ -S_{13}e^{i\delta} & 0 & C_{13}
-    \end{array}\right) \\\times
-  \left(\begin{array}{ccc}
-       C_{12} & S_{12} & 0 \\ -S_{12} & C_{12} & 0 \\ 0 & 0 & 1
-    \end{array}\right) &\times&
-  \left(\begin{array}{ccc}
-      e^{i\alpha_1/2} & 0 & 0 \\ 0 & e^{i\alpha_2/2} & 0 \\ 0 & 0 & 1
-    \end{array}\right),
-\end{eqnarray*}
-where $S_{ij} = \sin\theta_{ij}$, $C_{ij} = \cos\theta_{ij}$ represent the sines and cosines of the three mixing angles $\theta_{ij}$, $\delta$ is the CP violation phase, $\alpha_1$ and $\alpha_2$ are Majorana phases. The probability that a neutrino originally of flavor $\alpha$ will be observed as having flavor $\beta$ after traveling a distance $L$ is
+  \begin{array}{rcl}
+    U = \left(\begin{array}{ccc}
+        1 & 0 & 0 \\ 0 & \cos\theta_{23} & \sin\theta_{23} \\ 0 &         -\sin\theta_{23} & \cos\theta_{23}
+      \end{array}\right) &\times&
+    \left(\begin{array}{ccc}
+        \cos\theta_{13} & 0 & \sin\theta_{13}e^{-i\delta} \\ 
+        0 & 1 & 0 \\ -\sin\theta_{13}e^{i\delta} & 0 & \cos\theta_{13}
+      \end{array}\right) \\\times
+    \left(\begin{array}{ccc}
+        \cos\theta_{12} & \sin\theta_{12} & 0 \\ -\sin\theta_{12} &         \cos\theta_{12} & 0 \\ 0 & 0 & 1
+      \end{array}\right) &\times&
+    \left(\begin{array}{ccc}
+        e^{i\alpha_1/2} & 0 & 0 \\ 0 & e^{i\alpha_2/2} & 0 \\ 0 & 0 & 1
+      \end{array}\right),
+  \end{array}
+\end{equation}
+where $\theta_{ij}$'s are three mixing angles, $\delta$, $\alpha_1$ and $\alpha_2$ are CP-violating phases. Especially, $\alpha_1$ and $\alpha_2$ also known as Majorana phases have physical consequences only if neutrinos are Majorana particles. The probability that a neutrino originally of flavor $\alpha$ will be observed as having flavor $\beta$ after traveling a distance $L$ is
 \begin{equation}
   \label{eq:pa2b}
   \begin{array}{ccccl}
@@ -98,7 +100,7 @@ where $S_{ij} = \sin\theta_{ij}$, $C_{ij} = \cos\theta_{ij}$ represent the sines
   \end{array}
 \end{equation}
 where $\Delta m^{2}_{ij}$ is the squared mass difference between the
-two mass eigenstates $|m^{2}_{i} - m^{2}_{j}|$, while $E$ is the
+two mass eigenstates $m^{2}_{i} - m^{2}_{j}$, while $E$ is the
 average energy of the mass eigenstates.
 
 There would be not oscillation ($P_{\alpha \rightarrow \beta} = 0$) if neutrinos are all massless or all masses are the same ($\Delta m^{2} = 0$) or not mixing ($\theta = 0$); \textit{i.e.} if there are neutrino oscillations at least one neutrino must have mass and they must be mixed.
@@ -144,56 +146,47 @@ Neutrino oscillations have been observed not only in solar and atmosphere neutri
 \end{figure}
 
 
-\section{Neutrino Mass Terms}
+\section{Neutrino mass terms}
 \label{sec:nema}
 The observation of neutrino oscillations makes the introduction of
 neutrino mass terms into the \emph{Standard Model} necessary.
-\subsection{Dirac neutrinos}
+\subsection{Dirac mass term}
 \label{sec:dirac}
-Neutrino mass terms can be introduced within the Dirac formalism. For fermionic free field $\psi$, the Dirac equation can be deduced from the Lagrangian density
-\begin{equation}
-  \label{eq:deq}
-  \mathcal{L} = \bar{\psi} (i\gamma^{\mu}\partial_{\mu}-m) \psi,
-\end{equation}
-where $\mu = 1, 2, 3, 4$, $\gamma^{\mu}$ are the Dirac matrices, and $m$ is the rest mass of the fermion related to the field $\psi$. The first term corresponds to the kinetic energy and the second is the Dirac mass term,
-\begin{equation}
-  \label{eq:dm}
-  \mathcal{L}_D=m_{D}\bar{\psi}\psi,
-\end{equation}
-where the subscript $_{D}$ is introduced to indicate the Dirac property explicitly. Since an insertion of $\gamma^{5}$ yields
-\begin{equation}
-  \label{eq:2psi}
-  \bar{\psi}\psi =  \bar{\psi}    
-\left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right)
-  \left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right) \psi =
-  \bar{\psi}_{L}\psi_{R}+\bar{\psi}_{R}\psi_{L},
-\end{equation}
-a right-handed partner of the left-handed neutrino must be introduced
-in order to prevent the above term to vanish.
-
-The most straightforward approach to motivate the above mass term is to follow the same procedure as for the electron, \textit{i.e.} the lepton obtains mass by coupling to the Higgs field. The mass term of the electron can be expressed as
+The most straightforward approach to introduce the mass term is to follow the same procedure as for the electron, \textit{i.e.} the lepton obtains mass by coupling to the Higgs field. The mass term of the electron can be expressed as
 \begin{equation}
   \label{eq:dme}
-  m_{e}\bar{\psi_e}\psi_{e} = g_{e}\langle      
-h^{0}\rangle\bar{\psi_e}\psi_{e},
+  -\mathcal{L}_{e} \equiv m_{e}\bar{\psi_e}\psi_{e} = g_{e}\langle      
+  h^{0}\rangle \bar{\psi_e}\psi_{e},
 \end{equation}
-where $g_e$ is the coupling strength of electron field to Higgs field, $\langle h^{0}\rangle$ is the vacuum expectation value for the Higgs field. Similarly,
+with $m_{e} = g_{e} \langle h^{0}\rangle$, where $g_e$ is the coupling strength of electron field $\psi_{e}$ to Higgs field, $\langle h^{0}\rangle$ is the vacuum expectation value for the Higgs field. Similarly, the Dirac mass term of the neutrino can be expressed as
 \begin{equation}
   \label{eq:dmnu}
-  m_{\nu}\bar{\psi_\nu}\psi_{\nu} = g_{\nu}\langle  
-h^{0}\rangle\bar{\psi_\nu}\psi_{\nu},
+  -\mathcal{L}_{D} \equiv m_{D}\bar{\psi_\nu}\psi_{\nu} =         g_{\nu} \langle h^{0}\rangle\bar{\psi_\nu}\psi_{\nu},
 \end{equation}
-where $g_\nu$ is the coupling strength of neutrino field with Higgs field. Since neutrinos are much lighter than their leptonic partners, the coupling strength of the neutrino field to the Higgs field has to be much smaller than that of electron:
+with $m_{D} = g_{\nu} \langle h^{0}\rangle$, where $g_\nu$ is the coupling strength of neutrino field $\psi_\nu$ to Higgs field. Since neutrinos are much lighter than their leptonic partners, the coupling strength of the neutrino field to the Higgs field has to be much smaller than that of electron:
 \begin{equation}
   \label{eq:gg}
   g_{\nu} \ll g_{e}.
 \end{equation}
-After introducing the Dirac mass term the question arises why neutrinos couple to the Higgs field so weakly compared to their leptonic partners.
+After introducing the Dirac mass term the question arises why
+neutrinos couple to the Higgs field so weakly compared to their
+leptonic partners. And since an insertion of the Dirac matrix $\gamma^{5}$ yields
+\begin{equation}
+  \label{eq:2psi}
+  \bar{\psi}\psi = \bar{\psi}    
+  \left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right)
+  \left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right) \psi =
+  \bar{\psi}_{L}\psi_{R}+\bar{\psi}_{R}\psi_{L},
+\end{equation}
+a right-handed partner of the left-handed neutrino and a left-handed partner of the right-handed anti-neutrino must be introduced in order to prevent $m_{D}\bar{\psi_\nu}\psi_{\nu}$ to vanish.
 
-\subsection{Majorana neutrinos}
+\subsection{Majorana mass term}
 \label{sec:major}
+Once the right-handed neutrino field $\nu_{R}$ is included, the Majorana mass terms can be constructed out of $\nu_{R}$
 Theoretically, $\bar{\psi}^{c}\psi^{c}, \bar{\psi}\psi^{c}$ and $\bar{\psi}^{c}\psi$ are also possible mass terms, where $\psi^{c}$ is the charge conjugate of $\psi$.  $\bar{\psi}^{c}\psi^{c}$ is equivalent to $\bar{\psi}\psi$.  $\bar{\psi}\psi^{c}$ and $\bar{\psi}^{c}\psi$ cannot be mass terms for electrons or quarks because they destroy or create two particles of equal electric charge. However, they can be used as mass terms for neutrinos, because neutrinos do not have electric charge. These mass terms destroy or create two particles of the same lepton number, hence violate lepton number conservation.
 
+\subsection{Generic mass terms}
+\label{sec:genma}
 Abandoning lepton number conservation a generetic expression
 of the mass term of one generation of neutrino is
 \begin{equation}
