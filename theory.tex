@@ -155,15 +155,15 @@ neutrino mass terms into the \emph{Standard Model} necessary.
 The most straightforward approach to introduce the mass term is to follow the same procedure as for the electron, \textit{i.e.} the lepton obtains mass by coupling to the Higgs field. The mass term of the electron can be expressed as
 \begin{equation}
   \label{eq:dme}
-  -\mathcal{L}_{e} \equiv m_{e}\bar{\psi_e}\psi_{e} = g_{e}\langle      
-  h^{0}\rangle \bar{\psi_e}\psi_{e},
+  -\mathcal{L}_{e} \equiv m_{e}\bar{e}e = g_{e}\langle      
+  h^{0}\rangle \bar{e}e,
 \end{equation}
-with $m_{e} = g_{e} \langle h^{0}\rangle$, where $g_e$ is the coupling strength of electron field $\psi_{e}$ to Higgs field, $\langle h^{0}\rangle$ is the vacuum expectation value for the Higgs field. Similarly, the Dirac mass term of the neutrino can be expressed as
+with $m_{e} = g_{e} \langle h^{0}\rangle$, where $g_e$ is the coupling strength of electron field $e$ to Higgs field, and $\langle h^{0} \rangle$ is the vacuum expectation value for the Higgs field. Similarly, the Dirac mass term of the neutrino can be expressed as
 \begin{equation}
   \label{eq:dmnu}
-  -\mathcal{L}_{D} \equiv m_{D}\bar{\psi_\nu}\psi_{\nu} =         g_{\nu} \langle h^{0}\rangle\bar{\psi_\nu}\psi_{\nu},
+  -\mathcal{L}_{\nu}^{D} \equiv m_{D}\bar{\nu}\nu = g_{\nu} \langle       h^{0} \rangle \bar{\nu}\nu,
 \end{equation}
-with $m_{D} = g_{\nu} \langle h^{0}\rangle$, where $g_\nu$ is the coupling strength of neutrino field $\psi_\nu$ to Higgs field. Since neutrinos are much lighter than their leptonic partners, the coupling strength of the neutrino field to the Higgs field has to be much smaller than that of electron:
+with $m_{D} = g_{\nu} \langle h^{0}\rangle$, where $g_\nu$ is the coupling strength of neutrino field $\nu$ to Higgs field. Since neutrinos are much lighter than their leptonic partners, the coupling strength of the neutrino field to the Higgs field has to be much smaller than that of electron:
 \begin{equation}
   \label{eq:gg}
   g_{\nu} \ll g_{e}.
@@ -173,35 +173,46 @@ neutrinos couple to the Higgs field so weakly compared to their
 leptonic partners. And since an insertion of the Dirac matrix $\gamma^{5}$ yields
 \begin{equation}
   \label{eq:2psi}
-  \bar{\psi}\psi = \bar{\psi}    
+  \bar{\nu}\nu = \bar{\nu}    
   \left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right)
-  \left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right) \psi =
-  \bar{\psi}_{L}\psi_{R}+\bar{\psi}_{R}\psi_{L},
+  \left(\frac{1+\gamma^5}{2}+\frac{1-\gamma^5}{2}\right) \nu =
+  \overline{\nu_{L}}\nu_{R}+\overline{\nu_{R}}\nu_{L},
 \end{equation}
-a right-handed partner of the left-handed neutrino and a left-handed partner of the right-handed anti-neutrino must be introduced in order to prevent $m_{D}\bar{\psi_\nu}\psi_{\nu}$ to vanish.
+a right-handed partner of the left-handed neutrino and a left-handed partner of the right-handed anti-neutrino must be introduced in order to prevent $m_{D}\bar{\nu}\nu$ to vanish.
 
-\subsection{Majorana mass term}
+\subsection{Majorana mass terms}
 \label{sec:major}
-Once the right-handed neutrino field $\nu_{R}$ is included, the Majorana mass terms can be constructed out of $\nu_{R}$
-Theoretically, $\bar{\psi}^{c}\psi^{c}, \bar{\psi}\psi^{c}$ and $\bar{\psi}^{c}\psi$ are also possible mass terms, where $\psi^{c}$ is the charge conjugate of $\psi$.  $\bar{\psi}^{c}\psi^{c}$ is equivalent to $\bar{\psi}\psi$.  $\bar{\psi}\psi^{c}$ and $\bar{\psi}^{c}\psi$ cannot be mass terms for electrons or quarks because they destroy or create two particles of equal electric charge. However, they can be used as mass terms for neutrinos, because neutrinos do not have electric charge. These mass terms destroy or create two particles of the same lepton number, hence violate lepton number conservation.
+Theoretically, $\overline{\psi^{c}}\psi^{c}, \bar{\psi}\psi^{c}$ and $\overline{\psi^{c}}\psi$ are also possible mass terms, where $\psi^{c}$ is the charge conjugate of $\psi$. $\overline{\psi^{c}} \psi^{c}$ is equivalent to $\bar{\psi}\psi$. $\bar{\psi}\psi^{c}$ and $\overline{\psi^{c}}\psi$ cannot be mass terms for electrons or quarks because they destroy or create two particles of equal electric charge. However, they can be used as mass terms for neutrinos, because neutrinos do not have electric charge. These mass terms destroy or create two particles of the same lepton number, hence violate lepton number conservation and are called Majorana mass terms:
+\begin{equation}
+  \label{eq:mmt}
+  -\mathcal{L}_{\nu}^{M} \equiv \frac{1}{2}m_{L} \left(
+    \overline{\nu_{L}}(\nu_{L})^{c} +                  \overline{(\nu_{L})^{c}}\nu_{L}
+  \right) + \frac{1}{2}m_{R} \left(
+    \overline{(\nu_{R})^{c}}\nu_{R} +                       \overline{\nu_{R}}(\nu_{R})^{c} \right),
+\end{equation}
+where $m_{L}$ and $m_{R}$ are two independent constants. 
 
 \subsection{Generic mass terms}
 \label{sec:genma}
-Abandoning lepton number conservation a generetic expression
-of the mass term of one generation of neutrino is
+Nature could reflect a combination of the Dirac and Majorana mass terms:
 \begin{equation}
   \label{eq:dmm}
-  \mathcal{L}_{D+M} = m_{D}(\bar{\psi}_{L}\psi_{R} +  
-\bar{\psi}^{c}_{L}\psi^{c}_{R}) +
-  m_{L}\bar{\psi}_{L}\psi^{c}_{R} +   m_{R}\bar{\psi}^{c}_{L}\psi_{R}
-+ h.c.,
+  \begin{array}{ccl}
+    -2\mathcal{L}_{\nu}^{D+M} &\equiv& -2\mathcal{L}_{\nu}^{D}     -2\mathcal{L}_{\nu}^{M}\\ &=& \displaystyle{( 
+      m_{D}\overline{\nu}\nu +
+      m_{D}\overline{\nu^{c}}\nu^{c} )}\\ &+& \displaystyle{(                               m_{L}\overline{\nu_{L}}(\nu_{L})^{c} +                                                     m_{L}\overline{(\nu_{L})^{c}}\nu_{L} +                                           m_{R}\overline{(\nu_{R})^{c}}\nu_{R} +              m_{R}\overline{\nu_{R}}(\nu_{R})^{c})}\\ &=&\displaystyle{
+      m_{D}\overline{\nu_{L}}\nu_{R} +
+      m_{D}\overline{(\nu_{R})^{c}}(\nu_{L})^{c} +
+      m_{L}\overline{\nu_{L}}(\nu_{L})^{c} + 
+      m_{R}\overline{(\nu_{R})^{c}}\nu_{R} + h.c.},
+  \end{array}
 \end{equation}
-which can be reframed as
+where $h.c.$ stands for Hermitian conjugate. Introducing the notation $\nu^{c}_{L,R} \equiv (\nu^{c})_{L,R} = (\nu_{R,L})^{c}$ eq.~\ref{eq:dmm} can be reframed as
 \begin{equation}
   \label{eq:mm}
-  \mathcal{L}_{D+M} = (\bar{\psi}_{L},\bar{\psi}^{c}_{L})
+  -2\mathcal{L}_{\nu}^{D+M} =       \left(\overline{\nu_{L}},\overline{\nu^{c}_{L}}\right)
   \left(\begin{array}{cc}m_L & m_D \\ m_D & m_R\end{array}\right)
-  \left(\begin{array}{c}\psi^{c}_R \\ \psi_R\end{array}\right) + h.c.
+  \left(\begin{array}{c}\nu^{c}_R \\ \nu_R\end{array}\right) + h.c.
 \end{equation}
 By choosing a orthogonal matrix $\mathcal{U}$ ($\mathcal{U}^{T}
 \mathcal{U} = 1$) so that
@@ -212,217 +223,202 @@ m_R\end{array}\right)\mathcal{U} =
   \left(\begin{array}{cc}\epsilon_{1}m_1 & 0 \\ 0 &            
 \epsilon_{2}m_2\end{array}\right),
 \end{equation}
-where $m_{1}, m_{2} > 0$, $\epsilon_{1,2}$ indicate the signs of
-$m_{1}, m_{2}$ and hence equal to $\pm 1$, and defining
+where $m_{1}, m_{2} > 0$, $\epsilon_{1,2} = \pm 1$, and defining
 \begin{equation}
   \label{eq:mvet}
-  (\psi_{1L}, \psi_{2L}) = 
-  (\bar{\psi}_{L}, \bar{\psi}^{c}_{L})~ \mathcal{U},
-  \left(\begin{array}{c} \psi^{c}_{1R} \\            
-\psi^{c}_{2R}\end{array}\right) = \mathcal{U}^{T}
-  \left(\begin{array}{c} \psi^{c}_{R} \\ \psi_{R} \end{array}\right),
+  (\nu_{1L}, \nu_{2L}) = \left( \overline{\nu}_{L},             \overline{\nu^{c}_{L}} \right) \mathcal{U},
+  \left(\begin{array}{c} \nu^{c}_{1R} \\            
+      \nu^{c}_{2R}\end{array}\right) = \mathcal{U}^{T}
+  \left(\begin{array}{c} \nu^{c}_{R} \\ \nu_{R} \end{array}\right),
 \end{equation}
 eq.~\ref{eq:mm} can be rewritten as
 \begin{equation}
   \label{eq:m12}
-  \mathcal{L}_{D+M} = m_{1}\bar{\psi}_{1L}\psi^{c}_{1R} +  
-m_{1}\bar{\psi}^{c}_{1R}\psi_{1L} +
-  m_{2}\bar{\psi}_{2L}\psi^{c}_{2R} +  
-m_{2}\bar{\psi}^{c}_{2R}\psi_{2L}.
+  \mathcal{L}_{\nu}^{D+M} = m_{1}\overline{\nu_{1L}}\nu^{c}_{1R} +  
+  m_{1}\overline{\nu^{c}_{1R}}\nu_{1L} +
+  m_{2}\overline{\nu_{2L}}\nu^{c}_{2R} +  
+  m_{2}\overline{\nu^{c}_{2R}}\nu_{2L}.
 \end{equation}
-Define
+With
 \begin{equation}
   \label{eq:mafi}
-  \phi_{1} = \psi_{1L} + \epsilon_{1}\psi^{c}_{1R}, 
+  \phi_{1} = \nu_{1L} + \epsilon_{1}\nu^{c}_{1R}
   \mbox{\ \ \ and \ \ \ }
-  \phi_{2} = \psi_{2L} + \epsilon_{2}\psi^{c}_{2R}.
+  \phi_{2} = \nu_{2L} + \epsilon_{2}\nu^{c}_{2R},
 \end{equation}
-Eq.~\ref{eq:mm} can be rewritten as
+eq.~\ref{eq:mm} reduces to
 \begin{equation}
   \label{eq:mv}
-  \mathcal{L}_{D+M} = m_{1}\bar{\phi}_{1}\phi_{1} +
-m_{2}\bar{\phi}_{2}\phi_{2}
+  -2\mathcal{L}_{\nu}^{D+M} = m_{1}\bar{\phi}_{1}\phi_{1} +
+  m_{2}\bar{\phi}_{2}\phi_{2}
 \end{equation}
-It is easy to find out that
+Obviously,
 \begin{equation}
   \label{eq:mach}
-  \phi^{c}_{k} = (\psi_{kL})^{c} + \epsilon_{k}(\psi^{c}_{kR})^{c} =
+  \phi^{c}_{k} = (\nu_{kL})^{c} + \epsilon_{k}(\nu^{c}_{kR})^{c} =
 \epsilon_{k}\phi_{k}, ~~~ (k=1,2)
 \end{equation}
-\textit{i.e.} $\psi$ is its own anti-particle, and hence of Majorana
-type.
+\textit{i.e.} $\phi$ is its own anti-particle, and hence of Majorana type.
 
-In case that $m_{R}$ is very heavy, $m_{L} = 0$ and $m_{D} \approx
-\mathcal{O}(m_{e})$, we have
+If $m_{R} \ll m_{D}, m_{L}=0$ and $m_{D} \approx \mathcal{O}(m_{e})$,
 \begin{equation}
   \label{eq:seesaw}
-  m_{1} = \frac{m^{2}_{D}}{m_{R}}\ll m_{D},  \mbox{\ \ \ and \ \ \ }  
-m_{2} = m_{R}(1+\frac{m^{2}_{D}}{m^{2}_{R}}) \approx m_{R} \gg m_{D}.
+  m_{1} = \frac{m^{2}_{D}}{m_{R}}\ll m_{D}  \mbox{\ \ \ and \ \ \ }  
+  m_{2} = m_{R}(1+\frac{m^{2}_{D}}{m^{2}_{R}}) \approx m_{R} \gg m_{D}.
 \end{equation}
-\textit{i.e.} if there exists a very heavy Majorana neutrino $\phi_2$,
-the other Majorana neutrino would be much lighter than $m_e$. This is
-so-called seesaw machenism.
+Thus, if there exists a very heavy Majorana neutrino $\phi_2$, the other Majorana neutrino would be much lighter than $m_e$. This is the so-called seesaw mechanism.
 
-To sum up, Majorana mass terms should be taken into account in general
-as well as Dirac mass terms. For fermions carrying charge or similar
-quantum numbers the former mass terms are forbidden, while this is not
-the case for neutrinos. Majorana neutrinos $\phi_{1}, \phi_{2}$ can be
-constructed out of Dirac fields. By using seesaw mechanism the tiny
-neutrino mass can be explained naturally.
+In summary, both Dirac and Majorana mass terms should be taken into account. For fermions carrying charge or similar quantum numbers the Majorana mass terms are forbidden. This is not the case for neutrinos. Majorana neutrinos $\phi_{1}, \phi_{2}$ can be constructed out of Dirac fields. Using the seesaw mechanism the tiny neutrino masses can be explained naturally.
 
-\section{Double beta decay}
-\label{sec:0n2b}
-If neutrinos are of Majorana type the two neutrinos from double beta
-decay ($2\nu\beta\beta$) as shown in eq.~\ref{eq:2nu2b} may annihilate
-with each other. This is the so-called neutrinoless double beta decay
-($0\nu\beta\beta$) as shown in eq.~\ref{eq:0nu2b}:
-\begin{eqnarray}
-  2\nu\beta\beta: &(Z,A)& \rightarrow (Z+2,A) + 2e^{-} +
-2\bar{\nu}_{e}, \\\label{eq:2nu2b}
-  0\nu\beta\beta: &(Z,A)& \rightarrow (Z+2,A) + 2e^{-},
-\label{eq:0nu2b}
-\end{eqnarray}
-where $Z$ is the charge of the nucleus and $A$ is the atomic number.
-The Feynman diagrams of both processes are shown in
-Fig.~\ref{fig:2bdecay}.
-\begin{figure}[tbhp]
-  \centering
-  \includegraphics[width=0.45\textwidth]{FD2nu2b.eps} \hfil
-  \includegraphics[width=0.45\textwidth]{FD0nu2b.eps}  
-  \caption{Feynman diagrams of double beta decay with and without two neutrinos being emitted.}
-  \label{fig:2bdecay}
-\end{figure}
-
-\subsection{Double beta decay with neutrinos}
-\label{sec:2n2b}
-The study of double beta decay started in 1935~\cite{Goe35} when Maria
-Goeppert-Mayer applied Fermi's beta decay theory to calculate the
-process as shown in eq.~\ref{eq:2nu2b} as a second order effect. According to Fermi's golden rule the rate of double beta decay is 
-\begin{equation}
-  \label{eq:2nurate}
-  1/T^{2\nu}_{1/2} = G_{2\nu}(Q,Z) |\mathcal{M}_{2\nu}|^{2},
-\end{equation}
-where the phase space factor $G_{2\nu}(Q,Z)$ depends on the $Q$-value and the nuclear charge $Z$, the nuclear matrix element $\mathcal{M}_{2\nu}$ describes the hadronic part of the decay. Maria's motivation had nothing to do with neutrinos. She was concerned with the stability of various even-even nuclei over geological time. These nuclei, consisting of even numbers of protons and neutrons, cannot decay into their nearest neighbor even-odd nuclei due to energy conservation. They can however decay into their next nearest neighbors, as shown in Fig.~\ref{fig:ee2oo}. More than 60 naturally occurring isotopes should be able to undergo double-beta decay. Only ten of them were observed to actually do it. They are $^{48}$Ca, $^{76}$Ge, $^{82}$Se, $^{96}$Zr, $^{100}$Mo, $^{116}$Cd, $^{128}$Te, $^{130}$Te, $^{150}$Nd, and $^{238}$U. A comprehensive list of the decay modes and the corresponding lifetime of each isotope can be found in the latest \emph{Review of Particle Physics}~\cite{PDG07}.
-\begin{figure}[tbhp]
-  \centering
-  \includegraphics[width=0.6\textwidth]{Espec0nu2b.eps}  
-  \caption{Energy scheme for the double beta decay from parent nucleus     $^{A}X$ to daughter nucleus $^{A}Y$. The single beta decay to the     intermediate isotope $^{A}T$ is forbidden due to the energy     conservation.}
-  \label{fig:ee2oo}
-\end{figure}
-
-\subsection{Neutrinoless double beta decay}
-\label{sec:0n2brate}
-The study of neutrinoless double beta decay started several years
-later~\cite{Rac37,Fur37} when W. H. Furry showed that Majorana's
-symmetrical theory of neutrino and anti-neutrino could give rise to a
-neutrinoless mode of double beta decay. Prior to the discovery of
-parity non-conservation, the lifetime of neutrinoless double beta
-decay was calculated incorrectly. The understanding of double beta
-decay changed profoundly when parity non-conservation was discovered
-in 1957 and the two-component theory of the neutrino was developed.
-According to the two-component theory the probability for neutrinoless
-double beta decay via Furry's mechanism is zero because the neutrino
-emitted in the first beta decay is in the wrong helicity state to
-stimulate a second beta decay process. The observation of neutrino
-oscillations changed the picture once again. The rate of neutrinoless
-double beta decay can be expressed as
-\begin{equation}
-  \label{eq:0nura}
-  1/T^{0\nu}_{1/2} = \sum_{\text{spins}} \int |Z_{0\nu}|^{2}
-\delta(E_{e1} + E_{e2} + Q_{\beta\beta})
-\frac{d^{3}p_{e1}}{(2\pi)^{3}} \frac{d^{3}p_{e2}}{(2\pi)^{3}},
-\end{equation}
-where $Q_{\beta\beta}$ is the Q-value of the decay, $E_{e1}, E_{e2},
-p_{e1}, p_{e2}$ are the energies and momenta of the outgoing electrons
-and $Z_{0\nu}$ is the transition amplitude. $Z_{0\nu}$ contains both
-leptonic and hadronic parts. Taking into account the neutrino mixing
-the leptonic part is of the form
-\begin{equation}
-  \label{eq:leppar}
-  \contraction{\sum_{k}\bar{e}(x)\gamma_{\mu}(1-\gamma_{5})U_{ek}}
-  {\phi}{{}_{k}(x)\bar{e}(y)\gamma_{\nu}(1-\gamma_{5})U_{ek}}{\phi}
-  \sum_{k}\bar{e}(x)\gamma_{\mu}(1-\gamma_{5})U_{ek}\phi_{k}(x)
-  \bar{e}(y)\gamma_{\nu}(1-\gamma_{5})U_{ek}\phi_{k}(y).
-\end{equation}
-Assuming only the exchange of three light neutrinos, the leptonic part
-is proportional to 
-\begin{equation}
-  \label{eq:effmass}
-  \langle m_{\nu_{e}} \rangle \equiv \left| \sum_{k}m_{k}U^{2}_{ek}
-\right| = \left| m_{1}|U_{e1}|^{2} +
-m_{2}|U_{e2}|^{2}e^{i(\alpha_{2}-\alpha_{1})} +
-m_{3}|U_{e3}|^{2}e^{-i(\alpha_{1}+2\delta)} \right|,
-\end{equation}
-where $\langle m_{\nu_{e}} \rangle$ is called the effective Majorana
-neutrino mass. The rate of neutrinoless double beta decay can be
-expressed in term of the effective Majorana neutrino mass as
-\begin{equation}
-  \label{eq:0nurate}
-  1/T^{0\nu}_{1/2} = G_{0\nu}(Q,Z) |\mathcal{M}_{0\nu}|^{2} \langle
-m_{\nu_{e}} \rangle^{2},
-\end{equation}
-where $G_{0\nu}(Q,Z)$ is the phase space factor, $\mathcal{M}_{0\nu}$
-denotes the nuclear matrix elements which describe the hadronic part
-of the decay. 
-
-If the neutrino squared-mass spectrum is of the normal order, as shown
-in the left plot of Fig.~\ref{fig:hie}, the effective Majorana
-neutrino mass could be invisibly small. Because the terms in
-eq.~\ref{eq:effmass} can cancel each other out if the CP-violation
-phases $\alpha_{1}, \alpha_{2}$ and $\delta$ take some special values.
-Fig.~\ref{fig:effmvmm} taken from Ref.~\cite{Mer06} shows the
-effective Majorana neutrino mass as a function of the lightest
-neutrino mass. The mixing angle $\theta_{13}$ is assumed to be zero.
-The light band corresponds to the inverted mass hierarchy, the dark
-band to the normal mass hierarchy. An experiment sensitive to $\langle
-m_{\nu_{e}} \rangle \sim 10$meV has an excellent chance to seeing a
-signal in case of inverted mass hierarchy. And if the observed
-$\langle m_{\nu_{e}} \rangle$ is far below $10$meV the inverted mass
-hierarchy can be ruled out.
-\begin{figure}[tbhp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{mnueVm.eps}  
-  \caption{The effective Majorana neutrino mass as a function of the
-lightest neutrino mass, m. The mixing angle $\theta_{13}$ is assumed
-to be zero. The light band corresponds to the inverted mass hierarchy,
-the dark band to the normal mass hierarchy. the inner/outer bands
-correspond to calculations without/with the $3\sigma$-uncertainties on
-the oscillation parameters. }
-  \label{fig:effmvmm}
-\end{figure}
-
-\subsection{Double beta decay experiments}
-\label{sec:genremark}
-Q-value, nuclear matrix, natural abundance, background, efficiency ...
-
-comparison between different double beta decay experiments.
-
-\subsection{Neutrinoless double beta decay of $^{76}$Ge}
-\label{sec:ge76}
-
-advantage of $^{76}$Ge.
-
-IGEX and Heidelberg-Moscow.
-
-\section{Other aspects of neutrino physics}
+\section{Neutrino mass measurements}
 \label{sec:others}
 
-\subsection{Seesaw mechanism}
+\subsection{Cosmological observations}
 \label{sec:seesaw}
 the problems of seesaw mechanism
 
-\subsection{Neutrino pair production}
+\subsection{Single beta decay}
 \label{sec:pair}
 the cross sections are different if neutrinos are of different type.
 
-\subsection{Neutrino magnetic moment}
+\subsection{Neutrinoless double beda decay}
 \label{sec:mag}
 if neutrino has magnetic moment, it cannot be of Majorana type.
 
-\subsection{Neutrinos in astrophysics}
-\label{sec:astro}
-mass and number of types of neutrinos
-
+%\section{Double beta decay}
+%\label{sec:0n2b}
+%If neutrinos are of Majorana type the two neutrinos from double beta
+%decay ($2\nu\beta\beta$) as shown in eq.~\ref{eq:2nu2b} may annihilate
+%with each other. This is the so-called neutrinoless double beta decay
+%($0\nu\beta\beta$) as shown in eq.~\ref{eq:0nu2b}:
+%\begin{eqnarray}
+%  2\nu\beta\beta: &(Z,A)& \rightarrow (Z+2,A) + 2e^{-} +
+%2\overline{\nu}_{e}, \\\label{eq:2nu2b}
+%  0\nu\beta\beta: &(Z,A)& \rightarrow (Z+2,A) + 2e^{-},
+%\label{eq:0nu2b}
+%\end{eqnarray}
+%where $Z$ is the charge of the nucleus and $A$ is the atomic number.
+%The Feynman diagrams of both processes are shown in
+%Fig.~\ref{fig:2bdecay}.
+%\begin{figure}[tbhp]
+%  \centering
+%  \includegraphics[width=0.45\textwidth]{FD2nu2b.eps} \hfil
+%  \includegraphics[width=0.45\textwidth]{FD0nu2b.eps}  
+%  \caption{Feynman diagrams of double beta decay with and without two %neutrinos being emitted.}
+%  \label{fig:2bdecay}
+%\end{figure}
+%
+%\subsection{Double beta decay with neutrinos}
+%\label{sec:2n2b}
+%The study of double beta decay started in 1935~\cite{Goe35} when Maria
+%Goeppert-Mayer applied Fermi's beta decay theory to calculate the
+%process as shown in eq.~\ref{eq:2nu2b} as a second order effect. %According to Fermi's golden rule the rate of double beta decay is 
+%\begin{equation}
+%  \label{eq:2nurate}
+%  1/T^{2\nu}_{1/2} = G_{2\nu}(Q,Z) |\mathcal{M}_{2\nu}|^{2},
+%\end{equation}
+%where the phase space factor $G_{2\nu}(Q,Z)$ depends on the $Q$-value %and the nuclear charge $Z$, the nuclear matrix element %$\mathcal{M}_{2\nu}$ describes the hadronic part of the decay. Maria's %motivation had nothing to do with neutrinos. She was concerned with %the stability of various even-even nuclei over geological time. These %nuclei, consisting of even numbers of protons and neutrons, cannot %decay into their nearest neighbor even-odd nuclei due to energy %conservation. They can however decay into their next nearest %neighbors, as shown in Fig.~\ref{fig:ee2oo}. More than 60 naturally %occurring isotopes should be able to undergo double-beta decay. Only %ten of them were observed to actually do it. They are $^{48}$Ca, %$^{76}$Ge, $^{82}$Se, $^{96}$Zr, $^{100}$Mo, $^{116}$Cd, $^{128}$Te, %$^{130}$Te, $^{150}$Nd, and $^{238}$U. A comprehensive list of the %decay modes and the corresponding lifetime of each isotope can be %found in the latest \emph{Review of Particle Physics}~\cite{PDG07}.
+%\begin{figure}[tbhp]
+%  \centering
+%  \includegraphics[width=0.6\textwidth]{Espec0nu2b.eps}  
+%  \caption{Energy scheme for the double beta decay from parent nucleus     %$^{A}X$ to daughter nucleus $^{A}Y$. The single beta decay to the     %intermediate isotope $^{A}T$ is forbidden due to the energy     %conservation.}
+%  \label{fig:ee2oo}
+%\end{figure}
+%
+%\subsection{Neutrinoless double beta decay}
+%\label{sec:0n2brate}
+%The study of neutrinoless double beta decay started several years
+%later~\cite{Rac37,Fur37} when W. H. Furry showed that Majorana's
+%symmetrical theory of neutrino and anti-neutrino could give rise to a
+%neutrinoless mode of double beta decay. Prior to the discovery of
+%parity non-conservation, the lifetime of neutrinoless double beta
+%decay was calculated incorrectly. The understanding of double beta
+%decay changed profoundly when parity non-conservation was discovered
+%in 1957 and the two-component theory of the neutrino was developed.
+%According to the two-component theory the probability for neutrinoless
+%double beta decay via Furry's mechanism is zero because the neutrino
+%emitted in the first beta decay is in the wrong helicity state to
+%stimulate a second beta decay process. The observation of neutrino
+%oscillations changed the picture once again. The rate of neutrinoless
+%double beta decay can be expressed as
+%\begin{equation}
+%  \label{eq:0nura}
+%  1/T^{0\nu}_{1/2} = \sum_{\text{spins}} \int |Z_{0\nu}|^{2}
+%\delta(E_{e1} + E_{e2} + Q_{\beta\beta})
+%\frac{d^{3}p_{e1}}{(2\pi)^{3}} \frac{d^{3}p_{e2}}{(2\pi)^{3}},
+%\end{equation}
+%where $Q_{\beta\beta}$ is the Q-value of the decay, $E_{e1}, E_{e2},
+%p_{e1}, p_{e2}$ are the energies and momenta of the outgoing electrons
+%and $Z_{0\nu}$ is the transition amplitude. $Z_{0\nu}$ contains both
+%leptonic and hadronic parts. Taking into account the neutrino mixing
+%the leptonic part is of the form
+%\begin{equation}
+%  \label{eq:leppar}
+%  \contraction{\sum_{k}\overline{e}(x)\gamma_{\mu}(1-\gamma_{5})U_{ek}}
+%  {\phi}{{}_{k}(x)\overline{e}(y)\gamma_{\nu}(1-\gamma_{5})U_{ek}}{\phi}
+%  \sum_{k}\overline{e}(x)\gamma_{\mu}(1-\gamma_{5})U_{ek}\phi_{k}(x)
+%  \overline{e}(y)\gamma_{\nu}(1-\gamma_{5})U_{ek}\phi_{k}(y).
+%\end{equation}
+%Assuming only the exchange of three light neutrinos, the leptonic part
+%is proportional to 
+%\begin{equation}
+%  \label{eq:effmass}
+%  \langle m_{\nu_{e}} \rangle \equiv \left| \sum_{k}m_{k}U^{2}_{ek}
+%\right| = \left| m_{1}|U_{e1}|^{2} +
+%m_{2}|U_{e2}|^{2}e^{i(\alpha_{2}-\alpha_{1})} +
+%m_{3}|U_{e3}|^{2}e^{-i(\alpha_{1}+2\delta)} \right|,
+%\end{equation}
+%where $\langle m_{\nu_{e}} \rangle$ is called the effective Majorana
+%neutrino mass. The rate of neutrinoless double beta decay can be
+%expressed in term of the effective Majorana neutrino mass as
+%\begin{equation}
+%  \label{eq:0nurate}
+%  1/T^{0\nu}_{1/2} = G_{0\nu}(Q,Z) |\mathcal{M}_{0\nu}|^{2} \langle
+%m_{\nu_{e}} \rangle^{2},
+%\end{equation}
+%where $G_{0\nu}(Q,Z)$ is the phase space factor, $\mathcal{M}_{0\nu}$
+%denotes the nuclear matrix elements which describe the hadronic part
+%of the decay. 
+%
+%If the neutrino squared-mass spectrum is of the normal order, as shown
+%in the left plot of Fig.~\ref{fig:hie}, the effective Majorana
+%neutrino mass could be invisibly small. Because the terms in
+%eq.~\ref{eq:effmass} can cancel each other out if the CP-violation
+%phases $\alpha_{1}, \alpha_{2}$ and $\delta$ take some special values.
+%Fig.~\ref{fig:effmvmm} taken from Ref.~\cite{Mer06} shows the
+%effective Majorana neutrino mass as a function of the lightest
+%neutrino mass. The mixing angle $\theta_{13}$ is assumed to be zero.
+%The light band corresponds to the inverted mass hierarchy, the dark
+%band to the normal mass hierarchy. An experiment sensitive to $\langle
+%m_{\nu_{e}} \rangle \sim 10$meV has an excellent chance to seeing a
+%signal in case of inverted mass hierarchy. And if the observed
+%$\langle m_{\nu_{e}} \rangle$ is far below $10$meV the inverted mass
+%hierarchy can be ruled out.
+%\begin{figure}[tbhp]
+%  \centering
+%  \includegraphics[width=0.8\textwidth]{mnueVm.eps}  
+%  \caption{The effective Majorana neutrino mass as a function of the
+%lightest neutrino mass, m. The mixing angle $\theta_{13}$ is assumed
+%to be zero. The light band corresponds to the inverted mass hierarchy,
+%the dark band to the normal mass hierarchy. the inner/outer bands
+%correspond to calculations without/with the $3\sigma$-uncertainties on
+%the oscillation parameters. }
+%  \label{fig:effmvmm}
+%\end{figure}
+%
+%\subsection{Double beta decay experiments}
+%\label{sec:genremark}
+%Q-value, nuclear matrix, natural abundance, background, efficiency ...
+%
+%comparison between different double beta decay experiments.
+%
+%\subsection{Neutrinoless double beta decay of $^{76}$Ge}
+%\label{sec:ge76}
+%
+%advantage of $^{76}$Ge.
+%
+%IGEX and Heidelberg-Moscow.
+%
 
 
 %%% Local Variables:
