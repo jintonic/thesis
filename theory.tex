@@ -198,9 +198,9 @@ Nature could reflect a combination of the Dirac and Majorana mass terms:
 \begin{equation}
   \label{eq:dmm}
   \begin{array}{ccl}
-    -2\mathcal{L}_{\nu}^{D+M} &\equiv& -2\mathcal{L}_{\nu}^{D}     -2\mathcal{L}_{\nu}^{M}\\ &=& \displaystyle{( 
+    -2\mathcal{L}_{\nu}^{D+M} &\equiv& -2\mathcal{L}_{\nu}^{D}         -2\mathcal{L}_{\nu}^{M}\\ &=& \displaystyle{( 
       m_{D}\overline{\nu}\nu +
-      m_{D}\overline{\nu^{c}}\nu^{c} )}\\ &+& \displaystyle{(                               m_{L}\overline{\nu_{L}}(\nu_{L})^{c} +                                                     m_{L}\overline{(\nu_{L})^{c}}\nu_{L} +                                           m_{R}\overline{(\nu_{R})^{c}}\nu_{R} +              m_{R}\overline{\nu_{R}}(\nu_{R})^{c})}\\ &=&\displaystyle{
+      m_{D}\overline{\nu^{c}}\nu^{c} )}\\ &+& \displaystyle{(       m_{L}\overline{\nu_{L}}(\nu_{L})^{c} +                   m_{L}\overline{(\nu_{L})^{c}}\nu_{L} +             m_{R}\overline{(\nu_{R})^{c}}\nu_{R} +                                m_{R}\overline{\nu_{R}}(\nu_{R})^{c})}\\ &=&\displaystyle{
       m_{D}\overline{\nu_{L}}\nu_{R} +
       m_{D}\overline{(\nu_{R})^{c}}(\nu_{L})^{c} +
       m_{L}\overline{\nu_{L}}(\nu_{L})^{c} + 
@@ -226,7 +226,7 @@ m_R\end{array}\right)\mathcal{U} =
 where $m_{1}, m_{2} > 0$, $\epsilon_{1,2} = \pm 1$, and defining
 \begin{equation}
   \label{eq:mvet}
-  (\nu_{1L}, \nu_{2L}) = \left( \overline{\nu}_{L},             \overline{\nu^{c}_{L}} \right) \mathcal{U},
+  (\nu_{1L}, \nu_{2L}) = \left( \overline{\nu}_{L},                 \overline{\nu^{c}_{L}} \right) \mathcal{U},
   \left(\begin{array}{c} \nu^{c}_{1R} \\            
       \nu^{c}_{2R}\end{array}\right) = \mathcal{U}^{T}
   \left(\begin{array}{c} \nu^{c}_{R} \\ \nu_{R} \end{array}\right),
@@ -256,11 +256,11 @@ Obviously,
 \begin{equation}
   \label{eq:mach}
   \phi^{c}_{k} = (\nu_{kL})^{c} + \epsilon_{k}(\nu^{c}_{kR})^{c} =
-\epsilon_{k}\phi_{k}, ~~~ (k=1,2)
+  \epsilon_{k}\phi_{k}, ~~~ (k=1,2)
 \end{equation}
 \textit{i.e.} $\phi$ is its own anti-particle, and hence of Majorana type.
 
-If $m_{R} \ll m_{D}, m_{L}=0$ and $m_{D} \approx \mathcal{O}(m_{e})$,
+If $m_{R} \gg \mathcal{O}(m_{e}), m_{L}=0$ and $m_{D} \approx \mathcal{O}(m_{e})$,
 \begin{equation}
   \label{eq:seesaw}
   m_{1} = \frac{m^{2}_{D}}{m_{R}}\ll m_{D}  \mbox{\ \ \ and \ \ \ }  
@@ -270,21 +270,49 @@ Thus, if there exists a very heavy Majorana neutrino $\phi_2$, the other Majoran
 
 In summary, both Dirac and Majorana mass terms should be taken into account. For fermions carrying charge or similar quantum numbers the Majorana mass terms are forbidden. This is not the case for neutrinos. Majorana neutrinos $\phi_{1}, \phi_{2}$ can be constructed out of Dirac fields. Using the seesaw mechanism the tiny neutrino masses can be explained naturally.
 
-\section{Neutrino mass measurements}
+\section{Probing neutrino masses}
 \label{sec:others}
+The current neutrino oscillation experiments cannot address on two problems, the absolute mass scale and the mass spectrum hierarchy of neutrinos. Three major methods to probe the answers of the questions are 
+\begin{enumerate}
+\item cosmological observations, which are sensitive to the sum of neutrino masses $\Sigma$,
+\item single beta decay experiments, which detect the effective   electron neutrino mass $m_{\beta}$,
+\item neutrinoless double beta experiments, which detect the effective Majorana neutrino mass $m_{\beta\beta}$.
+\end{enumerate}
 
 \subsection{Cosmological observations}
 \label{sec:seesaw}
-the problems of seesaw mechanism
+According to the standard model of cosmology neutrinos could effect the evolution of universe mostly in three aspects. At first, the number of neutrino flavors $N_{\nu}$ effects the abundances of light elements in the early universe, which are reflected in the cosmic microwave background (CMB). Using the current CMB data, the value of $N_{\nu}$ is determined to be $1.8 \sim 3.3$~\cite{Oli02}. Secondly, if our universe is flat the energy density of the universe $\Omega = \Omega_{\Lambda} + \Omega_{cd} + \Omega_{b} + \Omega_{\nu} = 1$, where $\Omega_{\Lambda}, \Omega_{cd}, \Omega_{b}$ and $\Omega_{\nu}$ indicate the contribution to the energy density from dark energy, cold dark matter, baryons and neutrinos, respectively. If neutrinos have mass the percentages of the other components of the universe would change consequently, so does the evolution of the universe. This could also be reflected in the CMB data. Finally, the large-scale structure (LSS) existing today indicates the existence of a small initial density fluctuation in the early universe. Neutrinos, as weakly interacting particles, could escape without interaction from areas of high density to areas of low density (free streaming), hence could wash out the small scale fluctuation. The larger the neutrino masses are, the stronger is the washing-out effect. The data of anisotropies in LSS hence could address on neutrino masses.
+
+Cosmological observations are only sensitive to the sum of neutrino mass
+\begin{equation}
+  \label{eq:msum}
+  \Sigma \equiv \sum_{i=1}m_{i}.
+\end{equation}
+They are not sensitive to the oscillation parameters, and cannot distinguish between Dirac and Majorana neutrinos. However the limit on the sum of neutrino mass from cosmology does help to answer the questions left by the oscillation experiments. Fig.~\ref{fig:sumVSlightest} shows the expected range of the sum of neutrino mass as function of the lightest neutrino mass. The regions noted with $\Delta m^{2}_{32}<0$ and $\Delta m^{2}_{32}>0$ are the allowed regions in case of inverted and normal hierarchy, respectively. If the limit could go down to the level of $\sim 0.08$ eV, the normal and inverted hierarchy can then be distinguished. Considering only the CMB data the $2\sigma$ (95\% CL) constrain on the sum of neutrino masses is 1.19 eV. Taking into account LSS the constrain could go down to the sub eV level.  Several calculations show that the Planck satellite, which is going to be launched soon, can set limit at the $0.07 \sim 0.25$ eV level.
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{sumVSlightest.eps}  
+  \caption{Expected range of the sum of neutrino mass $\Sigma$ as     function of the lightest neutrino mass. The regions noted with     $\Delta m^{2}_{32}<0$ and $\Delta m^{2}_{32}>0$ are the allowed     regions at 99\% confidence level (CL) in case of inverted and     normal hierarchy, respectively. The darker lines in the middle of     the regions correspond to the central values of the oscillation     parameters.}
+  \label{fig:sumVSlightest}
+\end{figure}
 
 \subsection{Single beta decay}
 \label{sec:pair}
-the cross sections are different if neutrinos are of different type.
+By precisely measuring the shape of the beta decay spectrum around its end point the single beta decay experiments dominantly probe the effective electric neutrino mass
+\begin{equation}
+  \label{eq:m1b}
+  m_{\beta} \equiv \sqrt{\sum_{i=1}m_{i}^{2}|U_{ei}|^{2}}.
+\end{equation}
+The Dirac or Majorana nature of the neutrino cannot be inferred from $m_{\beta}$ because all the phases in the PMNS matrix do not contribute to the absolute values of $U_{ei}$'s. The MAINZ and TROITSK experiments measured $m_{\beta}$ in tritium beta decay. The combined limit is $m_{\beta} < 2.0$ eV at 99\% CL. The planned sensitivities of the future experiments KATRIN, also based on tritium decay, and MARE, base on $^{187}Re$ decay, are $\sim 0.2$ eV. Fig.~\ref{fig:m1bVSlightest} shows the expected range of the effective electric neutrino mass $m_{\beta}$ as function of the lightest neutrino mass. The regions noted with $\Delta m^{2}_{32}<0$ and $\Delta m^{2}_{32}>0$ are the allowed regions in case of inverted and normal hierarchy, respectively. Obviously, the sensitivities of KATRIN and MARE are not good enough to address on the hierarchy problem.
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{m1bVSlightest.eps}  
+  \caption{Expected range of the effective electric neutrino mass     $m_{\beta}$ as function of the lightest neutrino mass. The regions     noted with $\Delta m^{2}_{32}<0$ and $\Delta m^{2}_{32}>0$ are the     allowed regions at 99\% confidence level (CL) in case of inverted     and normal hierarchy, respectively. The darker lines in the middle     of the regions correspond to the central values of the oscillation     parameters.}
+  \label{fig:m1bVSlightest}
+\end{figure}
 
 \subsection{Neutrinoless double beda decay}
 \label{sec:mag}
-if neutrino has magnetic moment, it cannot be of Majorana type.
-
 %\section{Double beta decay}
 %\label{sec:0n2b}
 %If neutrinos are of Majorana type the two neutrinos from double beta
