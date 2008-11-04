@@ -2,9 +2,62 @@ When particles, $\alpha, \beta, \gamma, n, p$, etc., interact with the germanium
 
 \section{Interactions of radiation with matter}
 \label{sec:det:phys}
+\subsection{Electron and positron}
+\label{sec:det:ep}
+Electrons and positrons traversing matter lose their kinetic energy mainly by two processes, ionization and bremsstrahlung. High energy (GeV range) electrons and positrons predominantly lose energy in matter by bremsstrahlung. Low energy (MeV range) electrons and positrons predominantly lose energy in matter by ionization. The energy of an electron or a positron that loses as much energy in collisions as in radiation has the name of critical energy $\epsilon$. For elements with atomic number $Z > 13$ the critical energy is~\cite{Ama81}
+\begin{equation}
+  \label{eq:det:ecrit}
+  \epsilon = (550/Z) \text{ MeV}.
+\end{equation}
+For germanium $\epsilon \sim 17$~GeV. Hence, electrons emitted from the double beta decay of $^{76}$Ge mainly loss their energy by ionization.
 
-\section{Germanium semiconductor}
+The range of electrons and positrons depends on their energy and the material they traverse (see Ref.~\cite{Bri84} and references therein). The average range of a 1.02~MeV electron in germanium is about 0.5~mm.
+
+When a positron losses all its energy, it will annihilate with an electron into two photons with energy of 511~keV each, corresponding to the rest mass of an electron.
+
+\subsection{Photon}
+\label{sec:det:gamma}
+Photons emitted by the natural radioactive isotopes have energy ranging from several keV to several MeV. The possible processes, which this kind of photons undergo in matter, are photoelectric effect, Compton (incoherent) scattering, Rayleigh (coherent) scattering and Pair production. Since Rayleigh scattering changes not the energy of a scattered photon but its momentum, it is not relevant for GERDA.
+
+\textbf{Photoelectric effect:} When a photon interacts with an atom, its entire energy could be transfered to an atomic shell electron which is kicked out the shell. The energy of the secondary electron equals to the difference of the incident photon energy and the binding energy of the electron. If the electron is kicked out from an inner shell of the atom, outer shell electrons would fill the vacancy. Consequently, either characteristic x-rays are emitted, or, in case the x-ray photons are re-absorbed, secondary Auger-electrons are emitted. The cross section of photoelectric effect is inversely proportional to the photon energy. Hence, the photoelectric effect is the main interaction mechanism for photons at low energy (up to about 200~keV for Ge).
+
+\textbf{Compton scattering:} A photon scatters on a weakly bound electron (quasi-free), transferring only part of its energy and momentum. The angular distribution of the scattered photon is described by the Kein-Nishina formula. The maximum energy transfer occurs when the incident photon is scattered $180^{\circ}$ back by the electron. The Compton scattering is the predominant interaction process for photons of energy between about 200~keV and 8~MeV for germanium. A 1.33~MeV photon would undergo on average three Compton scatterings before being absorbed by a photoelectric effect. The mean free path of this photon is about several centimeter.
+
+\textbf{Pair production:} If the photon energy exceeds twice the rest mass of an electron, the photon could create an electron-positron pair in the electric field of a nucleus, the rest of the photon energy being transferred to the created electron and positron as kinetic energy. A significant cross section for this interaction mechanism takes place only over 4-5~MeV.
+
+\subsection{Neutron}
+\label{sec:det:neutron}
+Because of the size and lack of charge, neutrons have a relatively high penetrating power. However, there are still five reactions that can occur when neutrons interact with nuclei depending on the kinetic energy of incident neutrons:
+
+\textbf{Capture:} The nucleus, Z, absorbs the incident neutron, $n$, and de-excites with the emission of one or more photons, noted as $^{\text{A}}$Z$(n,\gamma)$, where A is the atomic number of the nucleus. In case of \textbf{internal conversion} an electron from a lower shell of the nucleus is emitted instead of a photon, noted as $^{\text{A}}$Z$(n,e)$. The excited nucleus can also be meta-stable and not de-excite instantaneously, noted as $^{\text{A}}$Z$(n,\gamma^{m})$. Capture is the dominant process for thermal neutrons, \textup{i.e.}, neutrons with energy in sub-eV range.
+
+\textbf{Elastic scattering:} A neutron collides with a nucleus, transfers some energy to it, and bounces off in a different direction; the target nucleus gains the energy lost by the neutron (also called recoil energy), and then moves at an increased speed. This is the dominant process for neutrons with energy in the range of keV to several tens MeV. The recoil energy is very small (mostly less than 200~keV) and has an exponentially decaying distribution, hence not relevant for $0\nu\beta\beta$ decay search.
+
+\textbf{Inelastic scattering:} A nucleus temporarily absorbs the incident neutron, forming a compound nucleus in an excited state; it then de-excites by emitting another neutron of lower energy, together with a photon, which takes the de-excitation energy; the nucleus also takes some recoil energy. The reaction could be noted as $^{\text{A}}$Z$(n,n^{\prime}\gamma)$ and be the dominant process for neutrons with energy in the range of 1 to several tens MeV.
+
+\textbf{Transmutation:} A nucleus absorbs a neutron then de-energizes by emitting a proton, $p$, or an $\alpha$ particle. This produces a nucleus of a different element. The process occurs when the incident neutron energy excess hundred MeV and becomes dominant at several GeV.
+
+When the neutron energy becomes even higher, fission reaction may also happen. High energetic neutrons can only be produced by cosmic ray muons, which could be vetoed by the muon detecting system in GERDA. The meta-stable nuclei excited by neutrons are serious hazard for GERDA.
+
+
+\section{Germanium detectors}
 \label{sec:det:semi}
+\subsection{Working principle of semiconductor detectors}
+\label{sec:det:prin}
+Insulators, semiconductors and conductors are separated from each other according to the energy gap between the valence and the conduction band. The width of the band gap of semiconductors are between those of insulators and conductors, and are of the order of several eV. This gives certain possibilities for an electron to be lifted from the valence band to the conduction band by thermal motion or external ionizing radiation.
+
+The conductivity of a semiconductor can be easily modified by doping impurities, or dopant, into its crystal lattice. Doped elements with only three valence electrons create energy states a little bit higher than the valence band, making it easy to lift valence electrons to these states and create freely moving holes in the valence band. This kind of dopant is called acceptor. Doped elements with five valence electrons donate electrons in the energy states a little bit lower than the conduction band, making it easy to lift these weakly bound electrons to the conduction band. This kind of dopant is called donors. Usually the thermal energy available at room temperature is sufficient to ionize most of the dopant. And the created freely moving electrons and holes are called charge carriers.
+
+A p-n junction forms when p- and n-doped pieces of semiconductor are placed together. The majority charge carriers diffuse into regions with lower concentrations of them, and are eliminated by recombination there, leaving behind the charged ions adjacent to the interface in a region with no mobile carriers called the \emph{depletion zone}. Since there are positive space charges on the n side and negative ones on the p side because of these ions, an electric field is created providing a force opposing the continued diffusion of charge carriers. The size of the depletion zone changes when external potential is applied to the junction. Under \emph{reverse bias} (anode connected to the n side, cathode to the p side) the majority charge carriers are driven away from the junction. This widens the depletion zone. Since the carrier density is small in the depletion zone, only a very small reverse saturation current flows through. Likewise, the depletion zone squeezes under \emph{forward bias} while the current greatly increases.
+
+The depletion zone is the active volume of any semiconductor detector. When ionizing radiation strikes the depletion zone, it may excite  electrons out of valence band and consequently leave the same amount of holes. Under the electric field through the whole depletion zone electron-hole pairs cannot recombine but split and drift towards the electrode and induce electric signals there. In most of the case reverse bias is applied in order to create an active volume as large as possible. The bias turning the whole bulk of a semiconductor detector into a depletion zone is called the depletion voltage.
+
+\subsection{Operation temperature of germanium detectors}
+\label{sec:det:temp}
+
+\subsection{Types of germanium detectors}
+\label{sec:det:type}
+
 
 \section{Drift of charge carriers}
 \label{sec:det:drift}
@@ -14,6 +67,9 @@ When particles, $\alpha, \beta, \gamma, n, p$, etc., interact with the germanium
 
 \section{Effects of electronics on signal formation}
 \label{sec:det:elec}
+
+\section{Energy resolution}
+\label{sec:det:temp}
 
 \section{Summary}
 \label{sec:det:sum}
