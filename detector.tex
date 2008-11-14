@@ -50,23 +50,64 @@ The conductivity of a semiconductor can be easily modified by doping impurities,
 
 A p-n junction forms when p- and n-doped pieces of semiconductor are placed together. The majority charge carriers diffuse into regions with lower concentrations of them, and are eliminated by recombination there, leaving behind the charged ions adjacent to the interface in a region with no mobile carriers called the \emph{depletion zone}. Since there are positive space charges on the n side and negative ones on the p side because of these ions, an electric field is created providing a force opposing the continued diffusion of charge carriers. The size of the depletion zone changes when external potential is applied to the junction. Under \emph{reverse bias} (anode connected to the n side, cathode to the p side) the majority charge carriers are driven away from the junction. This widens the depletion zone. Since the carrier density is small in the depletion zone, only a very small reverse saturation current flows through. Likewise, the depletion zone squeezes under \emph{forward bias} while the current greatly increases.
 
-The depletion zone is the active volume of any semiconductor detector. When ionizing radiation strikes the depletion zone, it may excite  electrons out of valence band and consequently leave the same amount of holes. Under the electric field through the whole depletion zone electron-hole pairs cannot recombine but split and drift towards the electrode and induce electric signals there. In most of the case reverse bias is applied in order to create an active volume as large as possible. The bias turning the whole bulk of a semiconductor detector into a depletion zone is called the depletion voltage.
+The depletion zone is the active volume of any semiconductor detector. When ionizing radiation strikes the depletion zone, some of its deposited energy excites electrons out of valence band and electron-hole pairs are created. Under the electric field through the whole depletion zone electron-hole pairs cannot recombine but split and drift towards the electrode and induce electric signals there. In most of the case reverse bias is applied in order to create an active volume as large as possible. The bias turning the whole bulk of a semiconductor detector into a depletion zone is called the depletion voltage.
 
-\subsection{Operation temperature of germanium detectors}
+\subsection{Operating Voltage of germanium detectors}
 \label{sec:det:temp}
-The smaller the band gap, the easier to lift an electron by thermal energy from the valence band to the conduction band. The band gap in germanium is 0.72~eV, in silicon is 1.1~eV. At room temperature the population of electrons in the conduction band in germanium is a factor of 1000 higher than that in silicon. Applying bias on a germanium detector with large bulk (about several cm) at room temperature would create large current, which makes the operation impossible, or would even destroy the detector. Germanium detectors are usually cooled via a metal cooling stick submerged in cooling medium, \textit{e.g.}, liquid nitrogen, to suppress the thermal excitation. Due to imperfect heat conduction the temperature of the germanium crystal is slightly higher than that of the cooling medium.
+The depletion depth is proportional to the square root of the ratio of the applied voltage and the dopant concentration. The less the dopants, the bigger the depleted region under a certain reverse bias. The number of atoms of impurities per cubic centimeter in germanium crystals, which act as dopants, is of the order of $10^{10}$. The number of germanium atoms in the same volume is of the order of $10^{22}$. So the dopant concentration in germanium detectors is of the order of 1~ppt (particle per trillion), which is extremely low. Consequently, the depletion voltage for a germanium detector is two orders of magnitude lower than that for a silicon detector of the same size. This allows the construction of large germanium detectors operating in relatively low voltage. The largest germanium detectors are based on a cylindrical geometry with diameter and height both in the several centimeter range. The depletion voltage for them is just several kilo-volts. The operating voltage is normally a little bit higher than that.
 
-The amount of thermal excited electrons could be very small when the volume of a piece of germanium become small. Germanium pieces thiner than several microns can be used to make room temperature detectors. No high voltage is needed to create large depletion zone. So the leakage current could be very small. The noise from the thermal excitation could also become tolerable given very few thermal excited electrons.
+\subsection{Operating temperature of germanium detectors}
+\label{sec:det:temp}
+The smaller the band gap, the easier to lift an electron by thermal energy from the valence band to the conduction band. The band gap in germanium is 0.72~eV, in silicon is 1.1~eV. At room temperature the population of electrons in the conduction band in germanium is a factor of 1000 higher than that in silicon. Applying bias on a germanium detector with large bulk (about several cm) at room temperature would create large current, which makes the operation impossible, or would even destroy the detector. Germanium detectors are usually cooled via a metal cooling stick submerged in cooling medium, \textit{e.g.}, liquid nitrogen, to suppress the thermal excitation.~\footnote{The amount of thermal excited electrons could be   very small when the volume of a piece of germanium become small.   Germanium pieces thiner than several microns can be used to make   room temperature detectors. No high voltage is needed to create   large depletion zone. So the leakage current could be very   small. The noise from the thermal excitation could also become   tolerable given very few thermal excited electrons.} Due to imperfect heat conduction the temperature of the germanium crystal is slightly higher than that of the cooling medium.
+
 
 \subsection{Types of germanium detectors}
 \label{sec:det:type}
+Germanium detectors fall naturally into two main classes characterized by the remaining impurities in the bulk material after the crystal pulling process. If the impurities are mainly acceptors, the detector is called $p$-type. If the impurities are mainly donors, the detector is called $n$-type. 
 
+Large germanium detectors normally have a cylindrical shape. According to the geometry, they can be divided into two types: the \textit{true coaxial} and the \textit{closed-ended coaxial}, in both cases the shape is cylindrical with an inner bore.~\footnote{There are also some germanium detectors having no hole in the middle. All the contacts are on the surface.} For true coaxial detectors the core is completely removed, whereas for a closed-ended coaxial geometry the core is only partially removed leaving a \textit{cap} on one side.
+
+The outer surface of a $p$-type detector is normally converted into a $n$-type layer with a typical thickness of about 0.5~mm by diffusing lithium on it. It is sometimes called the \textit{dead layer}, because the amount of the charge carriers excited by the energy deposition in it is very low. The inner surface of a $p$-type detector is implanted with boron in order to make good electric contact, the thickness of which is of the order of several microns. $n$-type detectors have the dead layer on the inner surface, hence have less inactive volume.
+
+Germanium detectors can also be classified as segmented and unsegmented ones. The segmentation is normally performed on the outer surface of the detector. For $p$-type detectors the outer surface is milled in order to penetrate the lithium-drifted thick dead layer. The fringe depths and thicknesses of the segments are of the order of a millimeter. Distortions in the electric field are expected in this case. For $n$-type detectors photo-lithographic techniques are used to form the segments on the outer surface. The size of the segment boundary is of the order of several microns.
 
 \section{Drift of charge carriers}
 \label{sec:det:drift}
+\subsection{Creation of charge carriers}
+\label{sec:det:exit}
+A big fraction of deposited energy by incident radiations causes the excitation of phonons, the rest excites electrons from the valence band to the conduction band. Thus, the energy needed to create one electron-hole pair, called pair energy, is much bigger than the band gap. In germanium the pair energy is 2.95~eV at 80~K, which is about four times larger than the band gap.
 
-\section{Induction of signals in detector electrodes}
+\subsection{Electric field}
+\label{sec:det:field}
+The reverse bias applied on the electrodes creates electric field in the bulk of the germanium detector, which drives the drift of charge carriers to the electrodes. The field $\mathbf{E}$, is determined by the boundary condition as well as the space charge in the depletion zone. It can be calculated by solving Poisson's equation:
+\begin{equation} 
+  \label{eq:det:ef}
+  \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon},  
+\end{equation}
+where, $\rho$ is the space charge density defined by the effective number of impurities, $\epsilon$ is the dielectric constant.
+
+\subsection{Effects of crystal structure}
+\label{sec:det:struc}
+The drift velocities of charge carriers, $\mathbf{v}_{e/h}$, are related with
+the electric field, $\mathbf{E}$, by a coefficient named the \emph{mobility}, $\mu_{e/h}$:
+\begin{equation} 
+  \label{eq:det:dv}
+  \mathbf{v}_{e/h} = \mu_{e/h} \mathbf{E}.  
+\end{equation}
+In germanium detectors operating in low temperature the mobility is influenced by the crystal lattice orientation. The drift velocities along different directions differ from each other (longitudinal anisotropy) and are not always parallel to the electrical field (transversal anisotropy). The angle between the drift direction and the electric field is known as the Sasaki angle~\cite{Sas56}. Detailed discussion about the effects of the crystal structure on the charge carriers drift is carried out in Chapter~\ref{cha:pss}.
+
+\section{Induction of signals on detector electrodes}
 \label{sec:det:lamo}
+Electric signals are induced on the electrodes of a detector by the cumulative influence of electrons and holes moving toward the electrodes. Ramo's Theorem~\cite{Gat82, Rad88, He00} can be used to calculate the time development of induced charge $Q(t)$ or current $I(t)$ on each electrode:
+\begin{equation} 
+  \label{eq:det:ramoq}
+  Q(t) = -Q_{0} \times [\varphi_{w}(\mathbf{r}_{h}(t)) - \varphi_{w}(\mathbf{r}_{e}(t))],
+\end{equation}
+\begin{equation} 
+  \label{eq:det:ramoi}
+  I(t) = Q_{0} \times [\mathbf{E}_{w}(\mathbf{r}_{h}(t)) \cdot \mathbf{v}_{h}(t) - \mathbf{E}_{w}(\mathbf{r}_{e}(t)) \cdot \mathbf{v}_{e}(t)],
+\end{equation}
+where, $Q_{0}$ is the electric charges carried by electrons or holes, $\mathbf{r}_{e/h}(t)$ and $\mathbf{v}_{e/h}(t)$ are the position and velocity vectors of electrons/holes as a function of time, $\varphi_{w}(\mathbf{r})$ and $\mathbf{E}_{w}(\mathbf{r})$ are the so-called \emph{weighting potential} and \emph{weighting field}. They can be calculated by solving the Poisson's equations, $\nabla^{2} \varphi(\mathbf{r}) = 0$ and $\nabla \cdot \mathbf{E}(\mathbf{r}) = 0$, with the boundary condition that the potential on the electrode of interest equals to 1, the potential on any other electrode equals to 0.
 
 \section{Effects of electronics on signal formation}
 \label{sec:det:elec}
