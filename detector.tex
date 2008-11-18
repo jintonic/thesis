@@ -98,7 +98,7 @@ In germanium detectors operating in low temperature the mobility is influenced b
 
 \section{Induction of signals on detector electrodes}
 \label{sec:det:lamo}
-Electric signals are induced on the electrodes of a detector by the cumulative influence of electrons and holes moving toward the electrodes. Ramo's Theorem~\cite{Gat82, Rad88, He00} can be used to calculate the time development of induced charge $Q(t)$ or current $I(t)$ on each electrode:
+Electric signals are induced on the electrodes of a detector by the cumulative influence of electrons and holes moving toward the electrodes. Shockley-Ramo's Theorem~\cite{Gat82, Rad88, He00} can be used to calculate the time development of induced charge $Q(t)$ or current $I(t)$ on each electrode:
 \begin{equation} 
   \label{eq:det:ramoq}
   Q(t) = -Q_{0} \times [\varphi_{w}(\mathbf{r}_{h}(t)) - \varphi_{w}(\mathbf{r}_{e}(t))],
@@ -112,12 +112,18 @@ where, $Q_{0}$ is the electric charges carried by electrons or holes, $\mathbf{r
 \section{Effects of electronics on signal formation}
 \label{sec:det:elec}
 
-\section{Energy resolution}
-\label{sec:det:temp}
+\subsection{Noise}
+\label{sec:det:noise}
+The total energy resolution in terms of the full width at half maximum
+(FWHM) of the peak under study, $W_{T}$, is composed of three terms:
+\begin{equation}
+W_{T}^{2} = W_{D}^{2} + W_{X}^{2} + W_{E}^{2},
+\end{equation}
+where, $W_{D}$ describes the statistical fluctuations of the creation of electron-hole pairs, $W_{X}$ describes the effect of incomplete charge collection and scales linearly with the incident energy, $W_{E}$ accounts for noise contributions from the electronics and is constant in energy. Given a perfect electronic system, germanium detectors have an energy resolution of about 2~keV at 1.3~MeV, where $W_{X}$ dominates the contribution, $W_{D}$ contributes less than 1~keV. They are the noise which cannot be reduced. In practise, thermal noise in pre-amplifiers and noise picked up by the cables and connecters necessary for the signal transformation would contribute a lot to the total noise. They are the noise which need to be avoided.
 
-\section{Summary}
-\label{sec:det:sum}
-
+\subsection{Cross talk}
+\label{sec:det:xtalk}
+For segmented germanium detectors, signals from all the electrodes are read out simultaneously. There are intrinsic cross talks between different channels because of the electric couplings between electrodes. These cross talks are not due to improper electric connections, hence cannot be avoided. However, they can be reduced to an acceptable level by choosing proper values of resistors and capacitors used in the pre-amplifier coupling or feed-back circuits to match the intrinsic capacities between detector electrodes. For detailed analysis please refer to Chapter 4 in Ref.~\cite{Bru06} and references therein.
 
 
 %%% Local Variables:
