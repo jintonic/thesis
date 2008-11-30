@@ -1,5 +1,585 @@
 %$Id$
 
+\section{Introduction}
+\label{sec:neu:intro}
+Neutrons produced near the germanium detectors by penetrating cosmic-ray muons can induce background events. In addition, neutrons from $(\alpha, n)$ reactions in the surrounding rock are also a potential source of background. The study of neutron interactions with germanium isotopes as well as the surrounding materials is thus of great interest.
+
+Segmented germanium detectors will be used in GERDA Phase II. It has been shown that segment information is very useful to identify photon induced background~\cite{Pid07}. It is interesting to check if segment information can also help with the identification of neutron induced background.
+
+In order to study the issues mentioned above, a GERDA Phase II 18-fold segmented prototype detector~\cite{Sie07} was exposed to an AmBe neutron source. Energy spectra were recorded for each segment and the core. The segment information was used to identify peaks induced by neutron interactions.
+
+The Geant4~\cite{Gea03,Gea06} based simulation package, MaGe~\cite{Mag06, Mag08}, has been co-developed by the GERDA and MAJORANA~\cite{Gai03, Aal04} collaborations. The simulation of neutron interactions was verified by comparisons to data.
+
+\section{Experimental setup and data sets}
+\label{sec:neu:exp}
+The detector used is the first segmented GERDA prototype detector. The
+n-type true coaxial cylindrical crystal made of natural germanium has
+a height of 70~mm and a diameter of 75~mm with a 10~mm hole in the
+center. It is 18-fold segmented with a 6-fold segmentation in the
+azimuthal angle $\phi$ and a 3-fold segmentation in the height $z$.
+The resolution of the segments at 1.3~MeV is $\sim3$~keV. The total
+energy resolution (core resolution) at 1.3~MeV is $4.07 \pm 0.03$~keV.
+It was operated in a conventional test cryostat. Details of the
+detector and its cryostat can be found in \cite{Sie07}.
+
+A 1.1~GBq isotropic AmBe neutron source was used in the experiment.
+The energy spectrum of the neutrons emitted from the
+$^{9}$Be$(\alpha,n)^{12}$C$^{*}$ nuclear reaction extends to 12~MeV.
+High resolution measurements of the neutron energy spectra of this
+kind of neutron source are presented in~\cite{Mar95,Gei75}. The
+dependence of the emittance of photons from the de-excitation of
+$^{12}$C$^{*}$ on the neutron energy is described in~\cite{Gei75}.
+
+The neutron source was located in a cylindrical paraffin
+collimator. The schematic experimental setup (not to scale) is shown
+in Fig.~\ref{fig:neu:exp}. The center of the collimator was vertically
+aligned to the center of the detector and the distance between source
+and detector center was about 1~m.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{neuExpSI}
+  \caption{Schematic experimental setup (not to scale).}
+  \label{fig:neu:exp}
+\end{figure}
+
+The core and segment electrodes were connected to charge sensitive pre-amplifiers. Their output was digitized using 14-bit ADCs in an XIA Pixie-4 data acquisition system~\cite{Daq06} with a sampling rate of 75~MHz, and recorded separately when the core was triggered. The system was configured such that if two pulses occured within 240~ns they were added up to a single signal; if the second pulse occured 240~ns to 8~$\mu$s after the first one, it was disregarded. Two different gain factors were chosen for four different measurements. The data sets are listed in Table~\ref{tab:neu:datset}. A low gain factor was chosen so that the energy range up to $\sim 11$~MeV could be covered. A high gain factor was chosen for measurements up to $\sim 3$~MeV.
+
+Two measurements were performed with the AmBe source present. They are
+referred to as HGdat (High Gain data) and LGdat (Low Gain data). In
+order to determine the background from the laboratory environment two
+more measurements without the source were performed. They are referred
+to as HGbg (High Gain background) and LGbg (Low Gain background). The
+data samples with different gains were combined for the study below
+3~MeV.
+
+\begin{table}[tbhp]
+  \caption{Data sets recorded with and without source.} 
+  \label{tab:neu:datset}\centering
+  \begin{tabular}{lcccc}\hline
+    & \multicolumn{2}{c}{With AmBe Source} &
+\multicolumn{2}{c}{Without AmBe Source} \\
+    \hline
+    DAQ Gain & High  & Low   & High  & Low  \\
+    $E_{max}$ [MeV] & $\sim$ 3.5  & $\sim$ 11 & $\sim$ 3.5 & $\sim$ 11
+\\
+    No. of Events & 7.1 M & 4.7 M & 1.5 M & 4.7 M \\
+    Name & HGdat & LGdat & HGbg & LGbg \\\hline
+  \end{tabular}
+\end{table}
+
+\section{Core spectra}
+\label{sec:neu:spec}
+The total energy deposited in the germanium crystal was read out from the core electrode of the detector. Figure~\ref{fig:neu:spec} shows the core energy spectra for the data and background in the range of [0.08, 3]~MeV. The thick line indicates the sum of HGdat and LGdat. The fine line represents the normalized sum of HGbg and LGbg. The trigger thresholds were set such that the spectra above 100~keV were not affected.
+
+Eight photon peaks from the background were fitted with a Gaussian
+function plus a first order polynomial to normalize the background to
+the data.  They are associated with the decays of $^{214}$Pb
+(352~keV), $^{214}$Bi (609~keV, 1120~keV, 1764~keV, 2448~keV),
+$^{228}$Ac (911~keV), $^{40}$K (1461~keV), and $^{208}$Tl (2615~keV).
+The numbers of events in the peaks determined by the fits were used to
+calculate the data to background ratios. The average of these ratios,
+$1.279 \pm 0.003$, was then used to scale the background spectrum.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spectra_0_520keV}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_500_1020keV}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_1000_1520keV}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_1500_2020keV}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_2_3MeV}
+  \caption{Core energy spectra with and without source. The
+    normalization procedure is described in the text. The energy range
+    is [0.08, 3]~MeV. Peaks induced by the AmBe source are indicated
+    with their energies.}
+  \label{fig:neu:spec}
+\end{figure}
+
+Figure~\ref{fig:neu:specl} shows the spectra in the range of [3,
+10.2]~MeV. In this energy range the background is small, as there are
+hardly any natural radioactive elements producing photons with such
+high energies.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spectra_3_11MeV}
+  \caption{Core energy spectra with and without source. The
+    normalization procedure is described in the text. The energy range
+    is [3, 10.2]~MeV. Peaks induced by the AmBe source are indicated
+    with their energies.}
+  \label{fig:neu:specl}
+\end{figure}
+
+To illustrate the neutron interactions more clearly the normalized
+background was subtracted from the data. This is shown in
+Fig.~\ref{fig:neu:specd}. Some of the less prominent structures were
+washed out since a larger bin width was chosen.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spectra_0_1d5MeV}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_1d5_3MeV}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_3_10d2MeV}
+  \caption{Core energy spectra with background subtracted.}
+  \label{fig:neu:specd}
+\end{figure}
+
+\section{Neutron interactions as seen by the core}
+\label{sec:neu:type}
+The main interaction mechanisms of neutrons with energies less than 12~MeV are thermal capture, inelastic and elastic scattering. Elastic scattering does not induce peaks that can be identified, because there is no photon emitted and the recoil energy distribution is too flat. Not only the production mechanism of the excited nucleus is important for the identification of a peak. The de-excitation mechanism has also to be taken into account. In most cases the nucleus de-excites instantaneously with the emission of one or more photons. However, it can also undergo internal conversion, in which case an electron from a lower shell is emitted instead of a photon. The excited nucleus can also be meta-stable and not de-excite instantaneously.
+
+Table~\ref{tab:neu:type} lists the processes identified in the core energy spectrum. If inelastic scattering happens inside the germanium crystal, the nuclear recoil energy is recorded as well as the energies from some of the prompt photons. In case of instantaneous de-excitation they are summed up: $E_{inelastic} = E_{\gamma} + E_{recoil}$. This causes an asymmetric peak with a long recoil tail on the high energy side. Internal conversions only create identifiable peaks, if they occur inside the crystal, otherwise the emitted electrons do not reach the detector.
+
+\begin{table}[tbhp]
+  \caption{Type of neutron processes identified in the core energy
+spectrum.}
+  \label{tab:neu:type}\centering
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+    \hline\noalign{\smallskip}
+    Production & De-excitation & Symbolic Notation & Short Form \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    thermal & instantaneous & $n + ^A$Z$ \rightarrow ^{(A+1)}$Z$ +
+\gamma$ & $^A$Z$(n,\gamma)$\\
+    \noalign{\smallskip}\cline{2-4}\noalign{\smallskip}
+    capture & meta-stable 
+    & $n + ^A$Z$ \rightarrow ^{(A+1)m}$Z, $^{(A+1)m}$Z$ \rightarrow
+^{(A+1)}$Z$+\gamma$ & $^A$Z$(n,\gamma^{m})$\\
+    %& & $^{(A+1)m}$Z$ \rightarrow ^{(A+1)}$Z$+\gamma$ & \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    inelastic & instantaneous & 
+    $n + ^A$Z$ \rightarrow ^A$Z$ + n^\prime + \gamma$ &
+$^A$Z$(n,n^\prime\gamma)$\\
+    \noalign{\smallskip}\cline{2-4}\noalign{\smallskip}
+    scattering & internal conversion & 
+    $n + ^A$Ge$ \rightarrow ^A$Ge$^{+} + n^\prime + e^-$ &
+$^A$Ge$(n,n^\prime e)$\\
+    \noalign{\smallskip}\hline
+  \end{tabular*}
+\end{table}
+
+Table~\ref{tab:neu:peak}, \ref{tab:neu:peak2} list all the peaks observed in the core energy spectrum due to neutron interactions within the germanium crystal as well as within the surrounding materials: H, C, Cl in the paraffin collimator, Al, Ce in the aluminum vacuum can, and Fe, Cu in the supporter and container of the detector and electronics.
+
+Pure photon peaks were fitted with a Gaussian function plus a first order polynomial to get the mean energies, FWHMs and the numbers of events in the peaks. The 596~keV peak from $^{74}$Ge$(n, n^\prime \gamma)$ does not have a Gaussian distribution. The treatment of this peak will be described in section~\ref{sec:neu:seg}. The 662~keV peak associated with $^{140}$Ce has a significant background contribution from $^{137}$Cs. This was subtracted. The 692~keV peak from $^{72}$Ge$(n,n^\prime e)$ is hard to fit because it is asymmetric and broad. It is also contaminated by other peaks nearby. The number of events in this peak was estimated by integration.
+
+The 4.4 MeV peak is due to photons from the de-excitation of $^{12}$C$^{*}$ created in the AmBe source by the interaction, $^{9}$Be$(\alpha,n)^{12}$C$^{*}$. It is Doppler broadened because of the movement of the $^{12}$C$^{*}$ nuclei. The width of this peak listed in Table~\ref{tab:neu:peak2} was determined by the fit. Because of low statistics the widths of most of the peaks above 6 MeV had to be fixed in the fitting procedure according to the detector resolution around these energies. The peaks that are not identified are marked with a question mark.
+
+\begin{table}[tbhp]
+  \caption{Peaks observed in the core energy spectrum (see
+Fig.~\ref{fig:neu:spec})
+    due to neutron interactions.} 
+  \label{tab:neu:peak}\centering
+  \begin{minipage}{\linewidth}
+    \begin{tabular}{llll} \hline
+      Fitted Energy~[keV]& Fitted FWHM~[keV]& Interaction Type& Number of Events\\\hline
+      139.4 & $1.6 \pm 0.2$ & $^{74}$Ge$(n,\gamma^m)$ & $3377 \pm 520$
+\\
+      197.9 & $1.9 \pm 0.2$ & $^{70}$Ge$(n,\gamma^m)$ & $3306 \pm 503$
+\\
+      499.8 & $1.9 \pm 0.7$ & $^{70}$Ge$(n,\gamma)$   & $503  \pm 186$
+\\
+      595.7\footnote{The fitting of the 596~keV peak is described in a
+        later section.}
+      & - & $^{74}$Ge$(n,n^\prime\gamma)$ & $(18.4 \pm 2.5)\times10^3$
+\\
+      662.0\footnote{The background contribution to the 662~keV peak
+        was subtracted.}
+      & $1.9 \pm 0.1$ & $^{140}$Ce$(n,\gamma)$ & $2802 \pm 188$ \\
+      685.6 & $1.4 \pm 0.2$ & ?\footnote{The unidentified peaks are
+        marked with a question mark.} & $628  \pm 111$ \\
+      692\footnote{The number of events in the 692~keV peak was
+        determined by integration.}  & - & $^{72}$Ge$(n,n^\prime e)$ &
+      $\sim 7000$
+      \\
+      708.5  & $2.4 \pm 0.5$ & $^{35}$Cl$(n,\gamma)$,       & $782 
+\pm 197$ \\
+      &  & $^{36}$Cl$\rightarrow^{36}$Ar & \\
+      721.9  & $1.9 \pm 0.2$ & ?$^c$ & $3502 \pm 148$ \\
+      843.4  & $2.4 \pm 0.5$ & $^{27}$Al$(n,n^\prime\gamma)$ & $1558
+\pm 202$ \\
+      846.6  & $2.4 \pm 0.2$ & $^{56}$Fe$(n,n^\prime\gamma)$ & $2802
+\pm 196$ \\
+      867.8  & $1.9 \pm 0.5$ & $^{73}$Ge$(n,\gamma)$        & $425 
+\pm 129$ \\
+      962.2  & $2.4 \pm 0.2$ & $^{63}$Cu$(n,n^\prime\gamma)$ & $1041
+\pm 129$ \\
+      1014.3 & $2.4 \pm 0.2$ & $^{27}$Al$(n,n^\prime\gamma)$ & $1958
+\pm 123$ \\
+      1164.1 & $2.6 \pm 0.5$ & $^{35}$Cl$(n,\gamma)$        & $646 
+\pm 140$ \\
+      1200.8 & $2.8 \pm 0.2$ & DEP\footnote{SEP, DEP stand for Single
+        Escape Peak and Double Escape Peak, respectively.} of 2223
+      & $2318 \pm 122$ \\
+      1326.9 & $2.4 \pm 0.2$ & $^{63}$Cu$(n,n^\prime\gamma)$   & $711 
+\pm 91$  \\
+      1711.8 & $3.8 \pm 0.1$ & SEP$^e$ of 2223 & $5555 \pm 133$ \\
+      1778.9 & $2.6 \pm 0.2$ & $^{27}$Al$(n,\gamma)$, & $469  \pm 73$
+\\
+      &  & $^{28}$Al$\rightarrow^{28}$Si &  \\
+      2223.2 & $3.8 \pm 0.1$ & $^{1}$H$(n,\gamma)$ & $79349 \pm 300$\\
+    \end{tabular}
+  \end{minipage}
+\end{table}
+
+\begin{table}[tbhp]
+  \caption{Peaks observed in the core energy spectrum (see
+Fig.~\ref{fig:neu:specl})
+    due to neutron interactions.} 
+  \label{tab:neu:peak2}\centering
+  \begin{minipage}{\linewidth}\centering
+    \begin{tabular}{llll} \hline\noalign{\smallskip}
+      Fitted Energy~[keV]& Fitted FWHM~[keV]& Interaction Type& Number of Events\\\hline
+ 3427 & $85 \pm 7$
+      & DEP\footnote{SEP, DEP stand for Single Escape Peak and Double
+        Escape Peak, respectively.} of 4441 & $2354 \pm 263$ \\
+      3931 & $87 \pm 5$  & SEP$^a$ of 4441 & $5873 \pm 368$ \\
+      4441 & $92 \pm 2$  & $^{9}$Be$(\alpha,n)^{12}$C$^{*}$ & $14672
+\pm 297$ \\
+      4946 & $4.9\pm1.4$ & $^{12}$C$(n,\gamma)$            & $68 \pm
+15$     \\
+      6113 & 7\footnote{The widths were fixed during the fit.}
+      & $^{35}$Cl$(n,\gamma)$ & $75 \pm 12$ \\
+      6904 & 7$^b$      & SEP$^a$ of 7416            & $60 \pm 10$ \\
+      7126 & 7$^b$ & ?\footnote{The unidentified peaks are marked with
+        a question mark.} & $38 \pm  9$ \\
+      7416 & 7$^b$       & $^{35}$Cl$(n,\gamma)$ & $70 \pm 10$ \\
+      7633 & 7$^b$       & $^{56}$Fe$(n,\gamma)$ & $18 \pm 10$ \\
+      7793 & $7.1\pm2.1$ & $^{35}$Cl$(n,\gamma)$ & $21 \pm  8$ \\
+      7918 & $6.8\pm1.4$ & $^{63}$Cu$(n,\gamma)$ & $29 \pm  8$ \\
+  \end{tabular}
+  \end{minipage}
+\end{table}
+
+\section{Neutron interactions as seen by the segments}
+\label{sec:neu:seg}
+The energies deposited in each of the segments are read out
+separately. This provides more information about the interactions
+inside the germanium crystal than can be extracted from the core
+signal alone.
+
+For example, a photon with an energy of the order of one MeV has a
+mean free path of several centimeters in the germanium crystal. It
+most probably deposits energy in several different segments because of
+multiple Compton scattering. The result is a \emph{multi-segment
+  event}, in short MSE. In contrast, if there is only one segment with
+an energy deposition, it is called a \emph{single-segment event}, in
+short SSE. The power of discrimination of MSE and SSE induced by
+photon using segmented germanium detectors has been shown in
+\cite{Pid07}.
+
+\subsection{Neutron inelastic scattering}
+Compared to photon induced events, a special characteristic of neutron inelastic scattering in a germanium crystal is that not only the photon energy, but also the recoil energy, is recorded. The inelastic scattering peak in the core energy spectrum has a high energy recoil tail and, hence, is much less significant than a pure photon peak with the same number of events, as seen in Fig.~\ref{fig:neu:spec}. However, it is possible to partially separate out the recoil energy distribution using information from the individual segments. The disentangled photon peak is much more significant than the original peak. This is due to the way a segmented detector can provide information about event topologies.
+
+Figure~\ref{fig:neu:inel} shows the three types of events contributing to the inelastic scattering peak in the core spectrum. In all cases the scattered neutron escapes:
+\begin{enumerate}
+\item The nuclear recoil energy and the prompt photon energy are
+  deposited in the same segment;
+\item The nuclear recoil energy is deposited within one segment, the
+  prompt photon deposits its energy in several other segments;
+\item The nuclear recoil energy is deposited within one segment while
+  the prompt photon deposits its total energy within another segment.
+\end{enumerate}
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{ine_1}
+  \caption{Three topologies of neutron inelastic scattering inside a
+    germanium crystal.}
+  \label{fig:neu:inel}
+\end{figure}
+
+In the first case, only one segment has a signal. The energies
+recorded by the core and the segment are the same, i.e. $E_{core} =
+E_{seg} = E_{\gamma} + E_{recoil}$. Segmentation cannot help to
+disentangle the two energies. In the second case, the recoil energy
+can be observed in one segment. As the photon energy is shared between
+several segments, there is no peaked distribution in any single
+segment. This would partially be recovered by segment energy
+summation. In the third case, the recoil energy is observed in one
+segment, while the photon is observed in another segment. To
+disentangle the photon peak from the recoil energy distribution,
+energy spectra of all the segments are summed to get a spectrum of the
+energy deposited in \emph{any segment}. In this spectrum, the type~1
+events produce the same distribution as in the core spectrum and type
+2 events form a flat distribution. The type~3 events, however, create
+a sharp photon peak at the original energy and an enhancement in the
+low energy region, the recoil energy distribution.
+
+Figure \ref{fig:neu:cas} shows the \emph{any segment} spectrum (fine line) together with the core spectrum (thick line) in the relevant energy ranges. Three peaks at 596~keV, 834~keV and 1039~keV, associated with inelastic scattering, $^{74}$Ge$(n, n^\prime\gamma)$, $^{72}$Ge$(n, n^\prime\gamma)$ and $^{70}$Ge$(n, n^\prime\gamma)$, respectively, are clearly visible in the \emph{any segment} spectrum. The latter two are washed out in the core spectrum.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spe_casp}
+  \includegraphics[width=0.8\textwidth,clip]{spe_cas2p}
+  \caption{The \emph{any segment} spectrum (fine line) and the core
+    spectrum (thick line) in the relevant energy ranges. The inset
+    shows a close-up of the 596~keV peak in the core spectrum. The
+    fitting of recoil energy distribution is described in the text.}
+  \label{fig:neu:cas}
+\end{figure}
+
+
+It is possible to extract the number of each type of events in the 596~keV peak. The core spectrum was used to determine the total number of events, $N_{total}$. An exponential function was fitted to the shoulder of the peak associated with the nuclear recoil energy distribution. A Gaussian function was fitted to the 609~keV background photon peak on the shoulder simultaneously. The background below the recoil structure was obtained from interpolating the spectrum below and above the shoulder. The total number of events equals to the difference between the fitted exponential and the background. The error was estimated by assuming different levels and shapes of the background. The fit is shown in the inset of Fig.~\ref{fig:neu:cas}. The dashed line represents the background, the solid line shows the exponential plus the Gaussian function from the background peak.
+
+The number of type~3 events, $N_{type3}$, was obtained by fitting a
+Gaussian function plus a first order polynomial to the 596~keV peak in
+the \emph{any segment} spectrum. The small shoulder caused by the
+contamination with type~1 events does not change the results of the
+fit significantly.
+
+In principle the number of type~1 events can be determined by fitting
+the 596 keV peak in \emph{single segment} spectrum, which is obtained
+by requiring only one segment having signal. However, a trigger
+threshold bigger than 5~keV must be set for each segment in order to
+avoid electric noise. Because the recoil energy is very likely to be
+smaller than 5~keV a lot of type~3 events with recoil energy smaller
+than 5~keV behave in reality as type~1 events. So the 596 keV peak in
+\emph{single segment} spectrum contains all the type~1 events and a
+large part of type~3 events.
+
+Another way to determine the number of type~1 events requires the
+study of the peaks purely induced by photons. This provides the
+probability that a de-excitation photon deposits its energy in exactly
+one or in multiple segments. The relative strength of the peaks in the
+core and any segment spectrum, that is, $\mathcal{R}(E_{\gamma}) =
+N_{core}(E_{\gamma}) / N^{any}_{seg}(E_{\gamma}) = (N_{SSE} + N_{MSE})
+/ N_{SSE}$, directly translates to the relative rate of the total
+number of inelastic scattering events to the sum of type~1 and type~3
+events, that is, $\mathcal{R}(E_{\gamma}^{inelastic}) = N_{total} /
+(N_{type1} + N_{type3})$.
+
+A Gaussian function plus a first order polynomial were fitted to
+eleven of the most prominent background photon induced peaks in the
+core and \emph{any segment} spectra, respectively. The numbers of
+events in the peaks from the fits were used to calculate the ratio,
+$\mathcal{R}(E_{\gamma})$. The points with error bars in
+Fig.~\ref{fig:neu:sf} represent the ratios calculated at different
+energies. A second order polynomial was fitted to get an estimate of
+the ratio at any energy, $\mathcal{R}(E)$. The number of type~1 events
+can be calculated as $N_{type1} = N_{total} /
+\mathcal{R}(E_{\gamma}^{inelastic}) - N_{type3}$.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.5\textwidth,clip]{sf}
+  \caption{The ``core to any segment ratio'' as a function of the
+    energy.}
+  \label{fig:neu:sf}
+\end{figure}
+
+The number of type~2 events can then be calculated as $N_{type2} = N_{total} - N_{type1} - N_{type3}$. The results concerning event topologies in the 596~keV peak are listed in the second row of Table~\ref{tab:neu:ncore}. The percentage of single-segment events, that is, $N_{type1}$, out of the total number of events is $\mathcal{P} = N_{type1} / N_{total} \approx 5\%$.
+\begin{table}[tbhp]
+  \caption{Numbers of events in the 596~keV, 834~keV and 1039~keV
+    peaks.    The two numbers in the square brakets indicate the     ranges of    numbers     of events with different topologies in     the     834~keV and 1039~keV    peaks.}
+  \label{tab:neu:ncore}\centering
+  \begin{minipage}{\textwidth}\centering
+    \begin{tabular}{lcccc} \hline\noalign{\smallskip}
+      Energy [keV]& $N_{type 1}$ & $N_{type 2}$  & $N_{type 3}$    &
+$N_{total}$   \\
+      \noalign{\smallskip}\hline\noalign{\smallskip} 595.8 &
+      $1000 \pm 1000$ \footnote{The huge error is due to the
+        propagation of errors of $N_{type1}$, $N_{total}$ and
+        $\mathcal{R}$ according to the relation $N_{type1} = N_{total}
+        / \mathcal{R} - N_{type3}$.}
+      & $(10 \pm 3)\times10^3$ & $7285 \pm 218$ & $(18.4 \pm
+2.5)\times10^3$ \\
+      834.0  & [0, 380]    & [4100, 4700] & $2592 \pm 186$ & [6700,
+7700] \\
+      1039.2 & [0, 240]    & [2700, 3100] & $1429 \pm 182$ & [4100,
+4800] \\
+    \end{tabular}
+  \end{minipage}
+\end{table}
+
+The numbers of type~3 events in the 834~keV and 1039~keV peaks were
+obtained by fitting the \emph{any segment} spectrum. Since there is no
+peak at these two energies in the core spectrum, it is impossible to
+get $N_{total}$ from a fit. However, since the percentage $\mathcal{P}
+= N_{type1} / N_{total}$ decreases with energy, $\mathcal{P}$ at
+834~keV and 1039~keV should be less than $\mathcal{P}$(596~keV).
+Taking into account the relation, $N_{type1} = N_{total}/\mathcal{R} -
+N_{type3}$, the ranges of numbers of events in different topologies in
+the 834~keV and 1039~keV peaks were calculated. They are listed in
+Table~\ref{tab:neu:ncore} as well.
+
+The following steps were used to disentangle the recoil energy
+$E_{recoil}$ spectrum of inelastic scattering with a prompt photon of
+energy $E_\gamma$:
+\begin{enumerate}
+\item Exactly two segments having an energy deposition greater than
+  10~keV were required.
+\item If one segment had an energy deposition in the range
+  $[E_\gamma-3\sigma, E_\gamma+3\sigma]$, where $\sigma$ was the
+  detector energy resolution, the energy deposited in the other
+  segment was used.
+\end{enumerate}
+
+The following steps produced the background to the recoil spectrum:
+\begin{enumerate}
+\item Exactly two segments having an energy deposition greater than
+  10~keV were required.
+\item Two energy side-bands, $[E_\gamma-6\sigma, E_\gamma-3\sigma]$
+  and $[E_\gamma+3\sigma, E_\gamma+6\sigma]$ were defined.
+\item If one segment had an energy deposition in the side-bands, the
+  energy deposited in the other segment was used.
+\end{enumerate}
+
+Figure~\ref{fig:neu:recoil} shows the disentangled recoil spectra related to the 596~keV, 834~keV and 1039~keV photon peaks. The histograms start at 10~keV. The spectrum is dominated by the electronic noise below. The recoil spectra extending to $\sim 100$~keV are clearly visible above the background.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{recoil}
+  \caption{Recoil energy spectra corresponding to the inelastic
+    neutron scattering with prompt photons of energies of 596~keV, 834
+    ~keV and 1039~keV.}
+  \label{fig:neu:recoil}
+\end{figure}
+
+\subsection{Internal conversion}
+\label{sec:neu:conv}
+If the excited state of a nucleus has the same spin as the ground
+state, internal conversion~\cite{Lis69,Kra56} is the predominant mode
+of the de-excitation. Since the mean free path of an electron emitted
+from internal conversion is about 1~mm in germanium, the energy of the
+electron and the recoil of the nucleus are deposited in the same
+segment. The core and the \emph{any segment} spectra are the same.
+This is demonstrated in Fig.~\ref{fig:neu:cas}. The 692~keV peak from
+internal conversion, $^{72}$Ge$(n,n'e)$, is neither changed nor
+suppressed in the \emph{any segment} spectrum.
+
+\subsection{Double escape peaks}
+\label{sec:neu:dep}
+The double escape peaks are enhanced in the \emph{any segment}
+spectrum, because many events from the single escape and full energy
+peaks in the core spectrum move to this peak. Two enhanced double
+escape peaks at 1200~keV and 1592~keV are clearly visible in
+Fig.~\ref{fig:neu:cas}. They originate from the 2223~keV peak of
+$^{1}$H$(n,\gamma)$ and the 2614~keV peak of $^{208}$Tl.
+
+
+\section{Verification of simulations}
+\label{sec:neu:sim}
+MaGe, a C++ simulation package developed by the Monte Carlo groups of the Majorana and Gerda collaborations, was used to simulate the experiment. It is based on Geant4~\cite{Gea03,Gea06}. The version Geant4 8.2 with patch-01 was used.
+
+\subsection{Generator, geometry and process}
+\label{sec:simdetail}
+Figure~5 in~\cite{Mar95} shows the measured neutron spectrum emitted
+from an AmBe source. It was normalized to a probability density
+function and used in the neutron generator to assign energies to the
+outgoing neutrons. The generator also produced 4.4 MeV photons from
+the $^{12}$C$^{*}$ de-excitation inside the AmBe source. The Doppler
+broadening of the 4.4 MeV peak was simulated by Gaussian smearing with
+the observed widths taken from Table~\ref{tab:neu:peak2}.
+
+The geometry of the experiment was implemented according to technical
+drawings. Approximations in the order of several centimeters had to be
+made regarding
+\begin{itemize}
+\item the shape and size of the AmBe source and how it is held inside
+  the paraffin collimator,
+\item the exact relative position between the crystal and the paraffin
+  collimator,
+\item the exact geometry of the components inside the cryostat.
+\end{itemize}
+
+Geant4 provides high precision models for the simulation of interactions of neutrons with energy below 20~MeV~\cite{Gea03,Gea06}. The models depend on the ``evaluated neutron data library'' (G4NDL) for cross sections, angular distributions and final state information. The version G4NDL3.10 was used.
+
+\subsection{Core spectrum}
+\label{sec:neu:spemc}
+Figure~\ref{fig:neu:mca} shows the simulated core energy spectra. The threshold effects below 100~keV were not taken into account in the simulation. Figure~\ref{fig:neu:mc} compares the simulation with the measurement in the range of [0.1, 3]~MeV. The thick line is the experimental data. The fine line is the sum of the simulation and measured background. The background was normalized to data as described in section \ref{sec:neu:spec}. The simulation was normalized to data according to the relation, $N_{data} = N_{background} + N_{signal} = N_{background} + N_{simulation}$, where the $N$s are the event numbers in the data, background and simulated spectra. Figure~\ref{fig:neu:mcl} shows the same spectra in the range of [3, 10.2]~MeV.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spectra_mc1}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_mc2}
+  \caption{Simulated core energy spectra from 0.1~MeV to 6.1~MeV.}
+  \label{fig:neu:mca}
+\end{figure}
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spectra_0_520keVm}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_500_1020keVm}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_1000_1520keVm}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_1500_2020keVm}
+  \includegraphics[width=0.8\textwidth,clip]{spectra_2_3MeVm}
+  \caption{Comparison of the neutron core energy spectra from 0.1~MeV
+    to 3~MeV between data and simulation plus measured background.}
+  \label{fig:neu:mc}
+\end{figure}
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.8\textwidth,clip]{spectra_3_11MeVm}
+  \caption{Comparison of the neutron core energy spectra from 3~MeV to
+    10.2~MeV between data and simulation plus measured background.}
+  \label{fig:neu:mcl}
+\end{figure}
+
+\subsection{Discrepancies between data and simulation}
+\label{sec:neu:dine}
+The shapes of the continuous spectra from the simulation and data
+deviate due to the poor knowledge of the exact material and geometry
+of components between the source and the crystal.
+
+There is a known bug~\cite{g4bug1} in Geant4 concerning neutron
+inelastic scatterings. The secondary particles are not boosted back to
+the laboratory frame after the calculations in the center of mass
+frame are completed. This causes two problems:
+\begin{itemize}
+\item The simulated recoil energies of the germanium isotopes are
+  wrong.
+\item The photon peaks from the interactions are not broadened.
+\end{itemize}
+
+The first effect is demonstrated in the third inset of
+Fig.~\ref{fig:neu:mc}. The measured 596~keV peak from
+$^{74}$Ge$(n,n^\prime\gamma)$ has a long tail on the high energy side
+due to the nuclear recoil, while the simulated peak misses this
+feature.
+
+The second effect is demonstrated in the inset of Fig.~\ref{fig:neu:mcl}.  The simulation generates a broad and a narrow peak, both at 4.4~MeV.  The broad peak is due to the de-excitation of $^{12}$C$^{*}$ created in the source. The generator was adjusted according to the data. The narrow one is due to neutron inelastic scattering on carbon atoms in the paraffin collimator, $^{12}$C$(n,n'\gamma)$. In reality, the carbon atom can gain a velocity of up to $0.02c$ causing a Doppler broadening of the order of 50~keV-100~keV. This is comparable to the broadening in the $^{12}$C$^{*}$ de-excitation peak, and can, thus, not be resolved in the measured spectrum.
+
+The mean value from the Gaussian fit to the measured 2223~keV photon
+peak is $(2223.24 \pm 0.01)$~keV. The simulated peak centers at
+$(2224.61 \pm 0.01)$~keV. This shifted value comes from the evaluated
+neutron data library. This problem has been reported to the Geant4
+Problem Tracking System~\cite{g4bug2}. It was fixed for our studies by
+changing the value in the database to the measured energy. The result
+is shown in Fig.~\ref{fig:neu:h2223}.
+
+\begin{figure}[tbhp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{h2223}
+  \caption{The 2223~keV photon peak from H$(n,\gamma)$ in data and
+    simulation. The simulated peak is shifted at 2224.6~keV before the
+    modification described in the text.}
+  \label{fig:neu:h2223}
+\end{figure}
+
+The 139~keV and 196~keV photon peaks from the meta-stable states of
+$^{75}$Ge and $^{71}$Ge produced by neutron captures are missing in
+the simulated neutron spectrum, see the first two insets of
+Fig.~\ref{fig:neu:mc}. This problem has been reported to the Geant4
+Problem Tracking System~\cite{g4bug3}.
+
+The 692~keV peak from internal conversion, $^{72}$Ge$(n,n^{\prime}e)$, is also missing in the simulation, see Fig.~\ref{fig:neu:mc}. It also has been reported~\cite{g4bug4}.
+
+\section{Conclusion}
+\label{sec:neu:out}
+An 18-fold segmented germanium detector was exposed to an AmBe neutron
+source and spectra were taken. A number of peaks from neutron
+interactions on germanium isotopes as well as the surrounding
+materials were identified. The segment information proved to be very
+helpful in identifying these peaks. Inelastic neutron scattering
+produces many events with energy depositions in more than one segment.
+Hence, the improved understanding of neutron induced interactions can
+also help to reduce the related background in the $0\nu2\beta$ decay
+experiment, GERDA.
+
+The Geant4 based simulation package, MaGe, was used to simulate the
+experiment. Several discrepancies between data and MC were found.
+Further verification and improvement of the related Geant4 codes are
+needed.
 
 
 %%% Local Variables:
