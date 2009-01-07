@@ -37,6 +37,23 @@
 \setlength{\hoffset}{0cm}
 \setlength{\voffset}{0cm}
 
+% Alter some LaTeX defaults for better treatment of floats: See p.105 % of "TeX Unbound" for suggested values. See pp. 199-200 of Lamport's % "LaTeX" book for details.
+
+% General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9} % max fraction of floats at top
+\renewcommand{\bottomfraction}{0.9} % max fraction of floats at bottom
+
+% Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4} % 2 may work better
+\renewcommand{\textfraction}{0.1} % allow minimal text w. figs
+
+% Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+
+% remember to use [htp] or [htpb] for placement
 
 
 %%% Local Variables:
