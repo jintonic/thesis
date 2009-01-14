@@ -5,4 +5,4 @@ ps:
 pdf:
 	pdflatex -shell-escape thesis
 clean:
-	rm -f *.bak *.pstex* *.aux *.toc *.log *.out *.dvi 
+	rm -rf \_* *.pdf *.bak *.pstex* *.aux *.toc *.log *.out *.dvi 
