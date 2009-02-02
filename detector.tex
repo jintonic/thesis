@@ -88,16 +88,16 @@ where $\rho$ is the space charge density defined by the effective number of impu
 
 \subsection{Effects of crystal structure}
 \label{sec:det:struc}
-The drift velocities of charge carriers, $\mathbf{v}_{e/h}$, are related to the electric field, $\mathbf{E}$, by a coefficient named \emph{mobility}, $\mu_{e/h}$:
+The drift velocities of charge carriers, $\mathbf{v}_{e/h}(\mathbf{r})$, are related to the electric field, $\mathbf{E}(\mathbf{r})$, by a coefficient named \emph{mobility}, $\mu_{e/h}$:
 \begin{equation} 
   \label{eq:det:dv}
-  \mathbf{v}_{e/h} = \mu_{e/h} \mathbf{E}.  
+  \mathbf{v}_{e/h} (\mathbf{r})= \mu_{e/h} \mathbf{E}(\mathbf{r}),
 \end{equation}
-In germanium detectors operating at low temperature the mobility is influenced by the crystal lattice orientation. The drift velocities along different directions differ from each other (longitudinal anisotropy) and are not always parallel to the electrical field (transversal anisotropy). The angle between the drift direction and the electric field is known as the Sasaki angle\cite{Sas56}. A detailed discussion of the effects of the crystal structure on the charge carrier drift is contained in Chapter~\ref{cha:pss}.
+where $\mathbf{r}$ indicates the position. In germanium detectors operating at low temperature the mobility is influenced by the crystal lattice orientation. The drift velocities along different directions differ from each other (longitudinal anisotropy) and are not always parallel to the electrical field (transversal anisotropy). The angle between the drift direction and the electric field is known as the Sasaki angle\cite{Sas56}. A detailed discussion of the effects of the crystal structure on the charge carrier drift is contained in Chapter~\ref{cha:pss}.
 
 \section{Induction of signals in detector electrodes}
 \label{sec:det:ramo}
-Electric signals are induced in the electrodes of a detector by the cumulative influence of electrons and holes moving toward the electrodes. Shockley-Ramo's Theorem~\cite{Gat82, Rad88, He00} can be used to calculate the time development of the induced charge $Q(t)$ or current $I(t)$ on each electrode:
+Electric signals are induced in the electrodes of a detector by the cumulative influence of electrons and holes moving toward the electrodes. Shockley-Ramo's Theorem~\cite{Gat82, Rad88, He00} can be used to calculate the time development of the induced charge $Q(t)$ or current $I(t)$ in each electrode:
 \begin{equation} 
   \label{eq:det:ramoq}
   Q(t) = -Q_{0} \times [\varphi_{w}(\mathbf{r}_{h}(t)) - \varphi_{w}(\mathbf{r}_{e}(t))],
