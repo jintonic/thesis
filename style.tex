@@ -1,9 +1,12 @@
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{rotating} % provide "sidwaysfigure"
+\usepackage[rightcaption]{sidecap} % provide "SCfigure"
 
 \usepackage{ifpdf}
 \ifpdf
 \usepackage{epstopdf}
+%\usepackage{pdflscape} % pdf version of lscape
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[pdftex,bookmarks=true,hypertexnames=false]{hyperref}
 \hypersetup{
@@ -14,6 +17,7 @@
 }
 \pdfadjustspacing=1
 \else
+%\usepackage{lscape} % provide \begin{landscape}...\end{landscape}
 \usepackage[usenames,dvips]{color}
 \usepackage[ps2pdf]{hyperref}
 \fi
