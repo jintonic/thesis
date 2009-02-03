@@ -4,19 +4,19 @@ Assuming the physics models\cite{miha, bart} for the drift of the charge carrier
 \label{sec:psa:char}
 Detailed description of the characterization measurements with Siegfried I is available in Ref.~\cite{Sie07}. Data samples used to verify the simulation were taken in the following two measurements:
 \begin{description}
-\item[Surface scanning:] The surface of segment 13, 14 and 15 of Siegfried I (see Fig.~\ref{fig:ger:segm} for the segmentation naming scheme) was scanned in $\phi$ (azimuthal angle) direction using a 75~kBq $^{152}$Eu source inside a copper collimator with a length of 52~mm and a pin-hole diameter of 1~mm. The spot size on the detector surface was estimated to be 150~mm$^{2}$, where the distance between the collimator and the detector was 50~mm. The spot was pointed at $z = 0$ (see Fig.~\ref{fig:pss:coo} for the coordinate system). The step size of the scanning was chosen to be 5$^{\circ}$ in segment 14 and 10$^{\circ}$ in segment 13 and 15. An uncertainty in $\phi$ of $\Delta \phi=2.5^{\circ}$ was estimated. In total 25~measurements were performed so that 180$^{\circ}$ azimuthal angle was covered. The pulses of the core and all segments were recorded for each measurement. There were about $50\ 000$~events per measurement.
+\item[Surface scanning:] The surface of segment 13, 14 and 15 of Siegfried I (see Fig.~\ref{fig:ger:segm} for the segmentation naming scheme) was scanned in $\phi$ (azimuth angle) direction using a 75~kBq $^{152}$Eu source inside a copper collimator with a length of 52~mm and a pin-hole diameter of 1~mm. The spot size on the detector surface was estimated to be 150~mm$^{2}$, where the distance between the collimator and the detector was 50~mm. The spot was pointed at $z = 0$ (see Fig.~\ref{fig:pss:coo} for the coordinate system). The step size of the scanning was chosen to be 5$^{\circ}$ in segment 14 and 10$^{\circ}$ in segment 13 and 15. An uncertainty in $\phi$ of $\Delta \phi=2.5^{\circ}$ was estimated. In total 25~measurements were performed so that 180$^{\circ}$ azimuth angle was covered. The pulses of the core and all segments were recorded for each measurement. There were about $50\ 000$~events per measurement.
 \item[Occupancy measurement:] A 60~kBq $^{60}$Co source was positioned about 15~cm above the center of Siegfried I (see Fig.~\ref{fig:ph:occ}). The energy deposits seen by each segment and the core were recorded.
 \end{description}
 
 The 122~keV $\gamma$ line from the $^{152}$Eu source was used to study the drift of the electrons. Because these low energy photons cannot penetrate too much into germanium and mostly deposit energy locally by photoelectric effect (see Sec.~\ref{sec:det:gamma}), they create electron-hole pairs mainly near the outer surface of the detector. The holes reach the outer surface almost immediately, while the electrons have to drift through nearly the whole bulk of the detector until they reach the inner surface. The shapes of the pulses recorded with the core of the detector are hence mainly affected by the drift of the electrons. 
 
-To analyze the pulse shapes quantitatively the 10\%-30\% and 10\%-90\% risetimes of the core pulses were calculated. Figure~\ref{fig:psa:rt10} shows the average risetimes as a function of the azimuthal angle $\phi$. The dashed lines indicate the segment boundaries. Clear oscillation patterns can be seen in both cases. This indicates a longitudinal anisotropy of the drift velocities of electrons in different $\phi$ angles because they need different time to drift through nearly the same distance.\footnote{Strictly speaking, because of the bend of the drift trajectories the distances covered by electrons in different $\phi$ angles are sightly different from each other. However, this is a second-order effect. The difference of the risetimes is mainly caused by the different drift velocity along $r$ in different $\phi$ angles.}
+To analyze the pulse shapes quantitatively the 10\%-30\% and 10\%-90\% risetimes of the core pulses were calculated. Figure~\ref{fig:psa:rt10} shows the average risetimes as a function of the azimuth angle $\phi$. The dashed lines indicate the segment boundaries. Clear oscillation patterns can be seen in both cases. This indicates a longitudinal anisotropy of the drift velocities of electrons in different $\phi$ angles because they need different time to drift through nearly the same distance.\footnote{Strictly speaking, because of the bend of the drift trajectories the distances covered by electrons in different $\phi$ angles are sightly different from each other. However, this is a second-order effect. The difference of the risetimes is mainly caused by the different drift velocity along $r$ in different $\phi$ angles.}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{phi_risetime1030}
 \includegraphics[width=0.45\textwidth]{phi_risetime1090}
-\caption{Average 10\%-30\% (left) and 10\%-90\% (right) risetimes of the core pulses as a function of the azimuthal angle $\phi$ (taken from Ref.~\cite{Sie07}).}
+\caption{Average 10\%-30\% (left) and 10\%-90\% (right) risetimes of the core pulses as a function of the azimuth angle $\phi$ (taken from Ref.~\cite{Sie07}).}
 \label{fig:psa:rt10}
 \end{figure}
 
@@ -62,9 +62,19 @@ The pulses corresponding to all scanning points were also simulated. They were c
 
 \section{Transverse anisotropy}
 \label{sec:psa:tra}
-The transverse anisotropy of the drift leads to the bend of the drift trajectories as shown in Fig.~\ref{fig:pss:trjs}. Consequently, the charge carriers created in a segment may drift into its neighboring segment. The occupancy of each segment, namely, the number of events recorded by the segment, is hence different. This is shown in Fig.~\ref{fig:ph:mcb}. Detailed studies show that this feature is independent of the energy deposited.
+The transverse anisotropy of the drift leads to the bend of the drift trajectories as shown in Fig.~\ref{fig:pss:trjs}. Consequently, the charge carriers created in a segment may drift into its neighboring segment. Some segments would always see more events than others if the trajectories are more likely to bend to it. The occupancy of each segment, namely, the number of events recorded by the segment, is hence different. This is shown in Fig.~\ref{fig:ph:mcb}. Detailed studies show that this feature is independent of the energy deposited.
 
-To verify how well this feature can be simulated $100\ 000$ hits were homogeneously distributed in the middle layer of Siegfried I. The azimuth angles of the final points of the drift trajectories on the outer surface of the detector were recorded.
+To verify how well this feature can be simulated $100\ 000$ hits with the same energy were homogeneously distributed in the middle layer of Siegfried I. The drift of holes created by each hit were simulated. If a trajectory ends on the outer surface of one segment, the number of events seen by that segment increases by one. 
+
+The simulated occupancy distribution was compared to data as shown in the left plot of Fig.~\ref{fig:psa:focc}. It changes with $\phi_{110}$, the angle between the segment boundary and the crystal axis (see Fig.~\ref{fig:pss:coo}). The difference of the distributions between data and simulation changes with $\phi_{110}$ consequently. This is shown in the right plot of Fig.~\ref{fig:psa:focc}. The difference is defined as a value proportion to $\sum_{i=1}^{6} (N_{i}^{sim}-N_{i}^{dat})$ where $N_{i}^{sim}$ and $N_{i}^{dat}$ are the numbers of events in segment $i$ for simulation and data, respectively.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fitocc}
+\caption{Left: comparison of the occupancy distribution between data and simulation. Right: difference of the two distributions as a function of $\phi_{110}$, the angle indicating the orientation of the crystal axis with respect to the segment boundary.}
+\label{fig:psa:focc}
+\end{figure}
+
 
 \section{Summary}
 \label{sec:psa:sum}
