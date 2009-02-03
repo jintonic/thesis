@@ -30,12 +30,12 @@ Pulse induced in the core electrode by the drift of electrons from outer surface
 
 The simulated pulse induced by the drift of electrons along the $\langle 110 \rangle$ axis was used to fit to each pulses from the scanning data. Figure~\ref{fig:psa:s2d} shows one of the fits. The dots with error bars are the sampling points of the pulse from data. The error was set according to the noise level.
 
-\begin{SCfigure}[][htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.5\textwidth]{PSs2d}
+\includegraphics[width=0.6\textwidth]{PSs2d}
 \caption{Fit of simulated pulse to a real one. The error bars of the sampling points are set according to the noise level.}
 \label{fig:psa:s2d}
-\end{SCfigure}
+\end{figure}
 
 If the risetime of the simulated pulse is the same as the pulse from data, the free parameter \emph{Time scale} determined by the fitting should be equal to one. A value smaller than one indicates that the simulated pulse is longer than in reality; a value larger than one indicates that the simulated pulse is shorter than in reality. The time scale given in Fig.~\ref{fig:psa:s2d} shows that the simulated pulse is about 20\% longer than the pulse chosen from data.
 
@@ -66,20 +66,20 @@ The transverse anisotropy of the drift leads to the bend of the drift trajectori
 
 To verify how well this feature can be simulated $100\ 000$ hits with the same energy were homogeneously distributed in the middle layer of Siegfried I. The drift of holes created by each hit were simulated. If a trajectory ends on the outer surface of one segment, the number of events seen by that segment increases by one. 
 
-The simulated occupancy distribution was compared to data as shown in the left plot of Fig.~\ref{fig:psa:focc}. It changes with $\phi_{110}$, the angle between the segment boundary and the crystal axis (see Fig.~\ref{fig:pss:coo}). The difference of the distributions between data and simulation changes with $\phi_{110}$ consequently. This is shown in the right plot of Fig.~\ref{fig:psa:focc}. The difference is defined as a value proportion to $\sum_{i=1}^{6} (N_{i}^{sim}-N_{i}^{dat})$ where $N_{i}^{sim}$ and $N_{i}^{dat}$ are the numbers of events in segment $i$ for simulation and data, respectively.
+The simulated occupancy distribution was compared to data as shown in the left plot of Fig.~\ref{fig:psa:focc}. It changes with $\phi_{110}$, the angle between the segment boundary and the crystal axis (see Fig.~\ref{fig:pss:coo}). The difference of the distributions between data and simulation changes with $\phi_{110}$ consequently. This is shown in the right plot of Fig.~\ref{fig:psa:focc}. The difference is defined as a value proportion to $\sum_{i=1}^{6} (N_{i}^{sim}-N_{i}^{dat})$ where $N_{i}^{sim}$ and $N_{i}^{dat}$ are the numbers of events in segment $i$ for simulation and data, respectively. The difference changes with $\phi_{110}$ by a period of $90^{\circ}$. There are four minima at $\phi_{110} \approx 84^{\circ}, 174^{\circ}, 264^{\circ}$ and $354^{\circ}$, \textit{i.e.}, the simulation fits data best when the $\langle 110 \rangle$ axis is nearly aligned with segment boundaries. This is consistent with the result from the scanning measurement.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fitocc}
-\caption{Left: comparison of the occupancy distribution between data and simulation. Right: difference of the two distributions as a function of $\phi_{110}$, the angle indicating the orientation of the crystal axis with respect to the segment boundary.}
+\includegraphics[width=0.9\textwidth]{fitocc}
+\caption{Left: comparison of the occupancy distribution between data and simulation. Right: difference of the two distributions as a function of $\phi_{110}$, the angle indicating the orientation of the crystal axis with respect to the segment boundary. The left plot shows the situation when the difference reaches its minima.}
 \label{fig:psa:focc}
 \end{figure}
 
+The segmentation and crystal axis orientations have a $180^{\circ}$ degeneracy: if the segment boundaries or the crystal axes are rotated around $z$-axis by $180^{\circ}$, the whole configuration does not change. The occupancy distribution, determined by the orientation of the crystal axis with respect to the segment boundary, should also reveal this feature. This is ture for the simulated distribution. The distribution in data does not follow this rule strictly. The first three segments show larger fluctuation than the last three. One of the possible explanations is that the impurity densities vary in different segments.
 
 \section{Summary}
 \label{sec:psa:sum}
-
-both indicate anisotropy of the impurity distribution along r.
+Several detector characterization measurements show anisotropic drift of the charge carriers. Pulse shape simulation for the detector under study was carried out and compared to data in different aspects. The risetimes of the simulated pulses systematically deviated from data by about 10\%. However, this can be easily corrected. The deviation decreases down to about 3\% after the correction. A novel method to obtain the crystal axes orientation information was introduced by simply comparing the number of events seen by each segment between data and simulation. The result is consistent with the common scanning measurement. The discrepancy indicates inhomogeneous distribution of the impurity density around the detector. This is worth further investigation.
 
 %%% Local Variables:
 %%% mode:latex
