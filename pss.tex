@@ -282,7 +282,7 @@ Once the weighting fields and potential, the drift velocities and trajectories o
 
 
 \section{Effects of electronics}
-\label{sec:pss:elec}
+\label{sec:pss:dbn}
 The pulses recorded by the DAQ system are quite different from the raw pulses. Not only their amplitudes but also their shapes are changed by the electronics. For example, the limit on the bandwidth of the signal transmission through the electronics cut off the signal components with frequency higher than the limit. The sharp changes in a pulse are hence smeared. The baseline after a pulse decrease exponentially to its original level with a time constant $\tau$. This also needs to be simulated. The electric noise may destroy any fine structure of a pulse, hence also needs to be simulated.
 
 Figure~\ref{fig:pss:elec} shows the changes of a raw pulse after folded in the effects from the limit of the transmission bandwidth, the decay of the baseline and the noise. The cut-off bandwidth set in the simulation is 10~MHz, the decay time is $5 \mu$s, and the noise level is 5\% of the pulse amplitude. These values are set larger than those in the test stands introduced before in order to show the effect clearly.
