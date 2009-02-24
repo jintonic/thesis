@@ -3,6 +3,6 @@ latex:
 ps:
 	dvips thesis.dvi -o thesis.ps
 pdf:
-	pdflatex -shell-escape thesis
+	pdflatex -shell-escape thesis # -shell-escape is required by epstopdf
 clean:
-	rm -rf \_* *.pdf *.bak *.pstex* *.aux *.toc *.log *.out *.dvi 
+	rm -rf \_* *.bak *.pstex* *.aux *.toc *.log *.out *.dvi 
