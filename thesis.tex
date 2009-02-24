@@ -2,90 +2,52 @@
 
 \input{style}
 
+\includeonly{introduction,acknowledgement,bibliography}
+
 \begin{document}
 
-\pagestyle{empty}
+\frontmatter
+%-----------
+% set pagenumbering to roman
+% add \cleardoublepage after chapters and tableofcontents
 
-\input{title}
+\pagestyle{empty} % for front matters
 
-\cleardoublepage
+\include{title}
+\include{abstract}
 
-\input{abstract}
+\pagestyle{headings} % til the end
 
-\cleardoublepage \setcounter{page}{1} \pagenumbering{Roman}
-
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\renewcommand{\contentsname}{Table of Contents}  % Original name = Contents
 \tableofcontents
 
-\cleardoublepage \setcounter{page}{1} \pagenumbering{arabic}
+\mainmatter
+%----------
+% set pagenumbering to arabic
+% set page counter to 1
 
-\pagestyle{headings}
+\include{introduction}
+\include{theory}
+\include{experiments}
+\include{gerda}
+\include{detector}
+\include{teststand}
+\include{gerdalinchenII}
+\include{photon}
+\include{neutron}
+\include{pss}
+\include{psa}
+\include{conclusion}
 
-\chapter{Introduction}
-\label{cha:intro}
-\input{introduction}
-\clearpage{\pagestyle{empty}\cleardoublepage}
+\backmatter
+%-----------
+% remove numbering of chapters in table of contents
 
-\chapter{Neutrino mass and its origin}
-\label{cha:theory}
-\input{theory}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Neutrinoless double beta decay experiments}
-\label{cha:exps}
-\input{experiments}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{The GERDA experiment}
-\label{cha:gerda}
-\input{gerda}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Signal formation in germanium detectors}
-\label{cha:detector}
-\input{detector}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Detector test facilities in Munich}
-\label{cha:teststand}
-\input{teststand}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter[Operation of segmented detectors in LN$_{2}$]{Operation of segmented detectors in liquid nitrogen}
-\label{cha:GII}
-\input{gerdalinchenII}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Photon induced background}
-\label{cha:photon}
-\input{photon}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Neutron induced background}
-\label{cha:neutron}
-\input{neutron}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Pulse shape simulation}
-\label{cha:pss}
-\input{pss}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Validation of pulse shape simulation}
-\label{cha:psa}
-\input{psa}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{Conclusions and outlook}
-\label{cha:con}
-\input{conclusion}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter*{Acknowledgement}
-\label{cha:ack}
-\input{acknowledgement} 
-\clearpage{\pagestyle{empty}\cleardoublepage}
+\include{acknowledgement}
 
 \addcontentsline{toc}{chapter}{Bibliography}
-\input{bibliography}
+\include{bibliography}
 
 \end{document}
