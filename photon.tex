@@ -2,7 +2,7 @@
 \label{cha:photon}
 Since the $0\nu\beta\beta$ decay of $^{76}$Ge has a $Q$-value of 2.039~MeV, natural $\gamma$-rays with energies larger than 2.039~MeV are the main background source for GERDA. Fortunately, the spatial distribution of photon interactions with germanium differs from electron interactions with germanium, see Sec.~\ref{sec:det:phys}. Segmented germanium detectors will be used in GERDA Phase II in order to identify photon induced background. The discrimination power of segmented germanium detectors was examined systematically \cite{Pid07} using the GERDA Phase II prototype detector Siegfried I (see Sec.~\ref{sec:gerda:stat3}) and its test stand (see Sec.~\ref{sec:tt:comc}). The main results are summarized in this chapter. 
 
-MaGe \cite{Mag08}, a C++ simulation package is co-developed by the Majorana and GERDA collaborations based on Geant4 toolkits \cite{Gea03,Gea06}. It was used for the simulation of GERDA and the detector test facilities in Munich. The predictions for photon induced events were verified to hold to 5\%.
+MaGe \cite{Mag06, Mag08}, a C++ simulation package is co-developed by the Majorana and GERDA collaborations based on Geant4 toolkits \cite{Gea03, Gea06}. It was used for the simulation of GERDA and the detector test facilities in Munich. The predictions for photon induced events were verified to hold to 5\%.
 
 \section{Event classification}
 \label{sec:ph:eve}
@@ -12,12 +12,12 @@ Figure~\ref{fig:ph:eve} depicts four possible event configurations. By requiring
 
 A single-site event can also be a multi-segment event if it happens to occur on the boundary of two neighboring segments and induces signals in both segments, as shown in the top right corner of Fig.~\ref{fig:ph:eve}. This kind of event will be rejected erroneously by the anti-coincidence requirement, and should also be identified using pulse shape analysis.
 
-\begin{SCfigure}[][htbp]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{events}
 \caption{Possible event configurations. The cross sections of Siegfried-like detectors are depicted. The black dots are hits (energy deposits). The wavy lines indicate $\gamma$-rays.}
 \label{fig:ph:eve}
-\end{SCfigure}
+\end{figure}
 
 \section{Background rejection using segmentation}
 \label{sec:ph:seg}
@@ -35,7 +35,7 @@ Different data samples were taken using the segmented germanium detector Siegfri
 
 \section{Monte Carlo simulation}
 \label{sec:ph:sim}
-Monte Carlo (MC) simulations of prototype detectors and their cryostats were performed using MaGe \cite{Mag08}, a C++ package co-developed by the Majorana and GERDA collaborations using the Geant4 toolkits \cite{Gea03,Gea06}. Figure~\ref{fig:ph:sim} shows the geometrical models of the detectors and cryostats implemented in Geant4. Figure~\ref{fig:ph:s2} shows a close-up of the \emph{Siegfried} II geometry. It was modeled in such a way that the details were implemented as close as possible to reality while the simulation efficiency did not decrease too much.
+Monte Carlo (MC) simulations of prototype detectors and their cryostats were performed using MaGe \cite{Mag06, Mag08}, a C++ package co-developed by the Majorana and GERDA collaborations using the Geant4 toolkits \cite{Gea03, Gea06}. Figure~\ref{fig:ph:sim} shows the geometrical models of the detectors and cryostats implemented in Geant4. Figure~\ref{fig:ph:s2} shows a close-up of the \emph{Siegfried} II geometry. It was modeled in such a way that the details were implemented as close as possible to reality while the simulation efficiency did not decrease too much.
  
 \begin{figure}[tbhp]
 \centering
