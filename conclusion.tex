@@ -1,39 +1,45 @@
-\chapter{Conclusions and outlook}
-\label{cha:con}
-The neutrinos in Standard Model are massless particles; they participate in the weak interaction with fixed helicity; there are only left-handed neutrinos and right-handed anti-neutrinos, and they are assumed to be different particles. The observation of neutrino oscillations indicated that at least two neutrino mass eigenstates have non-zero mass. This makes it necessary to introduce neutrino mass terms into the Standard Model Lagrangian. 
+\chapter{Summary and outlook} 
+\label{cha:con} 
+ 
+The results presented in this thesis can be summarized as follows:
+\begin{enumerate}
+\item Segmented n-type germanium detectors can be operated stably over long periods submerged in a cryogenic liquid;
+\item They can facilitate not only the identification of photon-induced events but also of neutron-induced events;
+\item The pulse shapes of segmented detectors can be simulated reliably using basic information about semiconductor-detectors;
+\item A novel way to determine the crystal orientation and impurity distribution of a segmented detector was developed.
+\end{enumerate}
 
-Following the same procedure as for the electron Dirac mass terms of neutrinos can be introduced. However, this does not explain why neutrinos couple to the Higgs field so weakly compared to their leptonic partners, and why the right-handed neutrinos and left-handed anti-neutrinos have never been found so far. Being ware of the chargeless nature of neutrinos the charge conjugates of the neutrinos fields can be used to form Majorana mass terms. Neutrinos and anti-neutrinos are assumed to be identical in this scenario, hence the second problem does not arise. The see-saw mechanism taking into account both Dirac and Majorana mass terms can be used to the different coupling strengths look natural.
+The work was performed in the context of detector development for Phase~II of the GERDA neutrinoless double beta decay experiment. The results are highly relevant for the realization of this experiment.
 
-The absolute mass scale of neutrinos cannot be measured by the oscillation experiments. It is constrained by cosmological observations, single beta decay and neutrinoless double beta ($0\nu\beta\beta$) decay experiments. Instead of probing neutrino masses, $0\nu\beta\beta$ decay experiments are the only approach known to answer the question whether neutrino and anti-neutrino are identical or not, hence were and are widely carried out. There was one controversial observation claim made by part of the Heidelberg-Moscow collaboration recently. The corresponding effective Majorana neutrino mass was also given by them. It is of great interest to perform new experiments with higher sensitivities to verify their result.
+\begin{enumerate}
 
-Many experiments have been constructed or planned to search for $0\nu\beta\beta$ decays of different isotopes. Generally speaking, large amount of source material, high abundance of the isotopes under study, large signal detecting efficiency, good energy resolution and low background contamination are preferred in order to overcome the extremely low event rate of the $0\nu\beta\beta$ decay. There is no simple solution satisfying all the preference. Different technical approaches were compared to each other. Their Pros and Cons were summarized.
+\item Segmented n-type germanium detectors are to be used in Phase~II of GERDA which is based on the idea to submerge detectors in liquid argon to achieve extremely low background levels using the liquid as a shield against external radiation.
+\item The background level due to the predicted radioactivity within GERDA can only reach the extremely low level targeted, if both photon-and neutron-induced events are identified with good efficiency.
+\item Even though background events are identified very well using segment information, an additional suppression factor of $\approx$\,1.3 for photon-induced events is expected from pulse shape analysis. However, the verification of this expectation is important and impossible without excellent pulse shape simulation.
+\item As handling has to be minimized during the production of the GERDA detectors in order to minimize possible contamination, the control measurements should be kept to a minimum. This novel way to determine the crystal orientation needed for pulse shape analysis allows an in-situ measurement of crystal properties during a normal energy calibration inside GERDA cryostat. 
+\end{enumerate}
 
-The experiments searching for the $0\nu\beta\beta$ decay of $^{76}$Ge are able to take advantage of the excellent energy resolution of germanium detectors to minimize the contamination of neutrino accompanied double beta $2\nu\beta\beta$ decay. Since the source and detector are identical, the detecting efficiency is very high. And The low natural abundance of $^{76}$Ge can be overcome by enrichment. However, this approach suffers from the fact that the $Q$-value of the decay is only $2039$~keV, lower than many natural radiation lines. To effectively reduce the background contamination is the key for this kind of experiment to success.
+As part of the work presented in this thesis, many tests were made to study segmented germanium detectors and the complete read-out and support system.  The understanding of these novel kind of detectors was enhanced considerably. The operation of the detectors and the tuning of the electronics provides guidelines for the operation of GERDA. This includes monitoring and control software.
 
-The GERmanium Detector Array (GERDA) experiment, currently under construction in Hall A of the INFN Gran Sasso National Laboratory (LNGS), Italy, follows this approach. Not only the common techniques are applied to reduce the background induced by cosmic ray muons, photon, neutron and alpha radiations from the surrounding and components of the experiment. Several novel techniques will also be used, such as the operation of segmented germanium detectors directly in liquid argon, in order to reach ultra-low background level. Several main parts of the experiment setup were established in fall 2008, including the water tank, the cryostat and the infra-structure on top of which the clean room is being built. This marked a major milestone of GERDA. The commissioning of GERDA is foresee to take place in fall 2009.
+The Monte Carlo package, MaGe, used to simulate all aspects of the GERDA experiment, was verified using photon-induced and neutron-induced events. Several problems, especially in the simulation of neutron interactions, were identified and solved. The overall agreement of the Monte Carlo predictions with data taken in the test facilities was very satisfactory.
 
-In order to systematically examine the operation of segmented germanium detectors directly in cryogenic liquid, and to study the background discrimination power of the segmentation scheme, several test facilities were built at the Max-Planck-Institut f\"ur Physik in M\"unchen. The first two 18-fold segmented prototype detectors for GERDA Phase~II were operated in vacuum and for the first time operated in cryogenic liquid. The detectors were characterized in all aspects, including the energy resolutions, the cross talks, the crystal orientation, the segment boundaries, and the impurities, \textit{etc.}. One of the two prototype detectors was operated in cryogenic liquid for more than four months. Its performance was carefully investigated. It was proved that the segmented germanium detector can be operated directly in cryogenic liquid stably for a long period.
-
-The prototype detectors were exposed to different gamma sources to study their interactions with photons in the MeV-energy range. These photons typically undergo multiple Compton scattering and deposit energies in several different segments, while electrons emitted from the $0\nu\beta\beta$ decay deposit energies mainly in one segment. The suppression factors of typical gamma lines by requiring single segment having signal were shown to be around 2 - 4 depending on the energies.
-
-The prototype detectors were also exposed to a neutron source to study the neutron interactions with the germanium detectors and the surrounding materials. A number of peaks from neutron interactions were identified. The segment information proved to be very helpful in identifying these peaks. Inelastic neutron scattering produces many events with energy deposits in more than one segment. Hence, the improved understanding of neutron induced interactions can also help to reduce the related background in GERDA.
-
-Monte Carlo (MC) simulations of prototype detectors and their cryostats were performed using MaGe, a C++ simulation framework jointly developed by the Majorana and GERDA collaborations using the Geant4 toolkits. The simulation of low energy photon interactions with germanium detectors proved to be quite accurate. However, several discrepancies between data and MC were found in the simulation of low energy neutron interactions. Most of them were corrected. Some further verification and improvement of the related Geant4 codes are needed.
-
-The pulse shape analysis is needed to further identify background events which cannot be rejected by requiring single segment having signal. An the pulse shape simulation is needed to estimate the efficiency of the pulse shape analysis. A full-functional pulse shape simulation package was developed within the MaGe framework. It covers the whole process of the signal formation in a germanium detector system, from the energy deposition of a radiation strike to the drift of charge carriers in the detector until the pulse shaping of the electronics system. The simulated pulses were compared to their counterparts in the data taken from the surface scanning of the prototype detector. Some discrepancy was found, but proved to be easy to correct. A novel method was developed to determine the crystal orientation by comparing the numbers of events in each segment provided by data and simulation.
-
-Confidence of the successful operation of segmented germanium detectors directly in cryogenic liquid were gradually built up based on these systematic studies. The methods using segmentation and pulse shapes to identify low energy photon and neutron induced background were developed and proved to be powerful. Based on the experience accumulated so far, the following researches are planned:
-\begin{itemize}
-\item the signal transmission system in cryogenic liquid needs to be further optimized so that the cross talks and the micro-phonic noise can be minimized.
-\item the cryogenic liquid test facility needs to be modified to operate germanium detectors in liquid argon without problems in the high voltage cabling.
-\item three segmented germanium detectors will be operated simultaneously in liquid argon after all the optimization. The operation of a string of segmented detectors in GERDA will be simulated as close as possible to the reality.
-\item data will be collected with a low energy gamma source placed right inside the core of a segmented $n$-type detector. Holes created on the inner surface of the detector will drift outwards while electrons created at the same place reach the inner surface immediately. The drift of the holes hence can be studied without being interfered by the drift of the electrons.
-\item the surface scanning will be performed with several other segmented detectors. The pulse shape simulation can be compared to data taken from different detectors so that it can be further verified.
-\item different pulse shape analysis methods will be validated and then performed based on samples generated by the verified pulse shape simulation package. Their background discrimination power will be studied in detail.
+The detector system including read-out and signal transmission and processing is still being optimized:
+\begin{itemize} 
+\item the signal transmission inside the cryogenic liquid needs to be further improved to minimize cross-talks and micro-phonic effects;
+\item the high voltage distribution into the cryogenic volume has to be improved to allow stable running not only with liquid nitrogen, but also with liquid argon;
 \end{itemize}
 
+It is planned to operate three segmented germanium detectors together in liquid argon, providing a test environment as close as possible to the GERDA environment and allowing a large variety of detector studies.
 
-%%% Local Variables:
-%%% mode:latex
-%%% TeX-master: "thesis"
-%%% End:
+\begin{itemize}
+\item Data will be collected with a low energy gamma source placed inside the core of a segmented $n$-type detector. Holes created close to the inner surface of the detector will drift outwards while electrons reach the inner surface almost immediately.  Thus, the drift of the holes can be studied separately.
+\item Various surface scans will be performed on at least three different segmented detectors of the same type. This will allow the verification of the pulse shape simulation package with a large variety of data.
+\item Several pulse shape analyses will be performed and evaluated using data and Monte Carlo including pulse shape simulation. The potential for background discrimination will be studied in detail.
+\end{itemize} 
+ 
+All these studies will rely on the work presented in this thesis and will further the understanding of segmented germanium detectors. The results will provide information for the operation of GERDA and the planning of future germanium based experiments.
+ 
+%%% Local Variables: 
+%%% mode:latex 
+%%% TeX-master: "thesis" 
+%%% End: 
