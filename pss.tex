@@ -58,8 +58,8 @@ Germanium has the same crystalline structure as silicon and diamond, \textit{i.e
 
 \begin{figure}[tbhp]
 \centering
-\includegraphics[width=0.6\textwidth]{xtalStruc}  
-\caption{Structure of germanium crystals: Left, basic configuration; Right, definition of crystal axes.}
+\includegraphics[width=0.8\textwidth]{xtalStruc}  
+\caption{Structure of germanium crystals: (a) basic configuration and (b) definition of crystal axes.}
 \label{fig:pss:xtal}
 \end{figure}
 
@@ -87,20 +87,20 @@ Ref.~\cite{bart}& & $\langle100\rangle$ & 38609 & 51.1 & 0.805 & -171\\
 \end{tabular*}
 \end{table}
 
-Figure~\ref{fig:pss:vvse} visualizes Eq.~\ref{eq:pss:para} for electric fields in the range of [7,500]~V/mm. The input parameters provided in Ref.~\cite{miha} (\cite{bart}) were used for Fig.~\ref{fig:pss:vvse}a and b (c and d). The highest curve in each plot (blue in color) is the velocity along the axes $\langle 100 \rangle$. The lowest curve in each plot (red in color) is the velocity along the axes $\langle 111 \rangle$. The drift velocity in any other direction can be related to the ones along  $\langle 100 \rangle$ and $\langle 111 \rangle$ axes. The detail of the calculation is described in the following sections.
+Figure~\ref{fig:pss:vvse} shows the drift velocities of electrons (a, c) and holes (b, d) along the principal crystal axes as functions of electric field in the range of [7,500]~V/mm. The drift velocities along the $\langle 100 \rangle$ and $\langle 111 \rangle$ axes were calculated according to Eq.~\ref{eq:pss:para}. The input parameters provided in Ref.~\cite{miha} (\cite{bart}) were used for Fig.~\ref{fig:pss:vvse}a and b (c and d). The drift velocity in any other direction is related to the ones along $\langle 100 \rangle$ and $\langle 111 \rangle$ axes and can be calculated accordingly. The drift velocities along the $\langle 110 \rangle$ axis were calculated as an example. The detail of the calculation is described in the following sections.
 
 \begin{figure}[tbhp]
 \centering
 \includegraphics[width=\textwidth]{VvsElucian} \\\hfil
 \includegraphics[width=\textwidth]{VvsEbart}
-\caption{Drift velocities along the principal crystal axes as functions of electric field in the range of [7,500]~V/mm. Velocities along the axes $\langle 100 \rangle$ and $\langle 111 \rangle$ are calculated with Eq.~\ref{eq:pss:para}, while velocities along $\langle 110 \rangle$ are predictions of a simulation described in Sec.~\ref{sec:pss:elec} and \ref{sec:pss:hole}. The upper plots are created using the input parameters provided in Ref.\cite{miha}, the lower using the input parameters provided in Ref.\cite{bart}.}
+\caption{Drift velocities of electrons (a, c) and holes (b, d) along the principal crystal axes as functions of electric field in the range of [7,500]~V/mm. Velocities along the axes $\langle 100 \rangle$ and $\langle 111 \rangle$ were calculated according to Eq.~\ref{eq:pss:para}: (a) and (b), the input parameters provided in Ref.~\cite{miha} were used; (c) and (d), the input parameters provided in Ref.~\cite{bart} were used. The velocities along $\langle 110 \rangle$ axis are predictions of the simulation described in the following sections.}
 \label{fig:pss:vvse}
 \end{figure}
 
 \subsection{Coordinate systems}
 \label{sec:pss:xyz}
 Two different coordinate systems are important for the calculation. The first one is defined by the crystal axes $\langle 100 \rangle$, $\langle 010 \rangle$ and $\langle 001 \rangle$. The second one, indicated as $xyz$ in Fig~\ref{fig:pss:coo}, is used in Geant4. The cylindrical detectors are produced with their geometrical middle axis, $z$, aligned to the crystal axis $\langle 001 \rangle$. The transformation between the two coordinate system, hence, only depends on the angle between the $\langle 110 \rangle$ and the y-axis, $\phi_{110}$.
-\begin{SCfigure}[][htpb]
+\begin{SCfigure}[][t!]
 \centering
 \includegraphics[width=0.4\textwidth]{coordins}  
 \caption{The relation between the coordinates $xyz$ used in Geant4 and the crystal axes $\langle 100 \rangle$, $\langle 010 \rangle$ and $\langle 001 \rangle$.}
@@ -110,7 +110,7 @@ Two different coordinate systems are important for the calculation. The first on
 \subsection{Electron drift velocity}
 \label{sec:pss:elec}
 The conduction band in a germanium crystal reaches its minimal potential in regions around the four equivalent $\langle 111 \rangle$ axes. The equipotential surfaces in these regions have ellipsoidal shapes as shown in Fig~\ref{fig:pss:valley}. 
-\begin{SCfigure}[][htpb]
+\begin{SCfigure}[][b!]
 \centering
 \includegraphics[width=0.4\textwidth]{valleys}  
 \caption{Minimal potential regions in the conduction band along four equivalent $\langle 111 \rangle$ axes, where the probability density of electrons is dominant (taken from Ref.\cite{bart}).}
@@ -274,9 +274,9 @@ The trajectories along the crystal axes are straight as explained in Sec.~\ref{s
 Once the weighting fields and potential, the drift velocities and trajectories of the charge carriers are known, Eq.~\ref{eq:det:ramoq} and \ref{eq:det:ramoi} introduced in Sec.~\ref{sec:det:ramo} can be used to calculate the time development of the induced charge $Q(t)$ or current $I(t)$ in each electrode (raw pulses in short). Figure~\ref{fig:pss:pss} shows the raw charge and current pulses induced by a hit in the fired segment, its neighboring segments and the core of a Siegfried-like detector. The contour in Fig.~\ref{fig:pss:psh} shows the weighting potential of the fired segment. The amplitude of the pulse induced in one neighboring segment is larger than the other neighboring segment because the trajectory of the hit is closer to this segment.
 \begin{figure}[htbp]
 \centering
-\subfloat[Weighting potential]{\label{fig:pss:psh}
+\subfloat[]{\label{fig:pss:psh}
 \includegraphics[height=0.22\textheight]{WP}}%
-\subfloat[Simulated charge and current pulses]{\label{fig:pss:pss}
+\subfloat[]{\label{fig:pss:pss}
 \includegraphics[height=0.22\textheight]{CIPS}}%
 \caption{Simulated charge and current pulses induced in segment A, B, C and the core of a Siegfried-like detector. (a) shows the weighting potential in segment B. (b) shows the charge and current pulses, the dashed line shows the drift trajectory of holes and the dotted line shows the drift trajectory of electrons.}
 \label{fig:pss:ps}
