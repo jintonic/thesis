@@ -1,19 +1,21 @@
 \chapter{Validation of pulse shape simulation}
 \label{cha:psa}
-Assuming the physics models\cite{miha, bart} for the drift of the charge carriers in germanium detectors and their input parameters taken from the measurements\cite{miha, bart} are precise enough the simulation based on them still needs to be tuned for each individual detector or at least for a series of similar detectors. This is because the pulse shape is affected by many things, such as the impurity density and the surface treatment of the detector, the electronics system connected, etc. These properties vary in different detector systems. Several data samples were taken with the first GERDA Phase II prototype detector Siegfried I (see Sec.~\ref{sec:gerda:stat3}) and its teststand (see Sec.~\ref{sec:tt:comc}) to characterize the detector. Simulation was verified with these data sets. The results are described in this chapter.
+The physics models \cite{miha, bart} for the drift of charge carriers and their measured input parameters \cite{miha, bart} alone are not enough to provide a realistic pulse shape simulation. While some input parameter are generic to germanium, others, like the impurity density and the detailed properties of the surface layers, are different for each detector. Thus the simulation has to be tuned for each individual detector or at least for a series of similar detectors. 
+
+Several data samples were taken with the first GERDA Phase II prototype detector Siegfried I (see Sec.~\ref{sec:gerda:stat3}) operated in its test stand (see Sec.~\ref{sec:tt:comc}) to characterize the detector. The simulation  was verified using these data. The results are presented in this chapter.
 
 \section{Detector characterization measurements}
 \label{sec:psa:char}
-Detailed description of the characterization measurements with Siegfried I is available in Ref.~\cite{Sie07}. Data samples used to verify the simulation were taken in the following two measurements:
+A detailed description of the characterization of Siegfried I is available in Ref.~\cite{Sie07}. Two data samples were used to verify the simulation:
 \begin{description}
-\item[Surface scanning:] The surface of segment 13, 14 and 15 of Siegfried I (see Fig.~\ref{fig:ger:segm} for the segmentation naming scheme) was scanned in $\phi$ (azimuth angle) direction using a 75~kBq $^{152}$Eu source inside a copper collimator with a length of 52~mm and a pin-hole diameter of 1~mm. The spot size on the detector surface was estimated to be 150~mm$^{2}$, where the distance between the collimator and the detector was 50~mm. The spot was pointed at $z = 0$ (see Fig.~\ref{fig:pss:coo} for the coordinate system). The step size of the scanning was chosen to be 5$^{\circ}$ in segment 14 and 10$^{\circ}$ in segment 13 and 15. An uncertainty in $\phi$ of $\Delta \phi=2.5^{\circ}$ was estimated. In total 25~measurements were performed so that 180$^{\circ}$ azimuth angle was covered. The pulses of the core and all segments were recorded for each measurement. There were about $50\ 000$~events per measurement.
+\item[Surface scanning:] The surface of segments 13, 14 and 15 (see Fig.~\ref{fig:ger:segm}) was scanned in $\phi$ (azimuth angle) using a 75~kBq $^{152}$Eu source inside a copper collimator with a length of 52~mm and a pin-hole diameter of 11~mm. The spot size on the detector surface was estimated to be $\approx 150$~mm$^{2}$. The distance between the collimator and the center of the detector was $\approx 85$~mm. The center of the collimator was pointed at $z = 0$ (see Fig.~\ref{fig:pss:coo}). 
+The step size of the scan was  5$^{\circ}$ in segment 14 and 10$^{\circ}$ in segment 13 and 15. The uncertainty in $\phi$ is $\approx \Delta \phi=2.5^{\circ}$. In total 25~measurements were performed to cover 180$^{\circ}$ in azimuth. The pulses of the core and all segments were recorded all events. There were about $50\ 000$~events per measurement.
 \item[Occupancy measurement:] A 60~kBq $^{60}$Co source was positioned about 15~cm above the center of Siegfried I (see Fig.~\ref{fig:ph:occ}). The energy deposits seen by each segment and the core were recorded.
 \end{description}
 
-The 122~keV $\gamma$ line from the $^{152}$Eu source was used to study the drift of the electrons. Because these low energy photons cannot penetrate too much into germanium and mostly deposit energy locally by photoelectric effect (see Sec.~\ref{sec:det:gamma}), they create electron-hole pairs mainly near the outer surface of the detector. The holes reach the outer surface almost immediately, while the electrons have to drift through nearly the whole bulk of the detector until they reach the inner surface. The shapes of the pulses recorded with the core of the detector are hence mainly affected by the drift of the electrons. 
+The 122~keV $\gamma$ line of the $^{152}$Eu source used in the scan provided the events to study the drift of electrons. Because these low energy photons cannot penetrate deeply into germanium and most likely deposit energy locally through the photoelectric effect (see Sec.~\ref{sec:det:gamma}), they create electron-hole pairs predominantly near the outer surface of the detector. The holes reach the outer surface almost immediately, while the electrons have to drift through nearly the whole bulk of the detector until they reach the inner surface. Therefore, the pulse shapes are mainly determined by the drift of the electrons. 
 
-To analyze the pulse shapes quantitatively the 10\%-30\% and 10\%-90\% risetimes of the core pulses were calculated. Figure~\ref{fig:psa:rt10} shows the average risetimes as a function of the azimuth angle $\phi$. The dashed lines indicate the segment boundaries. Clear oscillation patterns can be seen in both cases. This indicates a longitudinal anisotropy of the drift velocities of electrons in different $\phi$ angles because they need different time to drift through nearly the same distance.\footnote{Strictly speaking, because of the bend of the drift trajectories the distances covered by electrons in different $\phi$ angles are sightly different from each other. However, this is a second-order effect. The difference of the risetimes is mainly caused by the different drift velocity along $r$ in different $\phi$ angles.}
-
+To analyze the pulse shapes quantitatively the 10\%-30\% and 10\%-90\% risetimes of the core pulses were calculated. Figure~\ref{fig:psa:rt10} shows the average risetimes as a function of the azimuth angle $\phi$. The dashed lines indicate the segment boundaries. Clear oscillation patterns can be seen in both cases. This confirms the longitudinal anisotropy of the drift velocity of electrons depending on the angle~$\phi$. The electrons need different times to drift nearly the same distance.\footnote{Strictly speaking, because of the bend of the drift trajectories the distances covered by electrons in different $\phi$ angles are sightly different from each other. However, this is a second-order effect. The difference of the risetimes is mainly caused by the different drift velocity along $r$ in different $\phi$ angles.}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{phi_risetime1030}
@@ -22,66 +24,88 @@ To analyze the pulse shapes quantitatively the 10\%-30\% and 10\%-90\% risetimes
 \label{fig:psa:rt10}
 \end{figure}
 
-The fits with a sine function (solid lines in Fig.~\ref{fig:psa:rt10}) gave periods of about 90$^{\circ}$ for the longitudinal anisotropy of the drift of electrons. This feature can be explained by the model introduced in previous chapter and revealed in Fig.~\ref{fig:pss:trjs}. Direct comparison of the pulse shapes between data and simulation is described in Sec.~\ref{sec:psa:lon}
+Fits with a sine function (Fig.~\ref{fig:psa:rt10}) give periods of about 90$^{\circ}$ for the longitudinal anisotropy. This supports the model introduced in the previous chapter. The effect is illustrated in Fig.~\ref{fig:pss:trjs}. A direct comparison of the pulse shapes in data and simulation will follow
+in the next section.
 
-The result of the occupancy measurement is shown in Fig.~\ref{fig:ph:mcb}. Different occupancies of segments in the same layer indicate the transverse anisotropy of the drift of charge carriers, namely, the bend the drift trajectories. This can also be explained by the models introduced in the previous chapter and revealed in Fig.~\ref{fig:pss:trjs}. Detailed comparison of the occupancy distribution between data and simulatioin is described in Sec.~\ref{sec:psa:tra}
+Figure~\ref{fig:pss:trjs} also illustrates the bending of the drift trajectories, transverse anisotropy, predicted by the model introduced in the previous chapter. The result of the occupancy measurement was shown in Fig.~\ref{fig:ph:mcb}. The different occupancies of segments in the same layer confirm this predicted transverse anisotropy.
 
 \section{Longitudinal anisotropy}
 \label{sec:psa:lon}
-Pulse induced in the core electrode by the drift of electrons from outer surface to the inner surface of Siegfried I was simulated. The geometry, the operation voltage and the impurity density were implemented in the simulation according to the values listed in Table~\ref{tab:tt:detpar}. Figure~\ref{fig:psa:rt10} shows that the $\langle 110 \rangle$ axis of Siegfried I, along which electrons drift slowest hence the risetimes reach the maxima, was nearly aligned with the right boundary of segment 15, \textit{i.e.}, $\phi_{110} \approx 0$ (see Fig.~\ref{fig:pss:coo}). This was also implemented in the simulation. The decay time of 50~$\mu$s and the cut-off bandwidth of 37.5~MHz was implemented according to the specification of the electronics system. The electric noise was not added to the simulated pulse so that it can be used as a smooth fitting function with three free parameters: the \emph{Amplitude}, the \emph{Time offset} of the pulse and the \emph{Time scale} factor, a number multiplied to the time stamp of each sampling point of the pulse to stretch or squeeze the pulse in time.
+Pulses induced in the core electrode by the drift of electrons starting at the outer surface of Siegfried I were simulated. The geometry, the operational voltage and the impurity density were implemented in the simulation according to the values listed in Table~\ref{tab:tt:detpar}. 
 
-The simulated pulse induced by the drift of electrons along the $\langle 110 \rangle$ axis was used to fit to each pulses from the scanning data. Figure~\ref{fig:psa:s2d} shows one of the fits. The dots with error bars are the sampling points of the pulse from data. The error was set according to the noise level.
+According to the model electrons drift slowest along the $\langle 110 \rangle$ axes and ristimes reach their maxima. Thus, Figure~\ref{fig:psa:rt10} indicates that one of the $\langle 110 \rangle$ axes is nearly aligned with the right boundary of segment 15 at $\approx$\,290$^\circ$. This was implemented in the simulation. A decay time of 50~$\mu$s and a cut-off bandwidth of 37.5~MHz were implemented according to the specification of the electronics system. Electronic noise was not added to the pulse simulation to simplify
+direct comparisons with individual pulses. Several parameters, \textit{i.e.} the \emph{Amplitude}, the \emph{Time offset} and the \emph{Time scaling factor} of the pulse, were introduced to fit the shape of a simulated to a measured pulse. The time offset shifts the pulse while the time scaling factor stretches or 
+squeezes the pulse in time.
 
+Figure~\ref{fig:psa:s2d} shows a randomly selected core pulse and the result of a fit with the simulated pulse along the $\langle 110 \rangle$ axis. The fit yields a time scaling factor of 0.81, indicating that the simulated pulse overestimates the pulse-length by $\approx 20\%$. Neverthless the $\chi^{2}$/NDF is excellent. In general a factor smaller than one is expected as the simulation reflects the maximal risetime.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{PSs2d}
-\caption{Fit of simulated pulse to a real one. The error bars of the sampling points are set according to the noise level.}
+\caption{Fit of a simulated to a measured pulse. The dots represent the data and their error bars indicate the noise level.}
 \label{fig:psa:s2d}
 \end{figure}
 
-If the risetime of the simulated pulse is the same as the pulse from data, the free parameter \emph{Time scale} determined by the fitting should be equal to one. A value smaller than one indicates that the simulated pulse is longer than in reality; a value larger than one indicates that the simulated pulse is shorter than in reality. The time scale given in Fig.~\ref{fig:psa:s2d} shows that the simulated pulse is about 20\% longer than the pulse chosen from data.
+A subset of fits was selected requiring
+\begin{itemize}
+\item $\chi^{2} < 200$ to eliminate very nosiy events,
+\item $0.8 < Amplitude < 1.4$ to eliminate events misrecorded by the DAQ,
+\item $Time\ offset > -300$~ns as very early pulses were not treated correctly by the DAQ.
+\end{itemize}
 
-The $\chi^{2}$ and three parameters from the fits to all the pulses in each scanning data set taken in a certain $\phi$ angle were recorded. Fits with reasonable $\chi^{2}$, amplitude and time offset were chosen for the later analysis. The time scale distribution of the chosen sub data set was fitted with a Gaussian function. The mean values are plotted in Fig.~\ref{fig:psa:tsc} as the black dots. The width of the Gaussian function are taken as the error bar.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{tscale280}
+\caption{Time scaling factors from the fits of the simulated to measured pulses taken at $\phi=280^{\circ}$.}
+\label{fig:psa:ts280}
+\end{figure}
+The distributions of the time scaling factors for each scan position were fitted with a Gaussian function. Fig.~\ref{fig:psa:ts280} shows the distribution for $\phi = 280^{\circ}$. The mean values obtained from the fits versus azimuth are displayed in Fig.~\ref{fig:psa:tsc}. The points were fitted with a sine wave plus a 1$^{st}$-order polynomial. The period of the sine wave was fixed to $90^{\circ}$. The shifted polynomial is shown as a baseline in Fig.~\ref{fig:psa:tsc}. The data is reasonably well described by the fit. The scaling factor at $280^{\circ}$ should be close to one, if the the model would represent the detector perfectly. However, the different values obtained for the other instances of the $\langle 110 \rangle$ configuration indicate that the actual detector is more complex. One possible interpretation is that the impurity density given in Table~\ref{tab:tt:detpar} is an average density and in reality varies with the azimuthal angle $\phi$.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{tsc}
-\caption{Mean time scale (black dots) obtained from the fits of one simulated pulse to those from the scanning data. The distribution was fitted with a sine wave plus a 1$^{st}$-order polynomial. The period of the sine wave was fixed to $90^{\circ}$. The baseline of the oscillation pattern shown as the dashed line in the plot changes with $\phi$ and systematically deviates from one about 10\%.}
+\caption{Mean time scaling factor (black dots) of a simulated $\langle 110 \rangle$ pulse versus azimuth. The solid line represents a fit with a sine wave plus a 1$^{st}$-order polynomial. The dashed line show the shifted polynomial as a baseline.}
 \label{fig:psa:tsc}
 \end{figure}
 
-The mean time scale as a function of the azimuth angle $\phi$ shows similar oscillation pattern as the risetime distributions shown in Fig.~\ref{fig:psa:rt10}. However, the baseline of the pattern shown as the dashed line in Fig.~\ref{fig:psa:tsc} changes with $\phi$ and systematically deviates from one. The deviation is about 10\% on average. One possible explanation for the dependence of the baseline upon $\phi$ is that the impurity density may change with $\phi$.
-
-The pulses corresponding to all scanning points were also simulated. They were compared to their counterparts in data using the same method. The distribution of the mean time scales is shown in Fig.~\ref{fig:psa:tsl}. The baseline obtained in Fig.~\ref{fig:psa:tsc} is overlayed to guide the eye. The system deviation from one can be easily corrected using the baseline as a correction function. After the correction the deviation is around 3\%.
+The oscillation pattern expected and seen in Fig.~\ref{fig:psa:tsc} should disappear when the pulses are simulated for the indivual angular configuration of the the scan points. This was done and the result is depicted in fig.~\ref{fig:psa:tsl}. Also given is the shifted polynominal from the fit to the data in 
+fig.~\ref{fig:psa:tsc} and a straight line fit to the points in fig.~\ref{fig:psa:tsl}. The two lines are very close confirming the predictions of the model for the angular dependence of the rise-time. The deviations from the fitted straight line are below 3\% and indicate that the real crystal is not as perfect as the simulated one. The overall shift relativ to one is in average about 10\% and can easily be corrected for. 
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{tsline}
-\caption{Mean time scale (black dots) obtained from the fits of simulated pulses to their counterparts from the scanning data. The baseline obtained in Fig.~\ref{fig:psa:tsc} is overlayed to guide the eye.}
+\caption{Mean time scaling factor (black dots) for pulses simulated for each angle individually against $\phi$. The shifted polynomial from Fig.~\ref{fig:psa:tsc} is overlaid to guide the eye. The result of a straight line fit is give as a solid line.}
 \label{fig:psa:tsl}
 \end{figure}
 
 
 \section{Transverse anisotropy}
 \label{sec:psa:tra}
-The transverse anisotropy of the drift leads to the bend of the drift trajectories as shown in Fig.~\ref{fig:pss:trjs}. Consequently, the charge carriers created in a segment may drift into its neighboring segment. Some segments would always see more events than others if the trajectories are more likely to bend to it. The occupancy of each segment, namely, the number of events recorded by the segment, is hence different. This is shown in Fig.~\ref{fig:ph:mcb}. Detailed studies show that this feature is independent of the energy deposited.
+The transverse anisotropy of the drift leads to the bent drift trajectories shown in Fig.~\ref{fig:pss:trjs}. Consequently, the charge carriers created in one segment may drift into a neighboring segment. As a result, some segments always show a higher occupancy as the trajectories are more likely to bend towrads them. This was shown in Fig.~\ref{fig:ph:mcb}. Detailed studies show that this feature is independent of the amount of energy deposited.
 
-To verify how well this feature can be simulated $100\ 000$ hits with the same energy were homogeneously distributed in the middle layer of Siegfried I. The drift of holes created by each hit were simulated. If a trajectory ends on the outer surface of one segment, the number of events seen by that segment increases by one. 
+The model connects this feature with the bent drift of holes to the outer surface. To verify how well the effect can be simulated, $100\ 000$ hits with the same energy were homogeneously distributed in the middle 
+layer of Siegfried I. The drift of holes was simulated for each location. If a trajectory ends on the outer surface of a given segment, its occupancy increases by one.
 
-The simulated occupancy distribution was compared to data as shown in the left plot of Fig.~\ref{fig:psa:focc}. It changes with $\phi_{110}$, the angle between the segment boundary and the crystal axis (see Fig.~\ref{fig:pss:coo}). The difference of the distributions between data and simulation changes with $\phi_{110}$ consequently. This is shown in the right plot of Fig.~\ref{fig:psa:focc}. The difference is defined as a value proportion to $\sum_{i=1}^{6} (N_{i}^{sim}-N_{i}^{dat})^{2}$ where $N_{i}^{sim}$ and $N_{i}^{dat}$ are the numbers of events in segment $i$ for simulation and data, respectively. The difference changes with $\phi_{110}$ by a period of $90^{\circ}$. There are four minima at $\phi_{110} \approx 84^{\circ}, 174^{\circ}, 264^{\circ}$ and $354^{\circ}$, \textit{i.e.}, the simulation fits data best when the $\langle 110 \rangle$ axis is nearly aligned with segment boundaries. This is consistent with the result from the scanning measurement.
+The predicted occupancies depend on the orientation of the crystal axes where the $\langle 110 \rangle$ is used again as a reference. The resulting $\phi$-dependence of the occupancies was fitted to data with the orientation of the  $\langle 110 \rangle$ axis as a free parameter. The result of the best fit is given in Fig.~\ref{fig:psa:focc}a. The direction of the $\langle 110 \rangle$ axis from the fit is only $4^\circ$ away from one of the segment boundaries in good agreement with the result from the scan.
+
+Due to the crystal structure there is a $90^{\circ}$ degeneracy. While the overall behaviour of the data is well decribed, the precise differences in occupancy cannot be perfectly reproduced, again pointing at a non perfect crystal and possible systematic errors in the simulation due to uncertainties in the input parameters. Figure~\ref{fig:psa:focc}b shows the $\chi^2$/dof versus$\phi_{110}$, the azimuthal difference between the orientation of the $\langle 110 \rangle$ axis and the segment boundary. As also reflected in Fig.~\ref{fig:psa:focc}a the $\chi^2$/NDF is not good. However, the minima in $\chi^2$ are very distinct,
+thus, allowing a precise determination of the orientation of the crystal axes.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{fitocc}
-\caption{Left: comparison of the occupancy distribution between data and simulation. Right: difference of the two distributions as a function of $\phi_{110}$, the angle indicating the orientation of the crystal axis with respect to the segment boundary. The left plot shows the situation when the difference reaches its minima.}
+\caption{(a) occupancies of each segment (see Fig.~\ref{fig:ger:segm} for the segmentation scheme) for data (dots) and best fit simulation(histogram). (b) $\chi^{2}$/NDF of the fit described in the text versus $\phi_{110}$, the angle between the $\langle 110 \rangle$ axis and the segment boundary.}
 \label{fig:psa:focc}
 \end{figure}
 
-The segmentation and crystal axis orientations have a $180^{\circ}$ degeneracy: if the segment boundaries or the crystal axes are rotated around $z$-axis by $180^{\circ}$, the whole configuration does not change. The occupancy distribution, determined by the orientation of the crystal axis with respect to the segment boundary, should also reveal this feature. This is ture for the simulated distribution. The distribution in data does not follow this rule strictly. The first three segments show larger fluctuation than the last three. One of the possible explanations is that the impurity densities vary in different segments.
+The segmentation and crystal axis orientations together have a $180^{\circ}$ degeneracy: if the segment boundaries or the crystal axes are rotated around the $z$-axis by $180^{\circ}$, the whole configuration does not change. This is refelected in the simulation which predicts the same pattern for the from $0^{\circ}$ to $180^{\circ}$ and $180^{\circ}$ $360^{\circ}$. The data, however, do not provide identical differences in occupancy. The first three segments show larger differences than the last three. One possible explanations is that the impurity densities varies around $\phi$.
+
 
 \section{Summary}
 \label{sec:psa:sum}
-Several detector characterization measurements show anisotropic drift of the charge carriers. Pulse shape simulation for the detector under study was carried out and compared to data in different aspects. The risetimes of the simulated pulses systematically deviated from data by about 10\%. However, this can be easily corrected. The deviation decreases down to about 3\% after the correction. A novel method to obtain the crystal axes orientation information was introduced by simply comparing the number of events seen by each segment between data and simulation. The result is consistent with the common scanning measurement. The discrepancy indicates inhomogeneous distribution of the impurity density around the detector. This is worth further investigation.
+
+The longitudinal and transvers anisotropies inherent to the model of the drift of charges carriers used to simulate pulses in germanium detectors was observed in data. The longitudinal anisotropy connected to the drift of electrons was seen in the dependence of the rise-time on the azimuthal angle, $\phi$, of the energy deposition. After an overall simple adjustment the simulation reproduces the risetimes within 3\%.
+
+The transverse anisotropy connected to the drift of holes was observed as variations of the occupancy of segments located at different $\phi$. It was established that these variations can be used to determine the crystal orientation without a time consuming scan of the crystal.
 
 %%% Local Variables:
 %%% mode:latex
