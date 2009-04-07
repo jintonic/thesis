@@ -24,7 +24,7 @@ Concerning (1), previous studies \cite{Kev07} indicate that pulse
 shape analysis can provide an extra suppression factor of 1.3 beyond
 the suppression achieved through segment information alone. These
 studies were limited by the lack of knowledge about the development of
-the pulses in the detector and its support system.
+the pulses in the detector and the electronic system.
 
 Pulses resembling the ones expected for the $0\nu\beta\beta$ signal
 are usually collected using photon induced events with a similar event
@@ -35,9 +35,9 @@ located near the Q-value of $^{76}$Ge $0\nu\beta\beta$ decay. In
 addition, the events from the peak are not uniformly distributed
 throughout the detector crystal \cite{major}.  Events from single
 Compton scattering could, in principle, be selected to overcome these
-restrictions. However, it is intrinsically difficult to collect
-sufficiently large such samples.  Therefore, it is essential to
-supplement the data with simulated pulses from a reliable simulation.
+restrictions. However, it is intrinsically difficult to collect large
+such samples. Therefore, it is essential to supplement the data with
+simulated pulses from a reliable simulation.
 
 The physics models used for the drift of electrons and holes inside
 germanium crystals were established by L. Mihailescu \textit{et
@@ -60,11 +60,10 @@ the original hits.
 \item Calculate the number of electron-hole pairs, $n$, created by the
 hit with energy $E_{\text{hit}}$: $n = E_{\text{hit}} /
 E_{\text{pair}}$, where the pair energy $E_{\text{pair}} = 2.95$~eV;
-\item Calculate the electrical field and the weighting
-potentials\,\cite{Gat82, Rad88, He00} in the detector according to the
-high voltage applied and the spatial distribution of the impurity. The
-calculation of the fields and weighting potentials is done only
-once. The results are saved for interpolation later;
+\item Get the electrical field and the weighting potentials by
+interpolating values at the neighboring grid points. The grid is
+calculated once beforehand according to the high voltage applied and
+the spatial distribution of the impurity. \cite{Gat82, Rad88, He00}
 \item Calculate the drift velocities of the charge carriers taking
 into account the effect of the crystal structure;
 \item Calculate the trajectory of the drift from the interaction point
@@ -114,7 +113,7 @@ commercial detector, has a very significant effect.
  
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[width=0.7\textwidth]{rho} 
+\includegraphics[width=0.65\textwidth]{rho} 
 \caption{Strength of the electric field as a function of the
 cylindrical coordinate $r$ for impurity densities between 0 and $0.9
 \times 10^{-10}$/cm$^{3}$.}
@@ -245,7 +244,7 @@ middle axis, $z$, aligned to the crystal axis $\langle 001
 \rangle$. The transformation between the two coordinate system, hence,
 only depends on the angle between the $\langle 110 \rangle$ and the
 y-axis, $\phi_{110}$.
-\begin{SCfigure}[][t!] 
+\begin{SCfigure}[1.1][t!] 
 \centering 
 \includegraphics[width=0.4\textwidth]{coordins}   
 \caption{The relation between the coordinates $xyz$ used in Geant4 and
@@ -260,7 +259,7 @@ The conduction band in a germanium crystal reaches its minimal
 potential in regions around the four equivalent $\langle 111 \rangle$
 axes. The equipotential surfaces in these regions have ellipsoidal
 shapes as shown in Fig~\ref{fig:pss:valley}.
-\begin{SCfigure}[][b!] 
+\begin{SCfigure}[1.2][b!] 
 \centering 
 \includegraphics[width=0.4\textwidth]{valleys}   
 \caption{Minimal potential regions in the conduction band along four
@@ -277,7 +276,10 @@ electron drift velocity $\mathbf{v}_{e}$ on the applied electric field
 $\mathbf{E}$ can be written as
 \begin{equation} 
 \label{eq:pss:ed} 
-\mathbf{v}_{e}(\mathbf{E}) = \mathcal{A}(E) \sum_{j} \frac{n_{j}}{n} \frac{\gamma_{j}\mathbf{E_{0}}}{\sqrt{\mathbf{E_{0}}\gamma_{j}\mathbf{E_{0}}}}, \mbox{ with } j=1,2,3,4, 
+\mathbf{v}_{e}(\mathbf{E}) = \mathcal{A}(E) \sum_{j} \frac{n_{j}}{n} 
+\frac{\gamma_{j}\mathbf{E_{0}}}
+{\sqrt{\mathbf{E_{0}}^{T}\gamma_{j}\mathbf{E_{0}}}}, 
+\mbox{ with } j=1,2,3,4, 
 \end{equation} 
 where the coefficient $\mathcal{A}$ is a function of $E=|\mathbf{E}|$
 and the temperature; $\mathbf{E_{0}}$ is the normalized electric field
@@ -319,7 +321,7 @@ is the rotation matrix which aligns one of the four $\langle 111
 counter-clockwise rotation around the axis~$a$ with rotation
 angle~$\alpha$.
  
-\begin{SCfigure}[][tbhp] 
+\begin{SCfigure}[1.2][tbhp] 
 \centering 
 \includegraphics[width=0.4\textwidth]{axes}   
 \caption{Relation between the local coordinates
@@ -334,8 +336,10 @@ The deviation from an equal population , i.e. $n_{e}/n$=1/4, of
 electrons is assumed to depend on the electric field like:
 \begin{equation} 
 \label{eq:pss:nion} 
-\frac{n_{j}}{n} = \mathcal{R}(E) \left[ \frac{\sqrt{\mathbf{E_{0}}\gamma_{j}\mathbf{E_{0}}}} 
-{\sum_{i}\sqrt{\mathbf{E_{0}}\gamma_{i}\mathbf{E_{0}}}} - \frac{n_{e}}{n} \right] + \frac{n_{e}}{n},  
+\frac{n_{j}}{n} = \mathcal{R}(E) 
+\left[ \frac{\sqrt{\mathbf{E_{0}}^{T}\gamma_{j}\mathbf{E_{0}}}}
+{\sum_{i}\sqrt{\mathbf{E_{0}}^{T}\gamma_{i}\mathbf{E_{0}}}} - 
+\frac{n_{e}}{n} \right] + \frac{n_{e}}{n},  
 \end{equation} 
 where the coefficient $\mathcal{R}$ is a function of $E=|\mathbf{E}|$
 and the temperature.
@@ -349,7 +353,10 @@ according to Eq.~\ref{eq:pss:para}, the absolute value of
 $\mathcal{A}(E)$ can be expressed as
 \begin{equation} 
 \label{eq:pss:ae} 
-|\mathcal{A}(E)| = \frac{v_{e}^{100}(E)}  {\displaystyle \sum_{j} \frac{1}{4} \frac{\gamma_{j}\mathbf{E_{0}}} {\sqrt{\mathbf{E_{0}}\gamma_{j}\mathbf{E_{0}}}}}, \mbox{ with } \mathbf{E_{0}} = \left( \begin{array}{c}  
+|\mathcal{A}(E)| = \frac{v_{e}^{100}(E)}  
+{\displaystyle \sum_{j} \frac{1}{4} \frac{\gamma_{j}\mathbf{E_{0}}}
+{\sqrt{\mathbf{E_{0}}^{T}\gamma_{j}\mathbf{E_{0}}}}}, \mbox{ with } 
+\mathbf{E_{0}} = \left( \begin{array}{c}  
 \sqrt{1/2}\\\sqrt{1/2}\\0 \end{array} \right). 
 \end{equation} 
  
@@ -378,15 +385,22 @@ temperature according to Eq.~\ref{eq:pss:para}, another relation
 between $n_{1}/n$ and $n_{2}/n$ is obtained:
 \begin{equation} 
 \label{eq:pss:n12p} 
-v_{e}^{111}(E) =  \mathcal{A}(E) \left(  \frac{n_{1}}{n} \frac{\gamma_{1}\mathbf{E_{0}}}         {\sqrt{\mathbf{E_{0}}\gamma_{1}\mathbf{E_{0}}}} +  3\frac{n_{2}}{n} \frac{\gamma_{2}\mathbf{E_{0}}}         {\sqrt{\mathbf{E_{0}}\gamma_{2}\mathbf{E_{0}}}} \right). 
+v_{e}^{111}(E) =  \mathcal{A}(E) 
+\left( \frac{n_{1}}{n} \frac{\gamma_{1}\mathbf{E_{0}}} 
+{\sqrt{\mathbf{E_{0}}^{T}\gamma_{1}\mathbf{E_{0}}}} +  
+3\frac{n_{2}}{n} \frac{\gamma_{2}\mathbf{E_{0}}}         
+{\sqrt{\mathbf{E_{0}}^{T}\gamma_{2}\mathbf{E_{0}}}} \right). 
 \end{equation} 
 The values of $n_{1}/n$ and $n_{2}/n$ can be obtained by solving the
 equations \ref{eq:pss:n12} and \ref{eq:pss:n12p}. Then
 $\mathcal{R}(E)$ can be calculated as
 \begin{equation} 
 \label{eq:pss:re} 
-\mathcal{R}(E) = \left( \frac{n_{1}}{n} - \frac{n_{e}}{n} \right) / \left( \frac{\sqrt{\mathbf{E_{0}}\gamma_{1}\mathbf{E_{0}}}} 
-{\sum_{j}\sqrt{\mathbf{E_{0}}\gamma_{j}\mathbf{E_{0}}}} - \frac{n_{e}}{n} \right), \mbox{ with } \mathbf{E_{0}} = \left( \begin{array}{c}  
+\mathcal{R}(E) = \left( \frac{n_{1}}{n} - \frac{n_{e}}{n} \right) / 
+\left( \frac{\sqrt{\mathbf{E_{0}}^{T}\gamma_{1}\mathbf{E_{0}}}} 
+{\sum_{j}\sqrt{\mathbf{E_{0}}^{T}\gamma_{j}\mathbf{E_{0}}}} - 
+\frac{n_{e}}{n} \right), \mbox{ with } 
+\mathbf{E_{0}} = \left( \begin{array}{c}  
 0\\ \sqrt{2/3}\\\sqrt{1/3} \end{array} \right). 
 \end{equation} 
  
@@ -418,7 +432,7 @@ angles with respect to the coordinate system defined by the $\langle
 100 \rangle$, $\langle 010 \rangle$ and $\langle 001 \rangle$ axes as
 shown in Fig.~\ref{fig:pss:vsphere}.
  
-\begin{SCfigure}[][tbhp] 
+\begin{SCfigure}[1.2][tbhp] 
 \centering 
 \includegraphics[width=0.4\textwidth]{vsphere}   
 \caption{Relation between the crystal axes $\langle100\rangle$,
@@ -491,7 +505,9 @@ calculated using the method described in the previous two sections.
 The new position $\mathbf{r}_{i+1}$ is then
 \begin{equation} 
 \label{eq:pss:pos} 
-\mathbf{r}_{i+1} = \mathbf{r}_{i} + \Delta \mathbf{r} \ \ (i=0,1,...), \text{ with } \Delta \mathbf{r} = \mathbf{v}_{i} \Delta t. 
+\mathbf{r}_{i+1} = \mathbf{r}_{i} + \Delta \mathbf{r} \ \ 
+(i=0,1,...), \text{ with } 
+\Delta \mathbf{r} = \mathbf{v}_{i} \Delta t. 
 \end{equation} 
 The iteration continues until the charge carriers reach the boundary
 of the crystal. The series of position vectors $\mathbf{r}_{i}$ from
@@ -507,7 +523,7 @@ methods does not differ significantly.  The results presented here
 were obtained with the Runge-Kutta method.
  
 Figure~\ref{fig:pss:trjs} shows the drift trajectories projected on an
-x-y cross sections of a Siegfried-like detector.  The crystal axis
+x-y cross sections of a Siegfried-like detector. The crystal axis
 $\langle 110 \rangle$ is assumed to be parallel to the x-axis
 (\textit{i.e.}, $\phi_{110}$ as shown in Fig.~\ref{fig:pss:coo} is set
 to zero). The left plot shows the inward drift of electrons starting
@@ -545,53 +561,35 @@ Once the weighting fields and potentials as well as the drift
 velocities and trajectories of the charge carriers are known,
 Eq.~\ref{eq:det:ramoq} and \ref{eq:det:ramoi} introduced in
 Sec.~\ref{sec:det:ramo} can be used to calculate the time development
-of the induced charge $Q(t)$ or current $I(t)$ in each electrode (raw
-pulses in short).  Figure~\ref{fig:pss:psh} shows the weighting
-potential of a segment with the indication of an event.
-Figure~\ref{fig:pss:pss} shows the raw charge and current pulses
-induced by the resulting hit in this particular segment, its
-neighboring segments and the core of a Siegfried-like detector.  The
-amplitude of the pulse induced in one neighboring segment is larger
-than in the other, because the trajectory of the hit is closer to this
-segment.
-\begin{figure}[htbp] 
-\centering 
-\subfloat[]{\label{fig:pss:psh} 
-\includegraphics[height=0.22\textheight]{WP}}% 
-\subfloat[]{\label{fig:pss:pss} 
-\includegraphics[height=0.22\textheight]{CIPS}}% 
-\caption{(a) weighting potential of segment B together with an
-indication of a $\gamma$ interaction. (b) Simulated charge and current
-pulses induced in segments A, B and C.}
-\label{fig:pss:ps} 
-\end{figure} 
- 
+of the induced charge $Q(t)$ and current $I(t)$ in each electrode (raw
+pulses in short), which are shown in Figure~\ref{fig:det:pss}.
+
  
 \section{Effects of electronics} 
 \label{sec:pss:dbn} 
 The pulses recorded by the DAQ system are quite different from the raw
-pulses.  Not only their amplitudes but also their shapes are changed
-by the electronics.  The baseline after a pulse exponentially
+pulses. Not only their amplitudes but also their shapes are changed
+by the electronics. The baseline after a pulse exponentially
 decreases to its original level with a time constant $\tau$. The limit
 on the bandwidth of the signal transmission through the electronics
 cuts off the signal components with frequencies higher than the
 limit. Sharp edges in a pulse are hence smeared. Electronic noise may
-destroy any detailed structure of a pulse.  All these effects need to
+destroy any detailed structure of a pulse. All these effects need to
 be simulated.
  
 Figure~\ref{fig:pss:elec} shows a modified pulse after folding in the
-decay of the baseline, the limited bandwidth and the noise. The decay
-time was $5 \mu$s, the cut-off in bandwidth was 10~MHz and the noise
-level was 5\% of the pulse amplitude. These values are worse than
-observed in the tests stands. They were chosen to clearly demonstrate
-influence of the effects.
+decay of the baseline after the pulse, the limited bandwidth and the
+noise. The decay time was $5 \mu$s, the cut-off in bandwidth was
+10~MHz and the noise level was 5\% of the pulse amplitude. These
+values are worse than observed in the tests stands. They were chosen
+to clearly demonstrate influence of the effects.
 \begin{figure}[htbp] 
 \centering 
 \includegraphics[width=0.7\textwidth]{PSDBN} 
-\caption{Modified pulses after folding in the decay of the baseline,
-the limited bandwidth and the noise.}
+\caption{Modified pulses after folding in the decay of the baseline
+after the pulse, the limited bandwidth and the noise.}
 \label{fig:pss:elec} 
-\end{figure} 
+\end{figure}
  
  
 %%% Local Variables: 
