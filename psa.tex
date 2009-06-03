@@ -106,9 +106,9 @@ the pulse in time.
 Figure~\ref{fig:psa:s2d} shows a randomly selected core pulse and the
 result of a fit with the simulated pulse along the $\langle 110
 \rangle$ axis. The fit yields a time scaling factor of 0.81,
-indicating that the simulated pulse overestimates the pulse-length by
+indicating that the simulated pulse underestimates the pulse-length by
 $\approx 20\%$. Nevertheless the $\chi^{2}$/NDF is excellent. In
-general a factor between 1 and 0.94 is expected as the simulation
+general a factor between 1 and 1.06 is expected as the simulation
 reflects the maximal risetime.
 \begin{figure}[htbp]
 \centering
@@ -120,7 +120,7 @@ the data and their error bars indicate the noise level.}
 
 A subset of pulses with fits were selected requiring
 \begin{itemize}
-\item $\chi^{2} < 200$ to eliminate very noisy events,
+\item $\chi^{2} < 200$ to eliminate background events,
 \item The pulse amplitude in simulation must be equal to that in data
 within the resolution to eliminate events mis-recorded by the DAQ,
 \item Time offset $> -300$~ns as very early pulses were not treated
@@ -138,14 +138,12 @@ The distributions of the time scaling factors for each scan position
 were fitted with a Gaussian function. Fig.~\ref{fig:psa:ts280} shows
 the distribution for $\phi = 280^{\circ}$. The scaling factor at
 $280^{\circ}$ should be close to one, if the model would represent the
-detector perfectly. It is about 7\% lower. However, since the events
-in data do not start exactly at the outer surface, slightly shorter
-risetimes are expected in data compared to the simulation.
+detector perfectly. It is about 7\% lower. 
 
 The mean scaling factors obtained from the fits versus azimuth are
 displayed in Fig.~\ref{fig:psa:tsc}. The points were fitted with a
-sine wave plus a 1$^{st}$-order polynomial. The period of the sine
-wave was fixed to $90^{\circ}$. The shifted polynomial is shown as a
+sine wave plus a 1$^{st}$-order polynomial. The period of the sinusoid
+was fixed to $90^{\circ}$. The shifted polynomial is shown as a
 baseline in Fig.~\ref{fig:psa:tsc}. The data is reasonably well
 described by the fit. However, the different values obtained for
 different instances of the $\langle 110 \rangle$ configuration
@@ -167,9 +165,9 @@ shows the shifted polynomial as a baseline.}
 The oscillation pattern expected and seen in Fig.~\ref{fig:psa:tsc}
 should disappear when the pulses are simulated for the individual
 angular configuration of the the scan points. This was done and the
-result is depicted in fig.~\ref{fig:psa:tsl}. Also given is the
+result is depicted in Fig.~\ref{fig:psa:tsl}. Also given is the
 shifted polynomial from the fit to the data in Fig.~\ref{fig:psa:tsc}
-and a straight line fit to the points in fig.~\ref{fig:psa:tsl}. The
+and a straight line fit to the points in Fig.~\ref{fig:psa:tsl}. The
 two lines are very close confirming the predictions of the model for
 the angular dependence of the rise-time. The deviations from the
 fitted straight line are below 3\% and indicate that the real crystal
@@ -250,7 +248,7 @@ impurity density varies around $\phi$.
 The data confirm the longitudinal and transverse anisotropies inherent
 to the model of the drift of charges carriers used to simulate pulses
 in germanium detectors.  The longitudinal anisotropy connected to the
-drift of electrons was seen in the dependence of the rise-time on the
+drift of electrons was seen in the dependence of the risetime on the
 azimuthal angle, $\phi$, of the energy deposition. After adjusting the
 simulation reproduces the risetimes within $\pm$3\%.
 
