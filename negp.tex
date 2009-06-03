@@ -29,11 +29,12 @@ pulses are observed as expected.}
 
 \section{Selection of negative pulse events}
 \label{sec:np:sel}
-If the energies of negative pulses are correctly calculated, the sum
-of the the energies seen in all segments, $\sum E_{\text{segment}}$,
-is equal to the core energy, $E_{\text{core}}$, within the
-resolution. The DAQ system, However, sets the energy of a negative
-pulse to zero instead of a negative value, this causes $\sum
+If the energies of both positive and negative pulses are calculated,
+the sum of the the energies seen in all segments, $\sum
+E_{\text{segment}}$, is equal to the core energy, $E_{\text{core}}$,
+within the resolution. As described in Sec.\ref{sec:tt:daq}, the DAQ
+system was configured to set the energy of a negative pulse to zero
+instead of a negative value, and this causes $\sum
 E^{\text{DAQ}}_{\text{segment}}$ to be larger than $E_{\text{core}}$.
 
 Figure~\ref{fig:np:sEnegPulse} shows $\sum
@@ -56,7 +57,7 @@ the core energy.}
 
 There is also a small fraction of events with$\sum
 E^{\text{DAQ}}_{\text{segment}} < E_{\text{core}}$. This is due to
-threshold-effects, noise or pile-up, \textit{i.e.} two pulses are
+threshold-effects, noise or pile-up; \textit{i.e.}, two pulses are
 spaced in time such that the DAQ cannot provide a correct estimate of
 the core and segment energies. As there are quite a number of events
 with an energy beyond 2.6~MeV, the pile-up effects are probably
@@ -149,16 +150,16 @@ field distortion.
 \begin{SCfigure}[][htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{dmcnew}
-\caption{A slice of core energy spectrum around 1332~keV peak taken
-with Siegfried~I. The low energy side of the 1332~keV peak in data is
-significantly higher than in the simulation.}
+\caption{A slice of the core energy spectrum around 1332~keV peak
+taken with Siegfried~I. The low energy side of the 1332~keV peak in
+data is significantly higher than in the simulation.}
 \label{fig:np:shou}
 \end{SCfigure}
 
-If the pulse gets longer and longer, \textit{i.e.} the field becomes
+If the pulse gets longer and longer; \textit{i.e.}, the field becomes
 very small, the electrons are effectively trapped and the mirror pulse
 in a neighboring segment cannot be completed resulting in an effective
-negative baseline shift, \textit{i.e.} negative pulse.
+negative baseline shift; \textit{i.e.}, negative pulse.
 
 \section{Surface investigation}
 \label{sec:np:inv}
@@ -184,7 +185,7 @@ function of core energy in all segments.}
 \centering
 \includegraphics[width=0.6\textwidth]{gDepth}
 \caption{Depth distributions of hits created by low energy photons
-entering the detector form the top.}
+entering the detector from the top.}
 \label{fig:np:gdep}
 \end{figure}
 
@@ -213,8 +214,8 @@ middle layer.}
 
 Figure~\ref{fig:np:frac2614} shows the situation near the $^{208}$Tl
 line at 2614~keV. The negative pulse events show up as a large fraction
-below the line energy. This enhancement is seen down to about 2400~keV,
-\textit{i.e.} up to 200~keV energy can get lost. The fraction of
+below the line energy. This enhancement is seen down to about 2400~keV;
+\textit{i.e.}, up to 200~keV energy can get lost. The fraction of
 events shifted is about 1\%. As the distribution of hits created by
 2614~keV photons is basically homogeneous this directly translates into
 a volume corresponding to a surface layer of $\approx 200 \mu$m.
@@ -232,7 +233,7 @@ layer with a thickness of about 200~$\mu$m where the electric field is
 distorted. This is smaller than what was claimed by a previous
 publication \cite{Ebe08}. However, this publication refers to a very
 different detector. The effect for Siegfried~I was much smaller,
-indication that it had a thinner layer of field distortion. This is
+indicating that it had a thinner layer of field distortion. This is
 probably due to the fact that Siegfried~I has fully metalized segment
 surfaces while Siegfried~II only has relatively small metal contacts.
 
