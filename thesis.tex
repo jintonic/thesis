@@ -16,7 +16,7 @@
 \include{title}
 \include{abstract}
 
-\pagestyle{headings} % til the end
+\pagestyle{headings} % for contents
 
 \setcounter{page}{1}
 \pagenumbering{Roman}
@@ -28,7 +28,10 @@
 % set pagenumbering to arabic
 % set page counter to 1
 
+\pagestyle{plain} % for introduction 
 \include{introduction}
+
+\pagestyle{headings} % til the end
 \include{theory}
 \include{experiments}
 \include{gerda}
@@ -46,6 +49,7 @@
 % remove numbering of chapters in table of contents
 \include{conclusion}
 
+\phantomsection % to make the bookmark right
 \addcontentsline{toc}{chapter}{Bibliography}
 \include{bibliography}
 
